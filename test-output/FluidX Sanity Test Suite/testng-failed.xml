@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FluidX Sanity Test Suite]">
+  <test name="TileMenu(failed)">
+    <groups>
+      <run>
+        <include name="Sanity"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.lrn.html5.templates.TileMenu">
+        <methods>
+          <include name="clickViewYourCompletionCertificateButtonOnTileMenuCourse"/>
+          <include name="runTiles"/>
+          <include name="clickTakeSurveyOnTileMenuCourse"/>
+          <include name="Bulletin"/>
+        </methods>
+      </class> <!-- com.lrn.html5.templates.TileMenu -->
+    </classes>
+  </test> <!-- TileMenu(failed) -->
+</suite> <!-- Failed suite [FluidX Sanity Test Suite] -->

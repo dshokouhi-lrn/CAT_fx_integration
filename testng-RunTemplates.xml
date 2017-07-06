@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FluidX Regression Test Suite" >
+	<test name="Basicbtt">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="12"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Basicbtt"/>
+	    </classes>
+	</test>
+	<test name="Basicfsg">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="13"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Basicfsg"/>
+	    </classes>
+	</test>
+	<test name="Basicltr">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="9"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Basicltr"/>
+	    </classes>
+	</test>
+	<test name="Basicrtl">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="17"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Basicrtl"/>
+	    </classes>
+	</test>
+	<test name="Basicto">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="10"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Basicto"/>
+	    </classes>
+	</test>
+	<test name="Basicttb">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="11"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Basicttb"/>
+	    </classes>
+	</test>
+	<test name="Saqltr (check-box)">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="20"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Saqltr"/>
+	    </classes>
+	</test>
+	<test name="Saqrtl (radio-button)">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="21"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Saqrtl"/>
+	    </classes>
+	</test>
+	<test name="GraphicalSaq (check-box)">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="22"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.GraphicalSaq"/>
+	    </classes>
+	</test>
+	<test name="GraphicalSaq (radio-button)">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="23"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.GraphicalSaq"/>
+	    </classes>
+	</test>
+	<test name="Sidebarltr (TopTen)">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="3"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="3"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="24"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="FAQTopTen"/>
+	     		<exclude name="DidYouKnow"/>
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Sidebarltr"/>
+	    </classes>
+	</test>
+	<test name="Sidebarrtl (FAQ)">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="3"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="3"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="25"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="FAQTopTen"/>
+	     		<exclude name="DidYouKnow"/>
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Sidebarrtl"/>
+	    </classes>
+	</test>
+	<test name="Sidebarltr (DiD You Know?)">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="3"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="3"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="23"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="DidYouKnow"/>
+	     		<exclude name="FAQTopTen"/>
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Sidebarltr"/>
+	    </classes>
+	</test>
+	<test name="LandingPageltr">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="0"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.LandingPageltr"/>
+	    </classes>
+	</test>
+	<test name="ClickToRevealBox">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="35"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.ClickToRevealBox"/>
+	    </classes>
+	</test>
+	<test name="ClickToRevealHotspotbtt">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="40"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.ClickToRevealHotspotbtt"/>
+	    </classes>
+	</test>
+	<test name="ClickToRevealHotspotfsg">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="41"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.ClickToRevealHotspotfsg"/>
+	    </classes>
+	</test>
+	<test name="ClickToRevealHotspotltr">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="37"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.ClickToRevealHotspotltr"/>
+	    </classes>
+	</test>
+	<test name="ClickToRevealHotspotrtl">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="38"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.ClickToRevealHotspotrtl"/>
+	    </classes>
+	</test>
+	<test name="ClickToRevealHotspotttb">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="39"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.ClickToRevealHotspotttb"/>
+	    </classes>
+	</test>
+	<test name="ClickToRevealSelectableImagebtt">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="52"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.ClickToRevealSelectableImagebtt"/>
+	    </classes>
+	</test>
+	<test name="ClickToRevealSelectableImagefsg">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="53"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.ClickToRevealSelectableImagefsg"/>
+	    </classes>
+	</test>
+	<test name="ClickToRevealSelectableImageltr">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="49"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.ClickToRevealSelectableImageltr"/>
+	    </classes>
+	</test>
+	<test name="ClickToRevealSelectableImagertl">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="50"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.ClickToRevealSelectableImagertl"/>
+	    </classes>
+	</test>
+	<test name="ClickToRevealSelectableImagettb">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="51"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.ClickToRevealSelectableImagettb"/>
+	    </classes>
+	</test>
+	<test name="NewClickToRevealHotspotbtt">
+		<parameter name="PCorRemoteMachine" value="PC"/>			<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />					<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>				<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>					<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>					<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="47"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.NewClickToRevealHotspotbtt"/>
+	    </classes>
+	</test>
+	<test name="NewClickToRevealHotspotfsg">
+		<parameter name="PCorRemoteMachine" value="PC"/>			<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />					<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>				<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>					<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>					<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="48"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.NewClickToRevealHotspotfsg"/>
+	    </classes>
+	</test>
+	<test name="NewClickToRevealHotspotltr">
+		<parameter name="PCorRemoteMachine" value="PC"/>			<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />					<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>				<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>					<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>					<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="44"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.NewClickToRevealHotspotltr"/>
+	    </classes>
+	</test>
+	<test name="NewClickToRevealHotspotrtl">
+		<parameter name="PCorRemoteMachine" value="PC"/>			<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />					<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>				<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>					<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>					<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="45"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.NewClickToRevealHotspotrtl"/>
+	    </classes>
+	</test>
+	<test name="NewClickToRevealHotspotttb">
+		<parameter name="PCorRemoteMachine" value="PC"/>			<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />					<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>				<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>					<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>					<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="46"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.NewClickToRevealHotspotttb"/>
+	    </classes>
+	</test>
+	<test name="Consultltr">
+		<parameter name="PCorRemoteMachine" value="PC"/>			<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />					<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>				<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>					<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>					<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="78"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Consultltr"/>
+	    </classes>
+	</test>
+	<test name="Consultrtl">
+		<parameter name="PCorRemoteMachine" value="PC"/>			<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />					<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>				<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>					<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>					<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="79"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Consultrtl"/>
+	    </classes>
+	</test>
+	<test name="Consentltr">
+		<parameter name="PCorRemoteMachine" value="PC"/>			<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />					<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>				<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>					<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>					<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="75"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Consentltr"/>
+	    </classes>
+	</test>
+	<test name="Concernltr">
+		<parameter name="PCorRemoteMachine" value="PC"/>			<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />					<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>				<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>					<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>					<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="80"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Concernltr"/>
+	    </classes>
+	</test>
+	<test name="Concernrtl">
+		<parameter name="PCorRemoteMachine" value="PC"/>			<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />					<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>				<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>					<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>					<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="81"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Concernrtl"/>
+	    </classes>
+	</test>
+	<test name="BinaryListltr">
+		<parameter name="PCorRemoteMachine" value="PC"/>			<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />					<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>				<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>					<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>					<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="76"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.BinaryListltr"/>
+	    </classes>
+	</test>
+	<test name="DragandDrop-Box">
+		<parameter name="PCorRemoteMachine" value="PC"/>			<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />					<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>				<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>					<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>					<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="64"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.DragandDrop"/>
+	    </classes>
+	</test>
+	<test name="DragandDrop-Flag">
+		<parameter name="PCorRemoteMachine" value="PC"/>			<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />					<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>				<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>					<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>					<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="66"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.DragandDrop"/>
+	    </classes>
+	</test>
+	<test name="Carouselfsg">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="18"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Carouselfsg"/>
+	    </classes>
+	</test>
+	<test name="MultipleScenariobtt">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="73"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.MultipleScenariobtt"/>
+	    </classes>
+	</test>
+	<test name="MultipleScenariofsg">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="74"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.MultipleScenariofsg"/>
+	    </classes>
+	</test>
+	<test name="MultipleScenarioltr">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="67"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.MultipleScenarioltr"/>
+	    </classes>
+	</test>
+	<test name="MultipleScenariortl">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="69"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.MultipleScenariortl"/>
+	    </classes>
+	</test>
+	<test name="MultipleScenariottb">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="72"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.MultipleScenariottb"/>
+	    </classes>
+	</test>
+	<test name="Videoltr (MultipleTextModePage)">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="56"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Videoltr"/>
+	    </classes>
+	</test>	
+	<test name="Videoltr (SingleTextModePage)">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="2"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="2"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="57"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.Videoltr"/>
+	    </classes>
+	</test>
+	<test name="BranchingLesson (Mandatory Topics)">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="4"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="4"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="No"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="No"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="MandatoryTopics"/>
+	     		<exclude name="AllTopics"/>
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.BranchingLesson"/>
+	    </classes>
+	</test>
+	<test name="BranchingLesson (All Topics)">
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="4"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="4"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="Yes"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="No"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="AllTopics"/>
+	     		<exclude name="MandatoryTopics"/>
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.BranchingLesson"/>
+	    </classes>
+	</test>	
+	<test name="Quiz (Correct)">
+			<!-- Requirement = The Quiz only course and all lesson pages should have completed -->
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="5"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="5"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="Yes"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="7"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="Correct"/>
+	     		<exclude name="Incorrect"/>
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.KnowledgeCheckANDResultsandFeedback"/>
+	    </classes>
+	</test>	
+	<test name="Quiz (Incorrect)">
+			<!-- Requirement = The Quiz only course and all lesson pages should have completed -->
+			<!-- In 1st round, it will FAIL the Quiz and in 2nd Round, it will PASS the Quiz -->
+		<parameter name="PCorRemoteMachine" value="PC"/>				<!-- PCorRemoteMachine = PC, RemoteMachine -->
+		<parameter name="IPAddress" value="172.16.20.243"/>			<!-- Remote Machine's IPAddress -->
+		<parameter name="Browser" value="Chrome" />						<!-- Browser = Chrome, FireFox, InternetExplorer, Edge -->
+		<parameter name="XlsName" value="SanityTestSuite"/>			<!-- xls spreadsheet name -->
+		<parameter name="SheetName" value="Sheet1"/>				<!-- xls spreadsheet's worksheet name -->
+		<parameter name="StartRowNumber" value="5"/>					<!-- xls spreadsheet's worksheet start row number -->
+		<parameter name="EndRowNumber" value="5"/>						<!-- xls spreadsheet's worksheet end row number -->
+       	<parameter name="Screenshot" value="Fail"/>						<!-- Screenshot = Yes, No, Pass, Fail -->
+		<parameter name="FullScreen" value="No"/>						<!-- FullScreen = Yes, No -->
+		<parameter name="Fast" value="Yes"/>							<!-- Fast = Yes -> It will Skip the execution of extra methods, No -->
+		<parameter name="JumpToTileNumber" value="1"/>				<!-- JumpToTileNumber = 1(default), tileNumber, No -->
+		<parameter name="JumpToPageNumber" value="7"/>				<!-- JumpToPageNumber = 1(default), pageNumber, No (deactivate pagelevel fail condition), Yes (activate pagelevel fail condition)-->
+    
+	    <groups>
+	    	<run>
+	     		<include name="LaunchBrowserAndCourse"/>
+	     		<include name="Regression"/>						<!-- Regression, Sanity, NextOnly -->
+	     		<include name="Incorrect"/>
+	     		<exclude name="Correct"/>
+	     		<include name="ExtentReports"/>						<!-- ExtentReports, Jira -->
+	     		<include name="End"/>
+	    	</run>
+	  	</groups>
+    
+	    <classes>
+	    	<class name="com.lrn.html5.templates.KnowledgeCheckANDResultsandFeedback"/>
+	    </classes>
+	</test>
+	
+</suite>
