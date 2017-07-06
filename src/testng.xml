@@ -66,6 +66,8 @@
 			<class name= "com.lrn.cat.tc.PreviewCourseTC" />
 			<class name= "com.lrn.cat.tc.ExportToWordTC" />
 			<class name= "com.lrn.cat.tc.PushToCDVTC" />
+			<class name= "com.lrn.cat.tc.CloneCourseTC" />
+			<class name= "com.lrn.cat.tc.DeleteCourseTC" />
 <!-- 			<class name= "com.lrn.cat.tc.CheckInCourseTC" /> -->
 <!-- 			<class name= "com.lrn.cat.tc.CheckOutCourseTC" /> -->
             <class name="com.lrn.cat.tc.LogoutTC" />

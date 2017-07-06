@@ -3,13 +3,14 @@ package com.lrn.cat.page;
 import java.util.Date;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 
 import com.lrn.cat.common.CATAppCommon;
 import com.lrn.pp.utility.Log;
 
 public class CreateCourse extends CATAppCommon {
 	
-	static public void createCourse(String CourseTitle, String Description, String BaseCat, String CourseType, String CourseFormat, String CourseProgression, String CourseTopic, String Site, String Partner, String Language, String Mobile, String Video, String Audio, String CourseDuration) throws Exception {
+	static public void createCourse(String clonedCourse, String CourseTitle, String Description, String BaseCat, String CourseType, String CourseFormat, String CourseProgression, String CourseTopic, String Site, String Partner, String Language, String Mobile, String Video, String Audio, String CourseDuration) throws Exception {
 		
 		try{
 			
@@ -17,7 +18,9 @@ public class CreateCourse extends CATAppCommon {
 			
 			Log.startTestCase("Start create a course");
 			
-			if (isElementPresent(By.xpath("//div[3]//a[1]")))
+			Thread.sleep(2000);
+			
+			if (clonedCourse == "")
 			{
 				clickIdentifierXpath("//div[3]//a[1]");
 				Log.info("clicked on create your course button");
@@ -73,9 +76,12 @@ public class CreateCourse extends CATAppCommon {
 			
 			Log.info("mobile, video, audio and duration configured");
 			
+			JavascriptExecutor jse = (JavascriptExecutor)driver;
+			jse.executeScript("window.scrollTo(0,0)", "");
+			
 			clickIdentifierXpath("//*[@id='editedCourse']/div[1]/button");
 			
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			
 			String courseSaved = getValueByXpath("//*[@id='messageDialog']/tr/td[2]");
 			

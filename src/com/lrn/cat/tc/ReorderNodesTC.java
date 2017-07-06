@@ -11,15 +11,15 @@ public class ReorderNodesTC extends ReorderNodes{
 	{
 		dragPageToDropLesson("1", "", "2", "4", "2", "");
 		
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		
 		dragPageToDropTopic("1", "2", "3", "3", "1", "");
 		
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		
 		dragTopicToDropLesson("1", "", "3", "2");
 		
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		
 		collapseLessons();
 		

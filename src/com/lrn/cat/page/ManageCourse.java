@@ -42,7 +42,7 @@ public class ManageCourse extends CATAppCommon{
      }
 	}
 	
-	static public void cloneCourse(String coursePosition, String newCatalogID) throws Exception
+	static public void cloneCourse(String coursePosition) throws Exception
 	{
 		try
 		{
