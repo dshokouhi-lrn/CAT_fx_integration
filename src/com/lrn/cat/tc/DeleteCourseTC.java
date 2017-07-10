@@ -9,7 +9,7 @@ public class DeleteCourseTC extends SearchCourse{
 	@Test
 	void CatDeleteCourse() throws Exception
 	{
-		searchcourse("DAN794-r80en", "", "");
+		searchcourse("DAN799-r80en", "", "");
 		
 		Thread.sleep(5000);
 		

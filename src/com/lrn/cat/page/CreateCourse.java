@@ -97,7 +97,7 @@ public class CreateCourse extends CATAppCommon {
 				
 				Log.pass("course created successfully with system ID " + sysID + " and catalog ID " + catID);
 				
-				clickIdentifierXpath(".//div[@id='menuTabs']/ul/li[2]/p"); 
+				clickIdentifierXpath(".//div[@id='menuTabs']/ul/li[2]"); 
 				Log.info("Navigate to Create course tab");
 			}
 			

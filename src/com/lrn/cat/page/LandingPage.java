@@ -51,64 +51,72 @@ public class LandingPage extends CATAppCommon{
 			
 			if (desktopImage1 != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='dsktpImgSection']/div[1]/img[4]");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded desktop image 1");
 			}
 			
 			if (desktopImage2 != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='dsktpImgSection']/div[2]/img[4]");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded desktop image 2");
 			}
 			
 			if (desktopImage3 != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='dsktpImgSection']/div[3]/img[4]");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded desktop image 3");
 			}
 			
 			if (desktopImage4 != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='dsktpImgSection']/div[4]/img[4]");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded desktop image 4");
 			}
 			
 			if (mobileImage1 != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='mblImgSection']/div[1]/img[4]");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded mobile image 1");
 			}
 			
 			if (mobileImage2 != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='mblImgSection']/div[2]/img[4]");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded mobile image 2");
 			}
 			
 			if (mobileImage3 != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='mblImgSection']/div[3]/img[4]");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded mobile image 3");
 			}
 			
 			if (mobileImage4 != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='mblImgSection']/div[4]/img[4]");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded mobile image 4");
 			}
@@ -198,24 +206,27 @@ public class LandingPage extends CATAppCommon{
 			
 			if (desktopNormal != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='divDsktpStartBtn']/img[4]");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded desktop normal start button");
 			}
 			
 			if (desktopHover != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='divDsktpStartBtnHover']/img[4]");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded desktop hover start button");
 			}
 			
 			if (mobileNormal != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='divMblStartBtn']/img[4]");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded mobile normal start button");
 			}

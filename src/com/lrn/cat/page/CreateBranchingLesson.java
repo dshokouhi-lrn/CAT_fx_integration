@@ -37,11 +37,12 @@ public class CreateBranchingLesson extends CATAppCommon	{
 			
 			if (lessonAudio != "")
 			{
+				String audio = getRandomAudio();
 				clickIdentifierXpath(".//*[@id='branchingInfo']/div[2]/div[2]/div[2]/input[1]");
 				Thread.sleep(2000);
 				clickIdentifierXpath(".//*[@id='audBtn_1']");
 				Thread.sleep(2000);
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\TechJam.mp3");
+				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				clickIdentifierXpath("//*[@aria-describedby='selectDialog']/div[3]/div[1]/button");
 				Thread.sleep(2000);
@@ -69,12 +70,14 @@ public class CreateBranchingLesson extends CATAppCommon	{
 					Log.info("turned on completion message");
 					typeTextById("branchingLessonEditorContent1", lessonCompletion + " " + d.toString());
 				}
+				Thread.sleep(1000);
 			}
 			
 			if (lessonImage != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='branchingLessonBackgroundImage']/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded lesson image");
 			}
@@ -97,6 +100,8 @@ public class CreateBranchingLesson extends CATAppCommon	{
 					clickIdentifierXpath(".//*[@id='branchingInfo']/div[6]/div[4]/div/div/span");
 					Log.info("turned on mandatory topic");
 				}
+				
+				Thread.sleep(1000);
 			}
 			
 			if (completeTopics == "1" || completeTopics == "2")
@@ -139,6 +144,8 @@ public class CreateBranchingLesson extends CATAppCommon	{
 			JavascriptExecutor jse = (JavascriptExecutor)driver;
 			jse.executeScript("window.scrollTo(0,0)", "");
 			
+			Log.info("start configuring topic " + topicPosition);
+			
 			clickIdentifierXpath(".//*[@id='courseTree']/ul/li/ul/li[" + lessonPosition + "]/ul/li[" + topicPosition + "]/a");
 			
 			Thread.sleep(3000);
@@ -151,8 +158,9 @@ public class CreateBranchingLesson extends CATAppCommon	{
 			
 			if (topicImage != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='branchingTopicBackgroundImage']/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded topic image");
 			}

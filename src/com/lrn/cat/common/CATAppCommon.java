@@ -17,6 +17,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
+import java.util.Random;
 
 import javax.imageio.ImageIO;
 
@@ -40,6 +41,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+
+
 
 
 
@@ -97,7 +101,7 @@ public class CATAppCommon extends WebAppCommon {
 		try
 		{
 			JavascriptExecutor jse = (JavascriptExecutor)driver;
-			jse.executeScript("window.scrollBy(0,-550)", "");
+			jse.executeScript("window.scrollBy(0,550)", "");
 			
 			Thread.sleep(1000);
 			
@@ -107,7 +111,8 @@ public class CATAppCommon extends WebAppCommon {
 			
 			clickIdentifierXpath("//*[@id='pageBackgroundSection']/div/div[1]/div[1]/img");
 			
-			uploadFile("C:\\github\\CAT_automation\\resource\\images\\Tulips.jpg");
+			String image = getRandomImage();
+			uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 			Thread.sleep(5000);
 			Log.info("uploaded background image");
 		}
@@ -122,7 +127,7 @@ public class CATAppCommon extends WebAppCommon {
 		try
 		{
 			JavascriptExecutor jse = (JavascriptExecutor)driver;
-			jse.executeScript("window.scrollBy(0,-550)", "");
+			jse.executeScript("window.scrollBy(0,550)", "");
 			
 			Thread.sleep(1000);
 			
@@ -132,7 +137,9 @@ public class CATAppCommon extends WebAppCommon {
 			
 			clickIdentifierXpath("//*[@id='audioUpload']/input[2]");
 			
-			uploadFile("C:\\github\\CAT_automation\\resource\\audio\\TechJam.mp3");
+			String audio = getRandomAudio();
+			
+			uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
 			Thread.sleep(3000);
 			Log.info("uploaded audio");
 		}
@@ -152,6 +159,42 @@ public class CATAppCommon extends WebAppCommon {
 		catch(Exception e){
 			throw e;
 		}
+	}
+	
+	static public String getRandomImage()
+	{
+		String [] arr = {"Hydrangeas", "bns999_p18", "Penguins", "Chrysanthemum", "Desert", "Tulips", "Lighthouse", "Koala"};
+		Random r = new Random();
+		
+		int select = r.nextInt(arr.length);
+		
+		System.out.println("Random image selected: " + arr[select]);
+		
+		return arr[select];
+	}
+	
+	static public String getRandomHotSpotImage()
+	{
+		String [] arr = {"venicewin", "venicecan", "gondala_pole"};
+		Random r = new Random();
+		
+		int select = r.nextInt(arr.length);
+		
+		System.out.println("Random hot spot image selected: " + arr[select]);
+		
+		return arr[select];
+	}
+	
+	static public String getRandomAudio()
+	{
+		String [] arr = {"Ambianica", "FunkyDiva", "l1p01_1", "NewAgeTechno", "SaxyGroovy", "TechJam", "ThatAintRight"};
+		Random r = new Random();
+		
+		int select = r.nextInt(arr.length);
+		
+		System.out.println("Random audio selected: " + arr[select]);
+		
+		return arr[select];
 	}
 	
 

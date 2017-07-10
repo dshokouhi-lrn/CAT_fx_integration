@@ -46,8 +46,9 @@ public class EditConsult extends CATAppCommon{
 			
 			if (consultImage != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='consultClickReveal']/ul/li/div/div[4]/div[2]/div/div/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded consult image");
 			}
@@ -63,8 +64,9 @@ public class EditConsult extends CATAppCommon{
 			
 			if (consultQuestionAudio != "")
 			{
-				/*clickIdentifierByID("sltAudio");
-				uploadFile("C:\\Users\\dshokouhi\\Documents\\TechJam.mp3");
+				/*String audio = getRandomAudio();
+				clickIdentifierByID("sltAudio");
+				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);*/
 				Log.info("uploaded audio");
 			}
@@ -95,8 +97,9 @@ public class EditConsult extends CATAppCommon{
 			
 			if (consultAnswerDesktopImage != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='consultAnswer']/ul/li[1]/div/div[4]/div[2]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded consult image");
 			}
@@ -128,8 +131,9 @@ public class EditConsult extends CATAppCommon{
 				
 				if (singleImage != "")
 				{
+					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='consultFeedback']/div[1]/div[2]/div[3]/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded feedback image");
 				}
@@ -159,16 +163,18 @@ public class EditConsult extends CATAppCommon{
 				
 				if (correctImage != "")
 				{
+					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='consultFeedback']/div[1]/div[3]/div[1]/div[2]/div[1]/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded correct feedback image");
 				}
 				
 				if (incorrectImage != "")
 				{
+					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='consultFeedback']/div[1]/div[3]/div[2]/div[3]/div[1]/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded incorrect feedback image");
 				}
@@ -212,11 +218,6 @@ public class EditConsult extends CATAppCommon{
 				Log.pass("page saved");
 			else
 				Log.fail("page failed to save for reason: " + pageSaved);
-			
-			
-				
-			
-			
 		}
 		
 		catch(Exception e){  
@@ -239,7 +240,7 @@ public class EditConsult extends CATAppCommon{
 			
 			Date d = new Date();
 			
-			Log.startTestCase("start adding additional consult section");
+			Log.info("start adding additional consult section");
 			
 			int consultCount = consultPosition + 1;
 			
@@ -253,8 +254,9 @@ public class EditConsult extends CATAppCommon{
 			
 			if (consultImage != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='consultClickReveal']/ul/li[" + consultCount + "]/div/div[5]/div[2]/div/div/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded consult image");
 			}
@@ -301,7 +303,7 @@ public class EditConsult extends CATAppCommon{
 		{
 			Date d = new Date();
 			
-			Log.startTestCase("start adding additional consult answer option");
+			Log.info("start adding additional consult answer option");
 			
 			clickIdentifierByID("multiGraphicContentContainer_addconsultAnswer");
 			
@@ -328,8 +330,9 @@ public class EditConsult extends CATAppCommon{
 			
 			if (consultAnswerDesktopImage != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='consultAnswer']/ul/li[" + answerPosition + "]/div/div[5]/div[2]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded consult image");
 			}

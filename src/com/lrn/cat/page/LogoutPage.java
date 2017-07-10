@@ -17,6 +17,14 @@ public class LogoutPage extends CATAppCommon{
                   Thread.sleep(300);
                   //     Assert.assertTrue(waitForElementPresentByLinkText("log out"));
                   Log.pass("Logged-out Successfully!!");
+                  
+                  //driver.close();
+                  
+                  //Log.info("closed browser window");
+                  
+                  driver.quit();
+                  
+                  Log.pass("quit the driver");
 
            }
            catch(Exception e){  

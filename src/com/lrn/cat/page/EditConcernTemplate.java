@@ -69,8 +69,9 @@ public class EditConcernTemplate extends CATAppCommon{
 			
 			if (meterAnswerDesktop != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='multiGraphicContent_add']/li[1]/div[1]/div[4]/div[2]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded meter answer image");
 			}
@@ -88,8 +89,9 @@ public class EditConcernTemplate extends CATAppCommon{
 			
 /*			if (questionAudio != "")
 			{
+			String audio = getRandomAudio();
 				clickIdentifierXpath(".//*[@id='sltAudio']");
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\Ambianica.mp3");
+				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded question audio");
 			}*/
@@ -120,8 +122,9 @@ public class EditConcernTemplate extends CATAppCommon{
 			
 			if (answerDesktopImage != "")
 			{
+				String image1 = getRandomImage();
 				clickIdentifierXpath(".//*[@id='multiGraphicContentContainerconcernChoice']/div/div[4]/div[2]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image1 + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded answer image");
 			}
@@ -155,8 +158,9 @@ public class EditConcernTemplate extends CATAppCommon{
 				
 				if (singleImage != "")
 				{
+					String image2 = getRandomImage();
 					clickIdentifierXpath(".//*[@id='concernMeterFeedback']/div[1]/div[2]/div[3]/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image2 + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded feedback image");
 				}
@@ -186,16 +190,18 @@ public class EditConcernTemplate extends CATAppCommon{
 				
 				if (correctImage != "")
 				{
+					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='feedbackCorrectImage']/div[1]/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded correct feedback image");
 				}
 				
 				if (incorrectImage != "")
 				{
+					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='feedbackIncorrectImage']/div[1]/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded incorrect feedback image");
 				}
@@ -262,7 +268,7 @@ public class EditConcernTemplate extends CATAppCommon{
 		{
 			Date d = new Date();
 			
-			Log.startTestCase("start adding additional concern meter answer");
+			Log.info("start adding additional concern meter answer");
 			
 			clickIdentifierByID("multiGraphicContentContainer_addconcernAnswer");
 			
@@ -289,8 +295,9 @@ public class EditConcernTemplate extends CATAppCommon{
 			
 			if (meterAnswerDesktop != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='concernAnswer']/ul/li[" + answerPosition + "]/div/div[5]/div[2]/div[1]/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded meter answer image");
 			}
@@ -335,7 +342,7 @@ public class EditConcernTemplate extends CATAppCommon{
 		{
 			Date d = new Date();
 			
-			Log.startTestCase("start adding additional answer");
+			Log.info("start adding additional answer");
 			
 			clickIdentifierByID("multiGraphicContentContainer_addconcernChoice");
 			
@@ -362,8 +369,9 @@ public class EditConcernTemplate extends CATAppCommon{
 			
 			if (answerDesktopImage != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='concernChoice']/ul/li[" + answerPosition + "]/div/div[5]/div[2]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded answer image");
 			}

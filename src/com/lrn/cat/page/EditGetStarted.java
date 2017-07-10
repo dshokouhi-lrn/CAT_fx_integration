@@ -22,7 +22,7 @@ public class EditGetStarted extends CATAppCommon {
 			
 			Log.info("edited first course that shows up in the list");
 			
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			
 			if (driver.findElement(By.id("courseCheckoutButton")).isDisplayed())
 				clickIdentifierByID("courseCheckoutButton");
@@ -77,6 +77,8 @@ public class EditGetStarted extends CATAppCommon {
 			JavascriptExecutor jse = (JavascriptExecutor)driver;
 			jse.executeScript("window.scrollTo(0,0)", "");
 			
+			Thread.sleep(1000);
+			
 			if (CourseTitle != "" || Description != "" || Mobile != "" || Video != "" || Audio != "" || CourseDuration != "")
 			{
 				clickIdentifierXpath("//*[@id='editedCourse']/div[1]/button");
@@ -98,13 +100,14 @@ public class EditGetStarted extends CATAppCommon {
 				}
 			}
 			
-			clickIdentifierXpath(".//div[@id='menuTabs']/ul/li[2]/p"); 
+			clickIdentifierXpath(".//div[@id='menuTabs']/ul/li[2]"); 
 			
-			Thread.sleep(2000);
+			Thread.sleep(3000);
+			
 			clickIdentifierXpath(".//div[@id='menuTabs']/ul/li[2]/p"); 
 			Log.info("Navigated to Create course tab");
 			
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 		}
 		
 		catch(Exception e){  

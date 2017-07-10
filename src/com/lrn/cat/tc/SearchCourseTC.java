@@ -10,7 +10,7 @@ public class SearchCourseTC extends SearchCourse{
 	void CatLogicTC() throws Exception
 	{
 
-		searchcourse("DAN794-a80en", "", "");
+		searchcourse("DAN799-a80en", "", "");
 
 	}
 }

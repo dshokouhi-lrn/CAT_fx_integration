@@ -43,8 +43,9 @@ public class EditBinaryTemplate extends CATAppCommon{
 			
 			if (binaryDesktop != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='binaryListImage']/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Hydrangeas.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded binary desktop image");
 			}
@@ -57,8 +58,9 @@ public class EditBinaryTemplate extends CATAppCommon{
 			
 			if (binaryMobile != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='binaryListImage_mobileReady']/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Hydrangeas.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded binary mobile image");
 			}
@@ -121,7 +123,7 @@ public class EditBinaryTemplate extends CATAppCommon{
 		{
 			Date d = new Date();
 			
-			Log.startTestCase("start editing first 2 binary panels");
+			Log.info("start editing first 2 binary panels");
 			
 			selectDropdownValueVisibleText("maskSectionbinaryListOptions", "2");
 			
@@ -181,7 +183,7 @@ public class EditBinaryTemplate extends CATAppCommon{
 		{
 			Date d = new Date();
 			
-			Log.startTestCase("start adding additional binary category");
+			Log.info("start adding additional binary category");
 			
 			clickIdentifierByID("multiTitle_addbinaryListOptions");
 			typeTextById("categoryTextbinaryListOptions" + binaryPosition, binaryText + " " + d.toString());

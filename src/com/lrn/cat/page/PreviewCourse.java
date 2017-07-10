@@ -20,10 +20,12 @@ public class PreviewCourse extends CATAppCommon{
 			JavascriptExecutor jse = (JavascriptExecutor)driver;
 			jse.executeScript("window.scrollTo(0,0)", "");
 			
+			Thread.sleep(3000);
+			
 			clickIdentifierByID("coursePreviewButton");
 			
 			Set<String> courseWindow = driver.getWindowHandles();
-			System.out.println("count of window open "  +courseWindow.size());
+			System.out.println("count of windows open is "  +courseWindow.size());
 			System.out.println(courseWindow);
 			Thread.sleep(2000);
 			Iterator<String> ite1=courseWindow.iterator();
@@ -47,7 +49,7 @@ public class PreviewCourse extends CATAppCommon{
 			
 			//Log.info("closed course window");
 			driver.switchTo().window(Mainwindow);
-			Log.info("switched back to CAT");
+			Log.pass("finised preview and switched back to CAT");
 			
 
 		}

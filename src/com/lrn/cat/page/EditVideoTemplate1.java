@@ -130,16 +130,18 @@ public class EditVideoTemplate1 extends CATAppCommon{
 			   
 			if (desktopImage != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='desktop-image-main-div-0-videoUploadPanel']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded desktop image");
 			}
 			
 			if (mobileImage != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='mobile-image-main-div-0-videoUploadPanel']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Jellyfish.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded mobile image");
 			}
@@ -172,8 +174,9 @@ public class EditVideoTemplate1 extends CATAppCommon{
 			
 			if (panelAudio != "")
 			{
+				String audio = getRandomAudio();
 				clickIdentifierXpath(".//*[@id='widget1_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\TechJam.mp3");
+				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
 				Log.info("uploaded audio");
 				Thread.sleep(5000);
 			}
@@ -218,21 +221,25 @@ public class EditVideoTemplate1 extends CATAppCommon{
 			
 			clickIdentifierXpath(".//*[@id='videoUploadPanel']/div[3]/div[1]");
 			
+			Log.info("start adding video panel " + panelNumber);
+			
 			if (panelContent != "")
 				typeTextById("ckeditorContentTextViewText" + panelPosition, panelContent + " " + d.toString());
 			   
 			if (desktopImage != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='desktop-image-main-div-" + panelPosition + "-videoUploadPanel']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded desktop image");
 			}
 			
 			if (mobileImage != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='mobile-image-main-div-" + panelPosition + "-videoUploadPanel']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Jellyfish.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded mobile image");
 			}
@@ -245,8 +252,9 @@ public class EditVideoTemplate1 extends CATAppCommon{
 			
 			if (panelAudio != "")
 			{
+				String audio = getRandomAudio();
 				clickIdentifierXpath(".//*[@id='widget" + panelNumber + "_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\TechJam.mp3");
+				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
 				Log.info("uploaded audio");
 				Thread.sleep(5000);
 			}
@@ -282,7 +290,7 @@ public class EditVideoTemplate1 extends CATAppCommon{
 		{
 			Date d = new Date();
 			
-			Log.startTestCase("start adding new bulletin");
+			Log.info("start adding new bulletin");
 			
 			if (enableBulletin != "")
 			{

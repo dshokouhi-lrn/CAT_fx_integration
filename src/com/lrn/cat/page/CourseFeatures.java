@@ -77,8 +77,9 @@ public class CourseFeatures extends CATAppCommon {
 			
 			if (menuImage != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='courseFeature']/div[3]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded menu image");
 			}
@@ -97,24 +98,27 @@ public class CourseFeatures extends CATAppCommon {
 				
 				if (hsNormal != "")
 				{
+					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='chooseHotspot']/div[1]/div[1]/div[1]/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\venicewin.jpg");
+					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(6000);
 					Log.info("uploaded normal hot spot image");
 				}
 				
 				if (hsHover != "")
 				{
+					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='chooseHotspot']/div[1]/div[2]/div[1]/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\venicecan.jpg");
+					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(6000);
 					Log.info("uploaded hover hot spot image");
 				}
 				
 				if (hsComplete != "")
 				{
+					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='chooseHotspot']/div[1]/div[3]/div[1]/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\gondala_pole.jpg");
+					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(6000);
 					Log.info("uploaded completed hot spot image");
 				}
@@ -374,16 +378,18 @@ public class CourseFeatures extends CATAppCommon {
 				
 				if (resource1Type == "Document")
 				{
+					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='fileUpload']");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded resource 1 document");
 				}
 				
 				if (resource2Type == "Document")
 				{
+					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='fileUpload2']");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded resource 2 document");
 				}

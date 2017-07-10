@@ -16,7 +16,7 @@ public class ReorderNodes extends CATAppCommon{
 	{
 		try
 		{
-			Log.startTestCase("starting collapse lessons test case");  
+			Log.info("starting collapse lessons test case");  
 			
 			//WebElement productLink = driver.findElement(By.xpath(".//*[@id='j1_7_anchor']"));
 			
@@ -62,7 +62,7 @@ public class ReorderNodes extends CATAppCommon{
 		try
 		{
 			
-			Log.startTestCase("start drag and drop lesson test case");
+			Log.info("start drag and drop lesson test case");
 			
 			Actions builder = new Actions(driver);
 			
@@ -101,7 +101,7 @@ public class ReorderNodes extends CATAppCommon{
 		try
 		{
 			
-			Log.startTestCase("start drag and drop topics");
+			Log.info("start drag and drop topics");
 			
 			Actions builder = new Actions(driver);
 			
@@ -139,7 +139,7 @@ public class ReorderNodes extends CATAppCommon{
 	{
 		try
 		{
-			Log.startTestCase("start drag topic to lesson");
+			Log.info("start drag topic to lesson");
 			
 			Actions builder = new Actions(driver);
 			
@@ -177,7 +177,7 @@ public class ReorderNodes extends CATAppCommon{
 	{
 		try
 		{
-			Log.startTestCase("start dragging page to topic");
+			Log.info("start dragging page to topic");
 			
 			Actions builder = new Actions(driver);
 			

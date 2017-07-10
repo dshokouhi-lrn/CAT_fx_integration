@@ -42,24 +42,27 @@ public class EditTextTemplate extends CATAppCommon{
 			
 			if (audioFile != "")
 			{
+				String audio = getRandomAudio();
 				clickIdentifierXpath("//*[@id='page_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\TechJam.mp3");
+				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded audio");
 			}
 			
 			if (desktopImage != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='desktop-image-main-div-textGraphic_image']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Penguins.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded desktop image");
 			}
 			
 			if (mobileImage != "")
 			{
+				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='mobile-image-main-div-textGraphic_image']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\Jellyfish.jpg");
+				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded mobile image");
 			}
