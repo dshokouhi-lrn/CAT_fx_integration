@@ -21,6 +21,9 @@ public class ModuleManager extends CATAppCommon
 	public static String window = null;
 	//this method use for search module
 	
+	/**
+	 * Called after LCECLogin to navigate to module manager
+	 */
 	public void getModuleManager() throws Exception
 	{
 		Log.info("navigate to admin tools");
@@ -33,6 +36,11 @@ public class ModuleManager extends CATAppCommon
 		Log.info("navigate to module manager");
 		//LogerData.info("Click Module Manager link.");
 	}
+	
+	/**
+	 * Must be called after getModuleManager, will search for a course and select it
+	 * @param SearchModule provide the base catalog ID
+	 */
 	public void getSearchModule(String SearchModule) throws Exception
 	{
 		
@@ -87,7 +95,14 @@ public class ModuleManager extends CATAppCommon
 			
 		}
 	}
+	
+	
+
 	/******************* Edit Course*************************/
+	/**
+	 * To be called after getSearchModule, will add course to site and perform copy to edit if necessary before clicking on edit
+	 * @param course provide the base catalog ID
+	 */
 	static public void editFluidxCourse(String course) throws Exception
 	{
 		try{
@@ -174,6 +189,12 @@ public class ModuleManager extends CATAppCommon
 	 }
 	}
 	
+	
+	/**
+	 * to be called after getSearchModule, will copy to edit the library/base version of the course
+	 * @param course provide the base catalog ID
+	 * @param type must be either "library" or "custom" for the course type
+	 */
 	static public void copyToEditLibrary(String course, String type) throws Exception
 	{
 		try
