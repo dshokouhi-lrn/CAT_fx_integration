@@ -15,7 +15,6 @@ public class PreviewCourse extends CATAppCommon{
 	 * Must be called during course creation or editing
 	 * 
 	 */
-	
 	static public void previewCourse() throws Exception
 	{
 		try

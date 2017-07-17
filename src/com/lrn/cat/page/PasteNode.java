@@ -11,6 +11,11 @@ import com.lrn.pp.utility.Log;
 
 public class PasteNode extends CATAppCommon {
 
+	/**
+	 * to be called when user is on create your course tab after copyNode
+	 * @param lesson lesson position of page we are pasting, increase by 1 if landing page is present
+	 * @param topic topic position of the page
+	 */
 	static public void pasteNode(String lesson, String topic) throws Exception
 	{
 		try

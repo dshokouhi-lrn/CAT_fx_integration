@@ -14,7 +14,6 @@ public class AddTopic extends CATAppCommon {
 	 * @param lessonPosition provide the lesson position we are adding the topic to (increase by 1 if landing page is present)
 	 * @param topicName provide the topic name
 	 */
-	
 	static public void addTopic(String lessonPosition, String topicName) throws Exception
 	{
 		try {

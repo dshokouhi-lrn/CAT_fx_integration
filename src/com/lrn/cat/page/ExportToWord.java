@@ -10,6 +10,17 @@ import com.lrn.pp.utility.Log;
 
 public class ExportToWord extends CATAppCommon{
 	
+	/**
+	 * to be called after createCourse or editGetStarted or customizerGetStarted
+	 * @param fileName supply base catalog ID of course
+	 * @param showHidden show hidden content yes/no
+	 * @param showKC show KC yes/no
+	 * @param showCert show certification yes/no
+	 * @param showBulletin show bulletins yes/no
+	 * @param showTop10 show top 10 yes/no
+	 * @param showFAQ show faq yes/no
+	 * @param showPageID show page ID's yes/no
+	 */
 	static public void exportToWordCourse(String fileName, String showHidden, String showKC, String showCert, String showBulletin, String showTop10, String showFAQ, String showPageID) throws Exception
 	{
 		try

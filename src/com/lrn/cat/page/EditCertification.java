@@ -13,6 +13,18 @@ import com.lrn.pp.utility.Log;
 
 public class EditCertification extends CATAppCommon {
 	
+	/**
+	 * To be called after createCourse or editGetStarted
+	 * @param enableCert enable the certification yes/no
+	 * @param certName certification name
+	 * @param certDesc certification description
+	 * @param certInstruct certification instructions
+	 * @param certHide hide the certification yes/no
+	 * @param certReviewTitle certification review title
+	 * @param certReviewMessage certification review message
+	 * @param certCompleteTitle certification complete title
+	 * @param certCompleteMessage certification complete message
+	 */
 	static public void editCertification(String enableCert, String certName, String certDesc, String certInstruct, String certHide, String certReviewTitle, String certReviewMessage, String certCompleteTitle, String certCompleteMessage) throws Exception
 	{
 		try
@@ -114,6 +126,19 @@ public class EditCertification extends CATAppCommon {
 		}
 	}
 	
+	/**
+	 * to be called after editCertification
+	 * @param hideQuestion hide question yes/no
+	 * @param questionText question text
+	 * @param responseType must be one of the following: "Learners can select only one answer", "Learners can select one or more answers", "Learners can select one answer from dropdown", "Learners can enter a number", "Learners can select a date", "Learners can enter text"
+	 * @param learnersExplanation require learners explanation
+	 * @param explainText explanation text
+	 * @param showExplain show explanation for variant answers yes/no
+	 * @param answerText1 supply answer 1 if one of the first 3 responseType is chosen
+	 * @param answerVariant1 is answer 1 variant
+	 * @param answerText2 supply answer 2 if one of the first 3 responseType is chosen
+	 * @param answerVariant2 is answer 2 variant
+	 */
 	static public void addCertificationQuestion(String hideQuestion, String questionText, String responseType, String learnersExplanation, String explainText, String showExplain, String answerText1, String answerVariant1, String answerText2, String answerVariant2) throws Exception
 	{
 		try
@@ -253,6 +278,22 @@ public class EditCertification extends CATAppCommon {
 		}
 	}
 	
+	/**
+	 * To be called after editCertification and maybe after addQuestion
+	 * @param questionPosition the question position that contains the answers to start follow up question
+	 * @param followPosition the follow up position if we are adding a second level of follow ups
+	 * @param answerPosition the answer position of where we are adding the follow up
+	 * @param hideQuestion hide question yes/no
+	 * @param questionText question text
+	 * @param responseType must be one of the following: "Learners can select only one answer", "Learners can select one or more answers", "Learners can select one answer from dropdown", "Learners can enter a number", "Learners can select a date", "Learners can enter text"
+	 * @param learnersExplanation require learners explanation
+	 * @param explainText explanation text
+	 * @param showExplain show explanation for variant answers yes/no
+	 * @param answerText1 supply answer 1 if one of the first 3 responseType is chosen
+	 * @param answerVariant1 is answer 1 variant
+	 * @param answerText2 supply answer 2 if one of the first 3 responseType is chosen
+	 * @param answerVariant2 is answer 2 variant
+	 */
 	static public void addFollowUp(String questionPosition, String followPosition, String answerPosition, String hideQuestion, String questionText, String responseType, String learnersExplanation, String explainText, String showExplain, String answerText1, String answerVariant1, String answerText2, String answerVariant2) throws Exception
 	{
 		try

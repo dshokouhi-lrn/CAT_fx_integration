@@ -8,6 +8,18 @@ import com.lrn.pp.utility.Log;
 
 public class EditTextTemplate extends CATAppCommon{
 	
+	/**
+	 * to be called after addPage or selectPage
+	 * @param layout either: "text-only", "dir-ltr, "dir-rtl", "dir-ttb", "dir-btt" or "dir-fsg"
+	 * @param pageTitle page title
+	 * @param showTitle show title yes/no
+	 * @param pageContent the content for the page
+	 * @param desktopImage show desktop image yes or blank for no
+	 * @param mobileImage show mobile image yes or blank for no
+	 * @param audioFile add audio yes or blank for no
+	 * @param imageDesc image description
+	 * @param altText alt text
+	 */
 	static public void editTextTemplate(String layout, String pageTitle, String showTitle, String pageContent, String desktopImage, String mobileImage, String audioFile, String imageDesc, String altText) throws Exception
 	{
 		try

@@ -11,6 +11,22 @@ import com.lrn.pp.utility.Log;
 
 public class EditCarouselTemplate extends CATAppCommon{
 	
+	/**
+	 * Must be called after addPage or selectPage
+	 * @param screenTitle the title for the first screen
+	 * @param screenText1 screen 1 text 1
+	 * @param screenText2 screen 1 text 2
+	 * @param screenText3 screen 1 text 3
+	 * @param screenText4 screen 1 text 4
+	 * @param screenAudio add audio to screen 1 yes or blank for no
+	 * @param screenAutoPlay numeric digits
+	 * @param screenDesktop add desktop image yes or blank for no
+	 * @param screenMobile add mobile image yes or blank for no
+	 * @param screenImageDesc image description
+	 * @param screenAltText alt text
+	 * @param carouselAutoPlay enable autoplay for the template yes/no
+	 * @param pageAudio add page audio yes/no
+	 */
 	static public void editCarouselTemplate(String screenTitle, String screenText1, String screenText2, String screenText3, String screenText4, String screenAudio, String screenAutoPlay, String screenDesktop, String screenMobile, String screenImageDesc, String screenAltText, String carouselAutoPlay, String pageAudio) throws Exception
 	{
 		try
@@ -188,6 +204,21 @@ public class EditCarouselTemplate extends CATAppCommon{
      }
 	}
 	
+	/**
+	 * to be called after editCarouselTemplate
+	 * @param screenNumber screen number
+ 	 * @param screenText1 screen 1 text 1
+	 * @param screenText2 screen 1 text 2
+	 * @param screenText3 screen 1 text 3
+	 * @param screenText4 screen 1 text 4
+	 * @param screenAudio add audio to screen 1 yes or blank for no
+	 * @param screenAutoPlay numeric digits
+	 * @param screenDesktop add desktop image yes or blank for no
+	 * @param screenMobile add mobile image yes or blank for no
+	 * @param screenImageDesc image description
+	 * @param screenAltText alt text
+	 * @throws Exception
+	 */
 	static public void addCarouselScreen(int screenNumber, String screenTitle, String screenText1, String screenText2, String screenText3, String screenText4, String screenAudio, String screenAutoPlay, String screenDesktop, String screenMobile, String screenImageDesc, String screenAltText) throws Exception
 	{
 		try

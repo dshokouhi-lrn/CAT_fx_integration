@@ -9,6 +9,48 @@ import com.lrn.pp.utility.Log;
 
 public class EditSAQ extends CATAppCommon{
 	
+	/**
+	 * to be called after addPage or selectPage
+	 * @param pageTitle page title
+	 * @param showTitle show title yes/no
+	 * @param typeSAQ "Text SAQ" or "Graphical SAQ"
+	 * @param layoutSAQ "Left To Right" or "Right To Left"
+	 * @param questionText the question text
+	 * @param questionType "Multiple Choice" or "Check All"
+	 * @param correctAnswer is first answer correct
+	 * @param answerText first answer text
+	 * @param answerImage first answer image yes or blank for no
+	 * @param answerDesktopImage first answer desktop image yes or blank for no
+	 * @param answerImageDesc first answer image description
+	 * @param answerAltText first answer alt text
+	 * @param retryNumber number of retry attempts, leave blank to not configured
+	 * @param retryTitle retry title, leave blank if not configured
+	 * @param retryMessage retry message text, leave blank if not configured
+	 * @param retryButton retry button text, leave blank if not configured
+	 * @param feedbackOption "single" or "multiple"
+	 * @param singleFeedback feedback text for single feedback
+	 * @param singleImage single feedback image yes or blank for no
+	 * @param singleImageDesc single feedback image description
+	 * @param singleAltText single feedback alt text
+	 * @param correctTitle multiple feedback correct tile
+	 * @param correctContent multiple feedback correct text
+	 * @param correctImage multiple feedback image yes or blank for no
+	 * @param correctImageDesc multiple feedback image description
+	 * @param correctAltText  multiple feedback alt text
+	 * @param incorrectTitle multiple feedback  incorrect title
+	 * @param incorrectContent multiple feedback incorrect text
+	 * @param incorrectImage multiple feedback incorrect image yes/no
+	 * @param incorrectImageDesc multiple feedback image description
+	 * @param incorrectAltText multiple feedback alt text
+	 * @param desktopImage yes or blank for no
+	 * @param desktopImageDesc desktop image description
+	 * @param desktopAltText desktop alt text
+	 * @param mobileImage yes or blank for no
+	 * @param mobileImageDesc mobile image description
+	 * @param mobileAltText mobile alt text
+	 * @param pageAudio add page audio yes or blank for no
+	 * @param backgroundImage add background image yes or blank for no
+	 */
 	static public void editSAQ(String pageTitle, String showTitle, String typeSAQ, String layoutSAQ, String questionText, String questionType, String correctAnswer, String answerText, String answerImage, String answerDesktopImage, String answerImageDesc, String answerAltText, String retryNumber, String retryTitle, String retryMessage, String retryButton, String feedbackOption, String singleFeedback, String singleImage, String singleImageDesc, String singleAltText, String correctTitle, String correctContent, String correctImage, String correctImageDesc, String correctAltText, String incorrectTitle, String incorrectContent, String incorrectImage, String incorrectImageDesc, String incorrectAltText, String desktopImage, String desktopImageDesc, String desktopAltText, String mobileImage, String mobileImageDesc, String mobileAltText, String pageAudio, String backgroundImage) throws Exception
 	{
 		try
@@ -236,6 +278,17 @@ public class EditSAQ extends CATAppCommon{
 		
 	}
 	
+	
+	/**
+	 * to be called after selectPage or editSaq
+	 * @param answerCount count of answer options
+	 * @param correctAnswer is  answer correct
+	 * @param answerText  answer text
+	 * @param answerImage  answer image yes or blank for no
+	 * @param answerDesktopImage  answer desktop image yes or blank for no
+	 * @param answerImageDesc  answer image description
+	 * @param answerAltText  answer alt text
+	 */
 	static public void addAnswerOption(int answerCount, String correctAnswer, String answerText, String answerImage, String answerDesktopImage, String answerImageDesc, String answerAltText) throws Exception
 	{
 		try

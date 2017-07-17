@@ -11,7 +11,6 @@ public class RevertCourse extends CATAppCommon{
 	/**
 	 * Must be called after changes have been made and course is being edited otherwise it will fail, course needs to be checked out as well
 	 */
-	
 	static public void revertCourse() throws Exception
 	{
 		try

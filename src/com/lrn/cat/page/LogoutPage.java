@@ -8,7 +8,6 @@ public class LogoutPage extends CATAppCommon{
 	/**
 	 * can be called at any time after logOn, course window is closed as well
 	 */
-	
 	static public void logout() throws Exception
     {
            try

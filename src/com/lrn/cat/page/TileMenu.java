@@ -12,6 +12,21 @@ import com.lrn.pp.utility.Log;
 
 public class TileMenu extends CATAppCommon{
 	
+	/**
+	 * Must be called when user is on create your course tab, wait until all lessons, KC and Cert have been added before configuring
+	 * @param enableTileMenu yes/no
+	 * @param tilesPerRow1 on less than 2 or greater than 5
+	 * @param welcomeText new welcome text, leave blank for default
+	 * @param enableActive enable lessons in progress message yes/no
+	 * @param activeText new active lesson text, leave blank for default
+	 * @param enableKC enable KC message yes/no
+	 * @param kcText new KC text, leave blank for default
+	 * @param enableCert enable cert message yes/no
+	 * @param certText new cert text, leave blank for default
+	 * @param completeText new completion text, leave blank for default
+	 * @param lessonNavigation "exploratory" or "linear"
+	 * @param jumpToLesson yes/no
+	 */
 	static public void configureTileMenu(String enableTileMenu, int tilesPerRow1, String welcomeText, String enableActive, String activeText, String enableKC, String kcText, String enableCert, String certText, String completeText, String lessonNavigation, String jumpToLesson) throws Exception
 	{
 		try
@@ -286,7 +301,16 @@ public class TileMenu extends CATAppCommon{
 }
 
 	
-	
+	/**
+	 * to be called after configuretileMenu
+	 * @param tilePosition increase count by 2 starting at 2
+	 * @param tileDesc tile description
+	 * @param tileType either "solid", "fifty" or "full"
+	 * @param tileImage add image yes/no
+	 * @param tileImageDesc tile image description
+	 * @param tileAltText tile alt text
+	 * @param tileColor either "light" or "dark"
+	 */
 	static public void tileConfiguration(String tilePosition, String tileDesc, String tileType, String tileImage, String tileImageDesc, String tileAltText, String tileColor) throws Exception
 	{
 		try

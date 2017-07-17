@@ -11,6 +11,16 @@ import com.lrn.pp.utility.Log;
 
 public class CustomizerRole extends CATAppCommon{
 	
+
+	/**
+	 * Get Started tab edits for customizer role, at the end will navigate user to create your course tab, leave the descriptions blank as customizer cannot edit them
+	 * @param getStartedText leave blank for now
+	 * @param Description leave blank for now
+	 * @param longDesc leave blank for now
+	 * @param hasAudio YES/NO
+	 * @param courseDuration numeric only
+	 * @param courseObjective leave blank for now
+	 */
 	static public void customizerGetStarted(String getStartedText, String Description, String longDesc, String hasAudio, String courseDuration, String courseObjective) throws Exception
 	{
 		try
@@ -92,6 +102,10 @@ public class CustomizerRole extends CATAppCommon{
 		}
 	}
 	
+	/**
+	 * custom add page method for customizer role as they can only add 3 templates
+	 * @param template must be either "text", "sidebar" or "video"
+	 */
 	static public void customizerAddPage(String template) throws Exception
 	{
 		try
@@ -144,6 +158,9 @@ public class CustomizerRole extends CATAppCommon{
 		}
 	}
 	
+	/**
+	 * Called at the end of the customizer role test
+	 */
 	static public void saveAndExit() throws Exception
 	{
 		try

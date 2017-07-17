@@ -7,6 +7,12 @@ import com.lrn.pp.utility.Log;
 
 public class CourseTree extends CATAppCommon{
 
+	/**
+	 * to be called when user is on create your course tab
+	 * @param lesson the lesson position for the page, if landing page is present increase by 1
+	 * @param topic the topic position for the page
+	 * @param page the position of the page you want to select
+	 */
 	static public void selectPage(String lesson, String topic, String page) throws Exception
 	{
 		try

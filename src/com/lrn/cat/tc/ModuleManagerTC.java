@@ -12,7 +12,7 @@ public class ModuleManagerTC extends ModuleManager
 		String course = "ADP028";
 		getModuleManager();
 		getSearchModule(course);
-		copyToEditLibrary(course, "library");
+		//copyToEditLibrary(course, "library");
 		editFluidxCourse(course);
 	}
 	

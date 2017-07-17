@@ -13,6 +13,12 @@ import com.lrn.pp.utility.Log;
 
 public class RenameNode extends CATAppCommon {
 
+	/**
+	 * Must be called while user is on create your course tab
+	 * @param lesson lesson position you want to rename
+	 * @param topic topic position you want to rename
+	 * @param nodeText new text for the node
+	 */
 	static public void copyNode(String lesson, String topic, String nodeText) throws Exception
 	{
 		try

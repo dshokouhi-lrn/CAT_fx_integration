@@ -19,7 +19,6 @@ public class AdvancedTab extends CATAppCommon{
 	 * @param hideFooter hide the footer yes/no
 	 * @param learnerRetry how many retry attempts should the user take (can not be higher than 5)
 	 */
-	
 	static public void setupAdvancedFeatures(String lrnLogo, String progressBar, String pageNumbers, String resourcesMenu, String pageLock, String hideFooter, String learnerRetry) throws Exception
 	{
 		try
@@ -103,7 +102,6 @@ public class AdvancedTab extends CATAppCommon{
 	 * @param printCertLabel what is the print certificate label
 	 * 
 	 */
-	
 	static public void endOfCourseConfiguration(String printCert, String printCertLabel) throws Exception
 	{
 		try
@@ -161,7 +159,6 @@ public class AdvancedTab extends CATAppCommon{
 	 * @param courseWidth what is the custom course width, must be supplied of custom is supplied for fullOrCustom
 	 * @param courseHeight what is the custom course height, must be supplied of custom is supplied for fullOrCustom
 	 */
-	
 	static public void courseWindowSize(String windowSize, String fullorCustom, String courseWidth, String courseHeight) throws Exception
 	{
 		try

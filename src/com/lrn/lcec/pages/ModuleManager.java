@@ -1,6 +1,5 @@
 package com.lrn.lcec.pages;
 
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -39,7 +38,7 @@ public class ModuleManager extends CATAppCommon
 		
 		Log.startTestCase("searching for course: " + SearchModule);
 		Thread.sleep(5000);
-		String NextButton="//a[contains(text(),'next')]";
+		//String NextButton="//a[contains(text(),'next')]";
 		String PreviesButton="//span[contains(text(),'prev')]";
 		getWaitForElementPresent(PreviesButton,1000);
 		
@@ -117,11 +116,19 @@ public class ModuleManager extends CATAppCommon
 					System.out.println("label for add to site is: " + addSite);
 					
 					//currently this condition is not working
-					if (addSite.equalsIgnoreCase("Add to Our Site"))
+					if (addSite.contains("Add to Our Site"))
 					{
-						clickIdentifierXpath(".//*[@id='module_" + course + "']/table[1]/tbody[2]/tr[1]/td[4]/div/span/span[2]");
-						Log.info("attempted to click on add to site button");
+						clickIdentifierXpath(".//*[@id='module_" + course + "']/table[1]/tbody[2]/tr[1]/td[4]/div/span/span[2]/span");
+						//Log.info("attempted to click on add to site button");
+						System.out.println("attempted to click on add to site button");
 					}
+					
+					Thread.sleep(5000);
+					
+					boolean copy = driver.findElement(By.xpath(".//*[@id='course_version_" + course + "']/td[1]/div[1]/div[@class='entry library selected']/div[1]/div[1]/div[2]/div[1]/span[2]/span/button")).isDisplayed();
+					
+					if (copy)
+						clickIdentifierXpath(".//*[@id='course_version_" + course + "']/td[1]/div[1]/div[@class='entry library selected']/div[1]/div[1]/div[2]/div[1]/span[2]/span/button");
 					
 					Thread.sleep(5000);
 					
@@ -130,7 +137,7 @@ public class ModuleManager extends CATAppCommon
 					
 					Log.pass("clicked on the edit button for the course");
 					
-					Thread.sleep(2000);
+					Thread.sleep(10000);
 					
 					Set<String> catWindow = driver.getWindowHandles();
 					System.out.println("count of windows open is "  +catWindow.size());
@@ -152,19 +159,19 @@ public class ModuleManager extends CATAppCommon
 					//LogerData.info("Searching Module are not same");
 				}
 			}
-	}
+		}
 	
-	catch(Exception e){  
-        Log.fail("Failed to edit course in MM");
-        e.printStackTrace();
-        throw e;                                        
- } catch(AssertionError e)
- {
-        Log.fail("Failed to edit course in MM");
-        e.printStackTrace();
-        throw e;
-
- }
+		catch(Exception e){  
+	        Log.fail("Failed to edit course in MM");
+	        e.printStackTrace();
+	        throw e;                                        
+	 } catch(AssertionError e)
+	 {
+	        Log.fail("Failed to edit course in MM");
+	        e.printStackTrace();
+	        throw e;
+	
+	 }
 	}
 	
 	static public void copyToEditLibrary(String course, String type) throws Exception
@@ -216,6 +223,10 @@ public class ModuleManager extends CATAppCommon
 		
 	}
 	
+	/**
+	 * To be called after saveAndExit or getSearchModule
+	 * @param course the base catalog ID for the course (ex: ADP028)
+	 */
 	static public void publishCourse(String course) throws Exception
 	{
 		try

@@ -7,6 +7,9 @@ import com.lrn.pp.utility.Log;
 
 public class PublishCourse extends CATAppCommon {
 	
+	/**
+	 * must be called when editing/creating a course
+	 */
 	static public void publishCourse() throws Exception
 	{
 		try

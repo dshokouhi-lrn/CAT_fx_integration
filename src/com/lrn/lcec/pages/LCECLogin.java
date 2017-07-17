@@ -13,6 +13,12 @@ public class LCECLogin extends  CATAppCommon{
     //user after log in locater for validation 
   //  private String verifyLocater="//a[contains(text(),'Logout')]";
     String dueDate_xpath="//a[text()='Due:']";
+    
+    /**
+     * Logs into LCEC
+     * @param username the user name to log in
+     * @param password the password to log in
+     */
     public  void getLoginLCEC(String username,String password) throws Exception
     {
     	Log.startTestCase("start logging into LCEC");

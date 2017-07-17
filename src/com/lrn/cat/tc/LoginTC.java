@@ -8,17 +8,9 @@ import com.lrn.cat.page.LoginPage;
 
 public class LoginTC extends LoginPage{
 
-
 	@Test
 	void CatLogicTC() throws Exception
 	{
-
 		login("admin", "admin");
-
-	}
-	
-	
-	
+	}	
 }
-
-
