@@ -67,7 +67,7 @@ public class CATAppCommon extends WebAppCommon {
 		try{
 		//	makeDirectory();
 			launchBrowser(browser);
-			openURL(configProperties.getProperty("pptUrl"));
+			openURL(configProperties.getProperty("pptUrl1"));
 		}
 		catch(Exception e){
 			throw e;

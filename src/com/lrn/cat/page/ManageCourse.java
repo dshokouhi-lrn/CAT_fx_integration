@@ -5,6 +5,11 @@ import com.lrn.pp.utility.Log;
 
 public class ManageCourse extends CATAppCommon{
 	
+	/**
+	 * Can be called at any time after logOn
+	 * @param courseName provide the full catalog ID as the script will interact with the first row only
+	 * @param searchType must be one of the following: "Catalog ID" (can be left blank as this is default value in application) or "Course Name"
+	 */
 	static public void searchManageCourse(String courseName, String searchType) throws Exception
 	{
 		try
@@ -41,6 +46,11 @@ public class ManageCourse extends CATAppCommon{
 
      }
 	}
+	/**
+	 * Must be called after searchManageCourse
+	 * @param coursePosition if you searched for base catalog ID you must provide the row position, if left blank will assume first row
+	 * 
+	 */
 	
 	static public void cloneCourse(String coursePosition) throws Exception
 	{

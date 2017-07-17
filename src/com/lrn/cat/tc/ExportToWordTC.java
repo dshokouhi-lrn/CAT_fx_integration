@@ -9,7 +9,7 @@ public class ExportToWordTC extends ExportToWord{
 	@Test
 	void CatExportToWord() throws Exception
 	{
-		exportToWordCourse("DAN799", "", "", "", "", "", "", "");
+		exportToWordCourse("DAN736", "", "", "", "", "", "", "");
 	}
 
 }

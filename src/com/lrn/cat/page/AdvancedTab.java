@@ -9,6 +9,17 @@ import com.lrn.pp.utility.Log;
 
 public class AdvancedTab extends CATAppCommon{
 	
+	/** This method needs to be called after createCourse or editGetStarted as the user needs to be inside a course
+	 * 
+	 * @param lrnLogo show the LRN logo yes/no
+	 * @param progressBar show the progress bar yes/no
+	 * @param pageNumbers show page numbers yes/no
+	 * @param resourcesMenu show resources menu yes/no
+	 * @param pageLock show locked pages yes/no
+	 * @param hideFooter hide the footer yes/no
+	 * @param learnerRetry how many retry attempts should the user take (can not be higher than 5)
+	 */
+	
 	static public void setupAdvancedFeatures(String lrnLogo, String progressBar, String pageNumbers, String resourcesMenu, String pageLock, String hideFooter, String learnerRetry) throws Exception
 	{
 		try
@@ -20,7 +31,7 @@ public class AdvancedTab extends CATAppCommon{
 			
 			Thread.sleep(1000);
 			
-			clickIdentifierXpath(".//*[@id='menuTabs']/ul/li[8]/p");
+			clickIdentifierXpath(".//*[@id='menuTabs']/ul/li[8]");
 			
 			Thread.sleep(3000);
 			
@@ -86,6 +97,13 @@ public class AdvancedTab extends CATAppCommon{
      }
 	}
 	
+	/**
+	 * This method is to be called after setupAdvancedFeatures
+	 * @param printCert show print certificate yes/no
+	 * @param printCertLabel what is the print certificate label
+	 * 
+	 */
+	
 	static public void endOfCourseConfiguration(String printCert, String printCertLabel) throws Exception
 	{
 		try
@@ -135,6 +153,14 @@ public class AdvancedTab extends CATAppCommon{
 
      }
 	}
+	
+	/**
+	 * This method is to be called after setupAdvancedFeatures
+	 * @param windowSize customize the window size yes/no
+	 * @param fullorCustom full/custom size (full being full screen) must be supplied if windowSize is set to yes
+	 * @param courseWidth what is the custom course width, must be supplied of custom is supplied for fullOrCustom
+	 * @param courseHeight what is the custom course height, must be supplied of custom is supplied for fullOrCustom
+	 */
 	
 	static public void courseWindowSize(String windowSize, String fullorCustom, String courseWidth, String courseHeight) throws Exception
 	{

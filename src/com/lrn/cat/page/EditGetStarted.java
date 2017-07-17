@@ -10,6 +10,15 @@ import com.lrn.pp.utility.Log;
 
 public class EditGetStarted extends CATAppCommon {
 	
+	/**
+	 * Must be called after searchCourse, make sure searchCourse is given full catalog ID as first course will be selected
+	 * @param CourseTitle provide the new course title
+	 * @param Description provide the new course description
+	 * @param Mobile yes/no
+	 * @param Video yes/no
+	 * @param Audio yes/no
+	 * @param CourseDuration supply the amount of time in minutes
+	 */
 	static public void editGetStartedPage(String CourseTitle, String Description, String Mobile, String Video, String Audio, String CourseDuration) throws Exception {
 		
 		try{

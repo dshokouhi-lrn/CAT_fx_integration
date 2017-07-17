@@ -10,6 +10,24 @@ import com.lrn.pp.utility.Log;
 
 public class CreateCourse extends CATAppCommon {
 	
+	/**
+	 * Must be called after logOn or cloneCourse
+	 * @param clonedCourse leave blank if you did not call cloneCourse
+	 * @param CourseTitle provide the course title here
+	 * @param Description provide course description
+	 * @param BaseCat provide the base catalog id here
+	 * @param CourseType must be one of the following: "Custom" or "Library"
+	 * @param CourseFormat must be one of the following: "Awareness Vignette", "Experiential Learning", "Foundational", "Refresher", "Standalone Certification"
+	 * @param CourseProgression  must be any letter of US alphabet capitalized (ex: "A" or "B")
+	 * @param CourseTopic must be one of the course topics in list, must be provided if CourseType is Library (ex: "HOW" or "Fraud")
+	 * @param Site must be one of the partners name in the list, must be provided if CourseType is custom
+	 * @param Partner must be one of the partners name in the list, must be provided if CourseType is custom
+	 * @param Language must be any language
+	 * @param Mobile must be yes/no
+	 * @param Video must be yes/no
+	 * @param Audio must be yes/no
+	 * @param CourseDuration must be a number, does not need to be provided
+	 */
 	static public void createCourse(String clonedCourse, String CourseTitle, String Description, String BaseCat, String CourseType, String CourseFormat, String CourseProgression, String CourseTopic, String Site, String Partner, String Language, String Mobile, String Video, String Audio, String CourseDuration) throws Exception {
 		
 		try{

@@ -5,6 +5,13 @@ import com.lrn.pp.utility.Log;
 
 public class SearchCourse extends CATAppCommon{
 	
+	/**
+	 * Can be called any time after logOn
+	 * @param courseName provide the full catalog ID of the course you wish to interact
+	 * @param courseContent must be one of the following: "Catalog ID" (can be left blank as this is default value in application), "Course Content", "Course Information", "Bulletins", "Tags" or "Videos"
+	 * @param courseType must be one of the following: "All" (can be left blank as this is default value in application), "Library" or "Custom"
+	 * 
+	 */
 	
 	static public void searchcourse(String courseName, String courseContent, String courseType) throws Exception
     {
@@ -45,6 +52,11 @@ public class SearchCourse extends CATAppCommon{
 
            }
     }
+	
+	/**
+	 * Must be called after searchCourse with full catalog ID as it will click on the first delete icon it see's
+	 * 
+	 */
 	
 	static public void deleteCourse() throws Exception
 	{

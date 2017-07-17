@@ -12,6 +12,9 @@ import com.lrn.pp.utility.Log;
 
 public class ReorderNodes extends CATAppCommon{
 	
+	/**
+	 * Must be called after editGetStarted or while script is on create your course tab
+	 */
 	static public void collapseLessons() throws Exception
 	{
 		try
@@ -57,6 +60,12 @@ public class ReorderNodes extends CATAppCommon{
      }
 	}
 	
+	/**
+	 * Must be called after collapseLesson
+	 * @param fromLesson provide the location of the lesson we are dragging (note: if landing page is present increase number by 1)
+	 * @param toLesson provide the location where the fromLesson will be dropped to (note: if landing page is present increase number by 1)
+	 */
+	
 	static public void dragAndDropLesson(String fromLesson, String toLesson) throws Exception
 	{
 		try
@@ -95,6 +104,15 @@ public class ReorderNodes extends CATAppCommon{
 
      }
 	}
+	
+	/**
+	 * Must be called while user is on create your course tab or after editGetStarted
+	 * @param fromTopic the position of the topic we are grabbing
+	 * @param toTopic the position of the topic we are dropping fromTopic to
+	 * @param fromLesson the lesson position for fromTopic (note: if landing page is present increase number by 1)
+	 * @param toLesson the lesson position for toTopic (note: if landing page is present increase number by 1)
+	 * @throws Exception
+	 */
 	
 	static public void dragAndDropTopic(String fromTopic, String toTopic, String fromLesson, String toLesson) throws Exception
 	{
@@ -135,6 +153,14 @@ public class ReorderNodes extends CATAppCommon{
      }
 	}
 	
+	/**
+	 * Must be called after editGetStarted or while user is on create your course tab
+	 * @param fromTopic position of topic we are moving
+	 * @param toTopic position of topic we are dropping fromTopic to
+	 * @param fromLesson position of lesson for fromTopic (note: if landing page is present increase number by 1)
+	 * @param toLesson position of lesson for toTopic (note: if landing page is present increase number by 1)
+	 */
+	
 	static public void dragTopicToDropLesson(String fromTopic, String toTopic, String fromLesson, String toLesson) throws Exception
 	{
 		try
@@ -173,6 +199,16 @@ public class ReorderNodes extends CATAppCommon{
      }
 	}
 	
+	/**
+	 * Must be called after editGetStarted or while user is on create your course tab
+	 * @param fromTopic position of topic where we are grabbing the fromPage from
+	 * @param toTopic position of topic where we are dropping the fromPage to
+	 * @param fromLesson position of lesson where we are grabbing fromPage (note: if landing page is present increase number by 1)
+	 * @param toLesson position of lesson where we are dropping fromPage to (note: if landing page is present increase number by 1)
+	 * @param fromPage position of the page are moving
+	 * @param toPage position of the page we are dropping fromPage to
+	 */
+	
 	static public void dragPageToDropTopic(String fromTopic, String toTopic, String fromLesson, String toLesson, String fromPage, String toPage) throws Exception
 	{
 		try
@@ -210,6 +246,16 @@ public class ReorderNodes extends CATAppCommon{
 
      }
 	}
+	
+	/**
+	 * Must be called after editGetStarted or while user is on create your course tab
+	 * @param fromTopic position of topic where we are grabbing the fromPage from
+	 * @param toTopic position of topic where we are dropping the fromPage to
+	 * @param fromLesson position of lesson where we are grabbing fromPage (note: if landing page is present increase number by 1)
+	 * @param toLesson position of lesson where we are dropping fromPage to (note: if landing page is present increase number by 1)
+	 * @param fromPage position of the page are moving
+	 * @param toPage position of the page we are dropping fromPage to
+	 */
 	
 	static public void dragPageToDropLesson(String fromTopic, String toTopic, String fromLesson, String toLesson, String fromPage, String toPage) throws Exception
 	{

@@ -11,6 +11,11 @@ import com.lrn.pp.utility.Log;
 
 public class PreviewCourse extends CATAppCommon{
 	
+	/**
+	 * Must be called during course creation or editing
+	 * 
+	 */
+	
 	static public void previewCourse() throws Exception
 	{
 		try
@@ -33,9 +38,21 @@ public class PreviewCourse extends CATAppCommon{
 			Thread.sleep(2000);
 			String Mainwindow = ite1.next(); // window id of main CAT window
 			String courseWindow1 = ite1.next();
+			String thirdWindow = null;
+			
+			int windowCount = courseWindow.size();
+			
 			Thread.sleep(30000);
-	        
-			driver.switchTo().window(courseWindow1); //Switch to course window
+        
+			if (windowCount == 3)
+			{
+				thirdWindow = ite1.next();
+				driver.switchTo().window(thirdWindow);
+			}
+
+			else
+				driver.switchTo().window(courseWindow1); //Switch to course window
+			
 			Log.info("switched to course window");
 			Thread.sleep(5000);
 			
@@ -48,7 +65,12 @@ public class PreviewCourse extends CATAppCommon{
 			//driver.close();
 			
 			//Log.info("closed course window");
-			driver.switchTo().window(Mainwindow);
+			
+			if (windowCount ==3)
+				driver.switchTo().window(courseWindow1);
+			else
+				driver.switchTo().window(Mainwindow);
+			
 			Log.pass("finised preview and switched back to CAT");
 			
 
