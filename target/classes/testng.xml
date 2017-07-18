@@ -80,7 +80,6 @@
 			<class name="com.lrn.cat.tc.LCECLogoutTC" />
 			<!-- END customizer flow -->
 			
-			
 			<!-- test flow -->
 			<!-- <class name="com.lrn.cat.tc.LoginTC" />
 			<class name= "com.lrn.cat.tc.CreateCourseTC" />
