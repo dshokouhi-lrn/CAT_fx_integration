@@ -11,5 +11,4 @@ public class ExportToWordTC extends ExportToWord{
 	{
 		exportToWordCourse("DAN736", "", "", "", "", "", "", "");
 	}
-
 }
