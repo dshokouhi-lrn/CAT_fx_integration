@@ -9,9 +9,9 @@ public class AfterSaveAndExitTC extends ModuleManager{
 	@Test
 	public void aferSaveAndExit() throws Exception
 	{
-		String SearchModule = "ADP028";
-		getWaitForElementPresent("//*[@id='" + SearchModule + "']/div[2]/div/div", 100);
-		clickIdentifierXpath("//*[@id='" + SearchModule + "']/div[2]/div/div");
-		publishCourse(SearchModule);
+		//String SearchModule = "ADP028";
+		getWaitForElementPresent("//*[@id='" + configProperties.getProperty("searchModule") + "']/div[2]/div/div", 100);
+		clickIdentifierXpath("//*[@id='" + configProperties.getProperty("searchModule") + "']/div[2]/div/div");
+		publishCourse(configProperties.getProperty("searchModule"));
 	}
 }

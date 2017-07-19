@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="527382" started-at="2017-07-17T18:48:49Z" finished-at="2017-07-17T18:57:36Z">
+  <suite name="Suite" duration-ms="389891" started-at="2017-07-19T17:02:39Z" finished-at="2017-07-19T17:09:09Z">
     <groups>
     </groups>
-    <test name="SanityCheck" duration-ms="527382" started-at="2017-07-17T18:48:49Z" finished-at="2017-07-17T18:57:36Z">
+    <test name="SanityCheck" duration-ms="389891" started-at="2017-07-19T17:02:39Z" finished-at="2017-07-19T17:09:09Z">
       <class name="com.lrn.cat.tc.CustomizerRoleTC">
-        <test-method status="PASS" signature="CatCustomizerRole()[pri:0, instance:com.lrn.cat.tc.CustomizerRoleTC@4ae82894]" name="CatCustomizerRole" duration-ms="383019" started-at="2017-07-17T11:50:46Z" finished-at="2017-07-17T11:57:09Z">
+        <test-method status="PASS" signature="CatCustomizerRole()[pri:0, instance:com.lrn.cat.tc.CustomizerRoleTC@4ae82894]" name="CatCustomizerRole" duration-ms="215764" started-at="2017-07-19T10:05:03Z" finished-at="2017-07-19T10:08:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CatCustomizerRole -->
-        <test-method status="PASS" signature="updateResult(org.testng.ITestResult)[pri:0, instance:com.lrn.cat.tc.CustomizerRoleTC@4ae82894]" name="updateResult" is-config="true" duration-ms="51" started-at="2017-07-17T11:57:09Z" finished-at="2017-07-17T11:57:09Z">
+        <test-method status="PASS" signature="updateResult(org.testng.ITestResult)[pri:0, instance:com.lrn.cat.tc.CustomizerRoleTC@4ae82894]" name="updateResult" is-config="true" duration-ms="71" started-at="2017-07-19T10:08:38Z" finished-at="2017-07-19T10:08:38Z">
           <params>
             <param index="0">
               <value>
@@ -24,11 +24,11 @@
         </test-method> <!-- updateResult -->
       </class> <!-- com.lrn.cat.tc.CustomizerRoleTC -->
       <class name="com.lrn.cat.tc.ModuleManagerTC">
-        <test-method status="PASS" signature="searchModule()[pri:0, instance:com.lrn.cat.tc.ModuleManagerTC@4516af24]" name="searchModule" duration-ms="106018" started-at="2017-07-17T11:48:59Z" finished-at="2017-07-17T11:50:46Z">
+        <test-method status="PASS" signature="searchModule()[pri:0, instance:com.lrn.cat.tc.ModuleManagerTC@4516af24]" name="searchModule" duration-ms="130521" started-at="2017-07-19T10:02:52Z" finished-at="2017-07-19T10:05:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchModule -->
-        <test-method status="PASS" signature="updateResult(org.testng.ITestResult)[pri:0, instance:com.lrn.cat.tc.ModuleManagerTC@4516af24]" name="updateResult" is-config="true" duration-ms="76" started-at="2017-07-17T11:50:46Z" finished-at="2017-07-17T11:50:46Z">
+        <test-method status="PASS" signature="updateResult(org.testng.ITestResult)[pri:0, instance:com.lrn.cat.tc.ModuleManagerTC@4516af24]" name="updateResult" is-config="true" duration-ms="128" started-at="2017-07-19T10:05:02Z" finished-at="2017-07-19T10:05:03Z">
           <params>
             <param index="0">
               <value>
@@ -41,11 +41,11 @@
         </test-method> <!-- updateResult -->
       </class> <!-- com.lrn.cat.tc.ModuleManagerTC -->
       <class name="com.lrn.cat.tc.LCECLogoutTC">
-        <test-method status="PASS" signature="CatLCECLogout()[pri:0, instance:com.lrn.cat.tc.LCECLogoutTC@543788f3]" name="CatLCECLogout" duration-ms="3755" started-at="2017-07-17T11:57:28Z" finished-at="2017-07-17T11:57:32Z">
+        <test-method status="PASS" signature="CatLCECLogout()[pri:0, instance:com.lrn.cat.tc.LCECLogoutTC@543788f3]" name="CatLCECLogout" duration-ms="4382" started-at="2017-07-19T10:08:58Z" finished-at="2017-07-19T10:09:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CatLCECLogout -->
-        <test-method status="PASS" signature="updateResult(org.testng.ITestResult)[pri:0, instance:com.lrn.cat.tc.LCECLogoutTC@543788f3]" name="updateResult" is-config="true" duration-ms="26" started-at="2017-07-17T11:57:32Z" finished-at="2017-07-17T11:57:32Z">
+        <test-method status="PASS" signature="updateResult(org.testng.ITestResult)[pri:0, instance:com.lrn.cat.tc.LCECLogoutTC@543788f3]" name="updateResult" is-config="true" duration-ms="38" started-at="2017-07-19T10:09:03Z" finished-at="2017-07-19T10:09:03Z">
           <params>
             <param index="0">
               <value>
@@ -57,12 +57,44 @@
           </reporter-output>
         </test-method> <!-- updateResult -->
       </class> <!-- com.lrn.cat.tc.LCECLogoutTC -->
+      <class name="com.lrn.cat.tc.LCECLoginTC">
+        <test-method status="PASS" signature="startWebDriver(java.lang.String)[pri:0, instance:com.lrn.cat.tc.LCECLoginTC@b3d7190]" name="startWebDriver" is-config="true" duration-ms="7677" started-at="2017-07-19T10:02:39Z" finished-at="2017-07-19T10:02:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWebDriver -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.lrn.cat.tc.LCECLoginTC@b3d7190]" name="login" duration-ms="5089" started-at="2017-07-19T10:02:46Z" finished-at="2017-07-19T10:02:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="updateResult(org.testng.ITestResult)[pri:0, instance:com.lrn.cat.tc.LCECLoginTC@b3d7190]" name="updateResult" is-config="true" duration-ms="481" started-at="2017-07-19T10:02:51Z" finished-at="2017-07-19T10:02:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=LCECLoginTC.login()[pri:0, instance:com.lrn.cat.tc.LCECLoginTC@b3d7190] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateResult -->
+        <test-method status="PASS" signature="endClass()[pri:0, instance:com.lrn.cat.tc.LCECLoginTC@b3d7190]" name="endClass" is-config="true" duration-ms="5927" started-at="2017-07-19T10:09:03Z" finished-at="2017-07-19T10:09:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endClass -->
+      </class> <!-- com.lrn.cat.tc.LCECLoginTC -->
       <class name="com.lrn.cat.tc.AfterSaveAndExitTC">
-        <test-method status="PASS" signature="aferSaveAndExit()[pri:0, instance:com.lrn.cat.tc.AfterSaveAndExitTC@587c290d]" name="aferSaveAndExit" duration-ms="19583" started-at="2017-07-17T11:57:09Z" finished-at="2017-07-17T11:57:28Z">
+        <test-method status="PASS" signature="aferSaveAndExit()[pri:0, instance:com.lrn.cat.tc.AfterSaveAndExitTC@587c290d]" name="aferSaveAndExit" duration-ms="19745" started-at="2017-07-19T10:08:38Z" finished-at="2017-07-19T10:08:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aferSaveAndExit -->
-        <test-method status="PASS" signature="updateResult(org.testng.ITestResult)[pri:0, instance:com.lrn.cat.tc.AfterSaveAndExitTC@587c290d]" name="updateResult" is-config="true" duration-ms="31" started-at="2017-07-17T11:57:28Z" finished-at="2017-07-17T11:57:28Z">
+        <test-method status="PASS" signature="updateResult(org.testng.ITestResult)[pri:0, instance:com.lrn.cat.tc.AfterSaveAndExitTC@587c290d]" name="updateResult" is-config="true" duration-ms="34" started-at="2017-07-19T10:08:58Z" finished-at="2017-07-19T10:08:58Z">
           <params>
             <param index="0">
               <value>
@@ -74,38 +106,6 @@
           </reporter-output>
         </test-method> <!-- updateResult -->
       </class> <!-- com.lrn.cat.tc.AfterSaveAndExitTC -->
-      <class name="com.lrn.cat.tc.LCECLoginTC">
-        <test-method status="PASS" signature="startWebDriver(java.lang.String)[pri:0, instance:com.lrn.cat.tc.LCECLoginTC@b3d7190]" name="startWebDriver" is-config="true" duration-ms="3798" started-at="2017-07-17T11:48:49Z" finished-at="2017-07-17T11:48:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startWebDriver -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.lrn.cat.tc.LCECLoginTC@b3d7190]" name="login" duration-ms="6900" started-at="2017-07-17T11:48:52Z" finished-at="2017-07-17T11:48:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="updateResult(org.testng.ITestResult)[pri:0, instance:com.lrn.cat.tc.LCECLoginTC@b3d7190]" name="updateResult" is-config="true" duration-ms="229" started-at="2017-07-17T11:48:59Z" finished-at="2017-07-17T11:48:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=LCECLoginTC.login()[pri:0, instance:com.lrn.cat.tc.LCECLoginTC@b3d7190] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateResult -->
-        <test-method status="PASS" signature="endClass()[pri:0, instance:com.lrn.cat.tc.LCECLoginTC@b3d7190]" name="endClass" is-config="true" duration-ms="3881" started-at="2017-07-17T11:57:32Z" finished-at="2017-07-17T11:57:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endClass -->
-      </class> <!-- com.lrn.cat.tc.LCECLoginTC -->
     </test> <!-- SanityCheck -->
   </suite> <!-- Suite -->
 </testng-results>
