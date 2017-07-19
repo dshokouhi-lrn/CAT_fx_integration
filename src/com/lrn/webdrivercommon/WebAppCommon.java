@@ -1219,7 +1219,7 @@ public class WebAppCommon {
 			Thread.sleep(2000);
 			robot.keyPress(KeyEvent.VK_ENTER);
 			robot.keyRelease(KeyEvent.VK_ENTER);
-			Thread.sleep(40000);
+			Thread.sleep(10000);
 		}
 		catch(Exception e)
 		{
