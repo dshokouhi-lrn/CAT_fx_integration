@@ -8,6 +8,6 @@ public class LCECLoginTC extends LCECLogin {
 	
 	@Test
 	public void login() throws Exception{
-	getLoginLCEC("dshokouhi/lrn","123123");
+	getLoginLCEC("autoadmin","abcabc");
 	}
 }

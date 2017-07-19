@@ -130,7 +130,7 @@ public class ModuleManager extends CATAppCommon
 					String addSite = driver.findElement(By.xpath(".//*[@id='module_" + course + "']/table[1]/tbody[2]/tr[1]/td[4]/div/span/span[2]")).getText();
 					System.out.println("label for add to site is: " + addSite);
 					
-					//currently this condition is not working
+
 					if (addSite.contains("Add to Our Site"))
 					{
 						clickIdentifierXpath(".//*[@id='module_" + course + "']/table[1]/tbody[2]/tr[1]/td[4]/div/span/span[2]/span");
@@ -140,12 +140,16 @@ public class ModuleManager extends CATAppCommon
 					
 					Thread.sleep(5000);
 					
-					boolean copy = driver.findElement(By.xpath(".//*[@id='course_version_" + course + "']/td[1]/div[1]/div[@class='entry library selected']/div[1]/div[1]/div[2]/div[1]/span[2]/span/button")).isDisplayed();
+					/*boolean copy = driver.findElement(By.xpath(".//*[@id='course_version_" + course + "']/td[1]/div[1]/div[@class='entry library selected']/div[1]/div[1]/div[2]/div[1]/span[2]/span/button")).isDisplayed();
+					
+					boolean copy1 = driver.findElement(By.xpath(".//*[@id='course_version_" + course + "']/td[1]/div[1]/div[@class='entry ready_to_use selected']/div[1]/div[1]/div[2]/div[1]/span[2]/span/button")).isDisplayed();
 					
 					if (copy)
 						clickIdentifierXpath(".//*[@id='course_version_" + course + "']/td[1]/div[1]/div[@class='entry library selected']/div[1]/div[1]/div[2]/div[1]/span[2]/span/button");
+					else if (copy1)
+						clickIdentifierXpath(".//*[@id='course_version_" + course + "']/td[1]/div[1]/div[@class='entry ready_to_use selected']/div[1]/div[1]/div[2]/div[1]/span[2]/span/button");
 					
-					Thread.sleep(5000);
+					Thread.sleep(5000);*/
 					
 					clickIdentifierXpath(".//*[@id='course_version_" + course + "']/td[1]/div[1]/div[@class='entry draft selected']/div[1]/div[1]/div[2]/div[1]/span[2]/span/button");
 					//LogerData.info("Select Searching Module!");
@@ -219,7 +223,7 @@ public class ModuleManager extends CATAppCommon
 			
 			Thread.sleep(5000);
 			
-			if (type == "library")
+			if (type.toLowerCase() == "library")
 				clickIdentifierXpath(CopyToEdit_Xpath);
 			else if (type == "custom")
 				clickIdentifierXpath(CopyToEdit_Xpath1);
