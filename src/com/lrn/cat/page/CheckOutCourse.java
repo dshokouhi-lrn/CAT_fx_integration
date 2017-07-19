@@ -7,6 +7,9 @@ import com.lrn.pp.utility.Log;
 
 public class CheckOutCourse extends CATAppCommon{
 
+	/**
+	 * must be called after checkInCourse, editGetStarted automatically does this
+	 */
 	static public void checkOutCourse() throws Exception
 	{
 		try

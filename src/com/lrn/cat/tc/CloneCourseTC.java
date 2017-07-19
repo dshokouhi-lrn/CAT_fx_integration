@@ -10,13 +10,13 @@ public class CloneCourseTC extends ManageCourse{
 	@Test
 	void CatCloneCourse() throws Exception
 	{
-		searchManageCourse("DAN799", "");
+		searchManageCourse("DAN736", "");
 		
 		Thread.sleep(5000);
 		
 		cloneCourse("1");
 		
-		CreateCourse.createCourse("cloned", "test", "test", "DAN799", "Custom", "Refresher", "", "", "qacustomize07", "qacustomize07", "English", "YES", "NO", "YES", "5");
+		CreateCourse.createCourse("cloned", "test", "test", "DAN736", "Custom", "Refresher", "", "", "qacustomize07", "qacustomize07", "English", "YES", "NO", "YES", "5");
 
 	}
 

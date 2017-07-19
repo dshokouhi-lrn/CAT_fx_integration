@@ -7,6 +7,11 @@ import com.lrn.cat.common.CATAppCommon;
 import com.lrn.pp.utility.Log;
 
 public class AddPage extends CATAppCommon {
+	
+	/**
+	 * Must be called after addLesson or addTopic or any template
+	 * @param template provide the template either: "consult", "text", "consent", "hotspot, "binary", "selectable", "sidebar, "dnd, "saq", "carousel", "video", "snr", "concern" or "multiple"
+	 */
 
 	static public void addPage(String template) throws Exception
 	{

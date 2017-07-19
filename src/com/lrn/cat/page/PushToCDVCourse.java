@@ -7,6 +7,9 @@ import com.lrn.pp.utility.Log;
 
 public class PushToCDVCourse extends CATAppCommon {
 	
+	/**
+	 * must be called while course is being created or edited
+	 */
 	static public void pushToCDVCourse() throws Exception
 	{
 		try

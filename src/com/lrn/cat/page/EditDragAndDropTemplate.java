@@ -9,6 +9,43 @@ import com.lrn.pp.utility.Log;
 
 public class EditDragAndDropTemplate extends CATAppCommon{
 	
+	/**
+	 * to be called after addPage or selectPage
+	 * @param pageTitle page title
+	 * @param showTitle show title yes/no
+	 * @param pageLayout to be either: "Drag and Drop With Flags" or "Drag and Drop Without Flags"
+	 * @param pageContent content for the page
+	 * @param categoryText first category text
+	 * @param categoryImage first category image yes or blank for no
+	 * @param categoryImageDesc first category image description
+	 * @param categoryAltText first category alt text
+	 * @param lineItemText first line item text
+	 * @param lineItemCategory first line item category (ex: CAT1)
+	 * @param lineItemImage first line item image yes or blank for no
+	 * @param lineItemImageDesc first line item image description
+	 * @param lineItemAltText first line item alt text
+	 * @param dndRetryNumber retry attempts, leave blank if not configured
+	 * @param dndRetryTitle retry title for prompt , leave blank if not configured
+	 * @param dndRetryMessage retry message, leave blank if not configured
+	 * @param dndRetryButton retyr button text, leave blank if not configured
+	 * @param feedbackOption "single" or "multiple"
+	 * @param singleFeedback feedback text for single feedback
+	 * @param singleImage single feedback image yes or blank for no
+	 * @param singleImageDesc single feedback image description
+	 * @param singleAltText single feedback alt text
+	 * @param correctTitle multiple feedback correct tile
+	 * @param correctContent multiple feedback correct text
+	 * @param correctImage multiple feedback image yes or blank for no
+	 * @param correctImageDesc multiple feedback image description
+	 * @param correctAltText  multiple feedback alt text
+	 * @param incorrectTitle multiple feedback  incorrect title
+	 * @param incorrectContent multiple feedback incorrect text
+	 * @param incorrectImage multiple feedback incorrect image yes or blank for no
+	 * @param incorrectImageDesc multiple feedback image description
+	 * @param incorrectAltText multiple feedback alt text
+	 * @param pageAudio add page audio yes or blank for no
+	 * @param backgroundImage add background image yes or blank for no
+	 */
 	static public void editDragAndDropTemplate(String pageTitle, String showTitle, String pageLayout, String pageContent, String categoryText, String categoryImage, String categoryImageDesc, String categoryAltText, String lineItemText, String lineItemCategory, String lineItemImage, String lineItemImageDesc, String lineItemAltText, String dndRetryNumber, String dndRetryTitle, String dndRetryMessage, String dndRetryButton, String feedbackOption, String singleFeedback, String singleImage, String singleImageDesc, String singleAltText, String correctTitle, String correctContent, String correctImage, String correctImageDesc, String correctAltText, String incorrectTitle, String incorrectContent, String incorrectImage, String incorrectImageDesc, String incorrectAltText, String pageAudio, String backgroundImage) throws Exception
 	{
 		try
@@ -202,6 +239,14 @@ public class EditDragAndDropTemplate extends CATAppCommon{
 		}
 	}
 	
+	/**
+	 * to be called after selectPage or editDragAndDrop
+	 * @param categoryPosition the category position
+	 * @param categoryText  category text
+	 * @param categoryImage  category image yes or blank for no
+	 * @param categoryImageDesc  category image description
+	 * @param categoryAltText  category alt text
+	 */
 	static public void addCategory(String categoryPosition, String categoryText, String categoryImage, String categoryImageDesc, String categoryAltText) throws Exception
 	{
 		try
@@ -259,6 +304,15 @@ public class EditDragAndDropTemplate extends CATAppCommon{
 		}
 	}
 	
+	/**
+	 * to be called after selectPage or editDragAndDrop
+	 * @param lineItemPosition line item position
+	 * @param lineItemText  line item text
+	 * @param lineItemCategory  line item category (ex: CAT1)
+	 * @param lineItemImage  line item image yes or blank for no
+	 * @param lineItemImageDesc  line item image description
+	 * @param lineItemAltText  line item alt text
+	 */
 	static public void addLineItem(String lineItemPosition, String lineItemText, String lineItemCategory, String lineItemImage, String lineItemImageDesc, String lineItemAltText) throws Exception
 	{
 		try

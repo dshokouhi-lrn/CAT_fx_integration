@@ -10,6 +10,59 @@ import com.lrn.pp.utility.Log;
 
 public class EditMultipleScenarioTemplate extends CATAppCommon{
 	
+	/**
+	 * to be called after addPage or selectPage
+	 * @param pageTitle page title
+	 * @param showTitle show title yes/no
+	 * @param layoutMultiple must be one of the following: "Left To Right", "Right To Left", "Bottom To Top", "Top To Bottom" or "Full Screen Graphic"
+	 * @param multipleContent content for the page
+	 * @param multipleDesktop desktop yes or blank for no
+	 * @param multipleMobile mobile yes or blank for no
+	 * @param multipleImageDesc image description
+	 * @param multipleAltTags image alt text
+	 * @param multipleOrder Random or Sequential
+	 * @param multipleDesktopX must be 1-100
+	 * @param multipleDesktopY must be 1-100
+	 * @param multipleMobileX must be 1-100
+	 * @param multipleMobileY must be 1-100
+	 * @param multipleNormal supply custom normal hotspot image yes or blank for no
+	 * @param multipleHover supply custom hover hotspot image yes or blank for no
+	 * @param multipleClick supply custom click hotspot image yes or blank for no
+	 * @param scenarioTemplate "Text and Graphic" or "Saq"
+	 * @param scenarioShowTitle show scenario title yes/no
+	 * @param scenarioPageTitle page title for scenario
+	 * @param scenarioTextContent text for Text and Graphic scenario
+	 * @param scenarioImageDesktop scenario desktop yes or blank for no
+	 * @param scenarioImageMobile scenario mobile yes or blank for no
+	 * @param scenarioImageDesc image description for scenario
+	 * @param scenarioAltText alt text for scenario
+	 * @param scenarioAudio add audio to scenario yes or blank for no
+	 * @param scenarioQuestionType must be either: "Multiple Choice", "Check All"
+	 * @param scenarioQuestionText question text for scenario
+	 * @param scenarioAnswerCorrect is the answer correct yes or blank for no
+	 * @param scenarioAnswerText answer text
+	 * @param scenarioRetryTitle retry title, leave blank if not configured
+	 * @param scenarioRetryText retry message, leave blank if not configured
+	 * @param scenarioRetryButton retry button text, leave blank if not configured
+	 * @param feedbackOption "single" or "multiple"
+	 * @param singleFeedback feedback text for single feedback
+	 * @param singleImage single feedback image yes or blank for no
+	 * @param singleImageDesc single feedback image description
+	 * @param singleAltText single feedback alt text
+	 * @param correctTitle multiple feedback correct tile
+	 * @param correctContent multiple feedback correct text
+	 * @param correctImage multiple feedback image yes or blank for no
+	 * @param correctImageDesc multiple feedback image description
+	 * @param correctAltText  multiple feedback alt text
+	 * @param incorrectTitle multiple feedback  incorrect title
+	 * @param incorrectContent multiple feedback incorrect text
+	 * @param incorrectImage multiple feedback incorrect image yes or blank for no
+	 * @param incorrectImageDesc multiple feedback image description
+	 * @param incorrectAltText multiple feedback alt text
+	 * @param multipleRetryAttempts number of retry attempts, leave blank if not configured
+	 * @param pageAudio add page audio yes or blank for no
+	 * @param backgroundImage add background image yes or blank for no
+	 */
 	static public void editMultipleScenarioTemplate(String pageTitle, String showTitle, String layoutMultiple, String multipleContent, String multipleDesktop, String multipleMobile, String multipleImageDesc, String multipleAltTags, String multipleOrder, String multipleDesktopX, String multipleDesktopY, String multipleMobileX, String multipleMobileY, String multipleNormal, String multipleHover, String multipleClick, String scenarioTemplate, String scenarioShowTitle, String scenarioPageTitle, String scenarioTextContent, String scenarioImageDesktop, String scenarioImageMobile, String scenarioImageDesc, String scenarioAltText, String scenarioAudio, String scenarioQuestionType, String scenarioQuestionText, String scenarioAnswerCorrect, String scenarioAnswerText, String scenarioRetryTitle, String scenarioRetryText, String scenarioRetryButton, String feedbackOption, String singleFeedback, String singleImage, String singleImageDesc, String singleAltText, String correctTitle, String correctContent, String correctImage, String correctImageDesc, String correctAltText, String incorrectTitle, String incorrectContent, String incorrectImage, String incorrectImageDesc, String incorrectAltText, String multipleRetryAttempts, String pageAudio, String backgroundImage) throws Exception
 	{
 		try
@@ -404,6 +457,42 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 		}
 	}
 	
+	/**
+	 * to be called after selectPage or editMultiple
+	 * @param scenarioPosition the position of the scenario where we are adding a page
+	 * @param scenarioTemplate "Text and Graphic" or "Saq"
+	 * @param scenarioShowTitle show scenario title yes/no
+	 * @param scenarioPageTitle page title for scenario
+	 * @param scenarioTextContent text for Text and Graphic scenario
+	 * @param scenarioImageDesktop scenario desktop yes or blank for no
+	 * @param scenarioImageMobile scenario mobile yes or blank for no
+	 * @param scenarioImageDesc image description for scenario
+	 * @param scenarioAltText alt text for scenario
+	 * @param scenarioAudio add audio to scenario yes or blank for no
+	 * @param scenarioQuestionType must be either: "Multiple Choice", "Check All"
+	 * @param scenarioQuestionText question text for scenario
+	 * @param scenarioAnswerCorrect is the answer correct yes or blank for no
+	 * @param scenarioAnswerText answer text
+	 * @param scenarioRetryTitle retry title, leave blank if not configured
+	 * @param scenarioRetryText retry message, leave blank if not configured
+	 * @param scenarioRetryButton retry button text, leave blank if not configured
+	 * @param feedbackOption "single" or "multiple"
+	 * @param singleFeedback feedback text for single feedback
+	 * @param singleImage single feedback image yes or blank for no
+	 * @param singleImageDesc single feedback image description
+	 * @param singleAltText single feedback alt text
+	 * @param correctTitle multiple feedback correct tile
+	 * @param correctContent multiple feedback correct text
+	 * @param correctImage multiple feedback image yes or blank for no
+	 * @param correctImageDesc multiple feedback image description
+	 * @param correctAltText  multiple feedback alt text
+	 * @param incorrectTitle multiple feedback  incorrect title
+	 * @param incorrectContent multiple feedback incorrect text
+	 * @param incorrectImage multiple feedback incorrect image yes or blank for no
+	 * @param incorrectImageDesc multiple feedback image description
+	 * @param incorrectAltText multiple feedback alt text
+	 * @param multipleRetryAttempts number of retry attempts, leave blank if not configured
+	 */
 	static public void addPageToScenario(String scenarioPosition, String scenarioTemplate, String scenarioShowTitle, String scenarioPageTitle, String scenarioTextContent, String scenarioImageDesktop, String scenarioImageMobile, String scenarioImageDesc, String scenarioAltText, String scenarioAudio, String scenarioQuestionType, String scenarioQuestionText, String scenarioAnswerCorrect, String scenarioAnswerText, String scenarioRetryTitle, String scenarioRetryText, String scenarioRetryButton, String feedbackOption, String singleFeedback, String singleImage, String singleImageDesc, String singleAltText, String correctTitle, String correctContent, String correctImage, String correctImageDesc, String correctAltText, String incorrectTitle, String incorrectContent, String incorrectImage, String incorrectImageDesc, String incorrectAltText, String multipleRetryAttempts) throws Exception
 	{
 		try
@@ -674,6 +763,49 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 		}
 	}
 	
+	/**
+	 * to be called after selectPage or editMultiple
+	 * @param scenarioNumber1 the position of the scenario to be added
+	 * @param multipleDesktopX must be 1-100
+	 * @param multipleDesktopY must be 1-100
+	 * @param multipleMobileX must be 1-100
+	 * @param multipleMobileY must be 1-100
+	 * @param multipleNormal supply custom normal hotspot image yes or blank for no
+	 * @param multipleHover supply custom hover hotspot image yes or blank for no
+	 * @param multipleClick supply custom click hotspot image yes or blank for no
+	 * @param scenarioTemplate "Text and Graphic" or "Saq"
+	 * @param scenarioShowTitle show scenario title yes/no
+	 * @param scenarioPageTitle page title for scenario
+	 * @param scenarioTextContent text for Text and Graphic scenario
+	 * @param scenarioImageDesktop scenario desktop yes or blank for no
+	 * @param scenarioImageMobile scenario mobile yes or blank for no
+	 * @param scenarioImageDesc image description for scenario
+	 * @param scenarioAltText alt text for scenario
+	 * @param scenarioAudio add audio to scenario yes or blank for no
+	 * @param scenarioQuestionType must be either: "Multiple Choice", "Check All"
+	 * @param scenarioQuestionText question text for scenario
+	 * @param scenarioAnswerCorrect is the answer correct yes/no
+	 * @param scenarioAnswerText answer text
+	 * @param scenarioRetryTitle retry title, leave blank if not configured
+	 * @param scenarioRetryText retry message, leave blank if not configured
+	 * @param scenarioRetryButton retry button text, leave blank if not configured
+	 * @param feedbackOption "single" or "multiple"
+	 * @param singleFeedback feedback text for single feedback
+	 * @param singleImage single feedback image yes or blank for no
+	 * @param singleImageDesc single feedback image description
+	 * @param singleAltText single feedback alt text
+	 * @param correctTitle multiple feedback correct tile
+	 * @param correctContent multiple feedback correct text
+	 * @param correctImage multiple feedback image yes or blank for no
+	 * @param correctImageDesc multiple feedback image description
+	 * @param correctAltText  multiple feedback alt text
+	 * @param incorrectTitle multiple feedback  incorrect title
+	 * @param incorrectContent multiple feedback incorrect text
+	 * @param incorrectImage multiple feedback incorrect image yes or blank for no
+	 * @param incorrectImageDesc multiple feedback image description
+	 * @param incorrectAltText multiple feedback alt text
+	 * @param multipleRetryAttempts number of retry attempts, leave blank if not configured
+	 */
 	static public void addScenario(int scenarioNumber1, String multipleDesktopX, String multipleDesktopY, String multipleMobileX, String multipleMobileY, String multipleNormal, String multipleHover, String multipleClick, String scenarioTemplate, String scenarioShowTitle, String scenarioPageTitle, String scenarioTextContent, String scenarioImageDesktop, String scenarioImageMobile, String scenarioImageDesc, String scenarioAltText, String scenarioAudio, String scenarioQuestionType, String scenarioQuestionText, String scenarioAnswerCorrect, String scenarioAnswerText, String scenarioRetryTitle, String scenarioRetryText, String scenarioRetryButton, String feedbackOption, String singleFeedback, String singleImage, String singleImageDesc, String singleAltText, String correctTitle, String correctContent, String correctImage, String correctImageDesc, String correctAltText, String incorrectTitle, String incorrectContent, String incorrectImage, String incorrectImageDesc, String incorrectAltText) throws Exception
 	{
 		try

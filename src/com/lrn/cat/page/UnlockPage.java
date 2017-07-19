@@ -11,6 +11,12 @@ import com.lrn.pp.utility.Log;
 
 public class UnlockPage extends CATAppCommon {
 
+	/**
+	 * to be called when user is on create your course tab or after lockPage
+	 * @param lesson lesson position of page we are unlocking, increase by 1 if landing page is present
+	 * @param topic topic position of page we are unlocking
+	 * @param page position of page we are unlocking
+	 */
 	static public void unlockPage(String lesson, String topic, String page) throws Exception
 	{
 		try

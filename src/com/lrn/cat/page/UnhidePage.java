@@ -11,6 +11,12 @@ import com.lrn.pp.utility.Log;
 
 public class UnhidePage extends CATAppCommon {
 
+	/**
+	 * to be called when user is on create your course tab and page is hidden or after hidePage
+	 * @param lesson lesson position of the page we are unhiding, increase by 1 if landing page is present
+	 * @param topic topic position for the page we are unhiding
+	 * @param page position of page we are unhiding
+	 */
 	static public void unhidePage(String lesson, String topic, String page) throws Exception
 	{
 		try

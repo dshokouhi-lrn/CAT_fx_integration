@@ -5,7 +5,9 @@ import com.lrn.pp.utility.Log;
 
 public class LogoutPage extends CATAppCommon{
 	
-	
+	/**
+	 * can be called at any time after logOn, course window is closed as well
+	 */
 	static public void logout() throws Exception
     {
            try
@@ -22,7 +24,7 @@ public class LogoutPage extends CATAppCommon{
                   
                   //Log.info("closed browser window");
                   
-                  driver.quit();
+                  //driver.quit();
                   
                   Log.pass("quit the driver");
 

@@ -6,10 +6,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 
 import com.lrn.cat.common.CATAppCommon;
+import com.lrn.lcec.pages.ModuleManager;
 import com.lrn.pp.utility.Log;
 
 public class CustomizerRole extends CATAppCommon{
 	
+
+	/**
+	 * Get Started tab edits for customizer role, at the end will navigate user to create your course tab, leave the descriptions blank as customizer cannot edit them
+	 * @param getStartedText leave blank for now
+	 * @param Description leave blank for now
+	 * @param longDesc leave blank for now
+	 * @param hasAudio YES/NO
+	 * @param courseDuration numeric only
+	 * @param courseObjective leave blank for now
+	 */
 	static public void customizerGetStarted(String getStartedText, String Description, String longDesc, String hasAudio, String courseDuration, String courseObjective) throws Exception
 	{
 		try
@@ -20,22 +31,26 @@ public class CustomizerRole extends CATAppCommon{
 			
 			if (driver.findElement(By.id("ckeditorContentDescription")).isDisplayed())
 			{
-				typeTextById("ckeditorContentDescription", Description + " "  + d.toString());
+				if (Description != "")
+					typeTextById("ckeditorContentDescription", Description + " "  + d.toString());
 			}
 			
 			if (driver.findElement(By.id("ckeditorContentCourseObjective")).isDisplayed())
 			{
-				typeTextById("ckeditorContentCourseObjective", courseObjective + " "  + d.toString());
+				if (courseObjective != "")
+					typeTextById("ckeditorContentCourseObjective", courseObjective + " "  + d.toString());
 			}
 			
 			if (driver.findElement(By.id("ckeditorContentLong")).isDisplayed())
 			{
-				typeTextById("ckeditorContentLong", longDesc + " "  + d.toString());
+				if (longDesc != "")
+					typeTextById("ckeditorContentLong", longDesc + " "  + d.toString());
 			}
 			
 			if (driver.findElement(By.id("ckeditorContentShort")).isDisplayed())
 			{
-				typeTextById("ckeditorContentShort", getStartedText + " "  + d.toString());
+				if (getStartedText != "")
+					typeTextById("ckeditorContentShort", getStartedText + " "  + d.toString());
 			}
 			
 			if (hasAudio != "")
@@ -46,9 +61,12 @@ public class CustomizerRole extends CATAppCommon{
 			
 			Log.info("customized get started tab");
 			
+			JavascriptExecutor jse = (JavascriptExecutor)driver;
+			jse.executeScript("window.scrollTo(0,0)", "");
+			
 			clickIdentifierXpath("//*[@id='editedCourse']/div[1]/button");
 			
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 		
 			String courseSaved = getValueByXpath("//*[@id='messageDialog']/tr/td[2]");
 		
@@ -57,14 +75,13 @@ public class CustomizerRole extends CATAppCommon{
 			if (courseSaved.contains(passed))
 			{
 				Log.pass("get started tab edited successfully");
-
 			}
 			
 			else {
 				Log.fail("could not edit course due to following error: " + courseSaved);
 			}
 			
-			clickIdentifierXpath(".//div[@id='menuTabs']/ul/li[2]/p"); 
+			clickIdentifierXpath(".//div[@id='menuTabs']/ul/li[2]"); 
 			Thread.sleep(1000);
 			clickIdentifierXpath(".//div[@id='menuTabs']/ul/li[2]/p"); 
 			Log.info("Navigate to Create course tab");
@@ -85,6 +102,10 @@ public class CustomizerRole extends CATAppCommon{
 		}
 	}
 	
+	/**
+	 * custom add page method for customizer role as they can only add 3 templates
+	 * @param template must be either "text", "sidebar" or "video"
+	 */
 	static public void customizerAddPage(String template) throws Exception
 	{
 		try
@@ -137,6 +158,9 @@ public class CustomizerRole extends CATAppCommon{
 		}
 	}
 	
+	/**
+	 * Called at the end of the customizer role test
+	 */
 	static public void saveAndExit() throws Exception
 	{
 		try
@@ -150,11 +174,17 @@ public class CustomizerRole extends CATAppCommon{
 			
 			clickIdentifierByID("coursePublishButton");
 			
+			Log.info("clicked on Save and Exit button");
+			
 			Thread.sleep(1000);
 			
 			clickIdentifierXpath(".//div[@aria-describedby='dialogArea']/div[3]/div/button[1]");
 
-			Thread.sleep(10000);
+			Thread.sleep(20000);
+			
+			driver.switchTo().window(ModuleManager.window);
+			
+			Log.pass("switched back to LCEC");
 		}
 		
 		catch(Exception e){  

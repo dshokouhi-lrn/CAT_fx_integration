@@ -11,6 +11,12 @@ import com.lrn.pp.utility.Log;
 
 public class HidePage extends CATAppCommon {
 
+	/**
+	 * to be called when user is on create your course tab
+	 * @param lesson lesson position of page we are hiding, increase by 1 if landing page is present
+	 * @param topic topic position of the page
+	 * @param page the position of the page
+	 */
 	static public void hidePage(String lesson, String topic, String page) throws Exception
 	{
 		try

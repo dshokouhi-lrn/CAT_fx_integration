@@ -1,5 +1,6 @@
 package com.lrn.cat.page;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 
 import com.lrn.cat.common.CATAppCommon;
@@ -7,6 +8,9 @@ import com.lrn.pp.utility.Log;
 
 public class RevertCourse extends CATAppCommon{
 	
+	/**
+	 * Must be called after changes have been made and course is being edited otherwise it will fail, course needs to be checked out as well
+	 */
 	static public void revertCourse() throws Exception
 	{
 		try
@@ -20,9 +24,19 @@ public class RevertCourse extends CATAppCommon{
 			
 			Thread.sleep(2000);
 			
-			clickIdentifierXpath("//*[@role='dialog']/div[3]/div/button[1]");
+			clickIdentifierXpath("//*[@class='ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons']/div[3]/div/button[1]");
 			
-			String checkedIn = getValueByXpath("//*[@id='messageDialog']/tr/td[2]");
+			Thread.sleep(10000);
+			
+			boolean revertDisabled = driver.findElement(By.id("courseRevertButton")).isEnabled();
+			
+			if (!revertDisabled)
+				Log.pass("revert successful");
+			else
+				Log.fail("revert failed");
+			
+					
+			/*String checkedIn = getValueByXpath("//*[@id='messageDialog']/tr/td[2]");
 			
 			if (checkedIn.contains("Course Revert Successful"))
 			{
@@ -30,7 +44,7 @@ public class RevertCourse extends CATAppCommon{
 			}
 			
 			else
-				Log.fail("course did not revert for reason: " + checkedIn);
+				Log.fail("course did not revert for reason: " + checkedIn);*/
 		}
 		
 		catch(Exception e){  

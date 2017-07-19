@@ -5,6 +5,11 @@ import com.lrn.pp.utility.Log;
 
 public class LoginPage extends CATAppCommon{
 	
+	/**
+	 * must be called first, be sure to update the function based on the environment the test will run in
+	 * @param userName supply the user name
+	 * @param passWord supply the password
+	 */
 	
 	static public void login(String userName,String passWord) throws Exception
     {

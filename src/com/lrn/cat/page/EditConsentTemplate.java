@@ -9,6 +9,23 @@ import com.lrn.pp.utility.Log;
 
 public class EditConsentTemplate extends CATAppCommon{
 	
+	/**
+	 * to be called after addPage or selectPage
+	 * @param pageTitle page title
+	 * @param showTitle show title yes or blank for no
+	 * @param markComplete mark course as complete yes or blank for no
+	 * @param pageContent content for the page
+	 * @param consentButton title for the consent button
+	 * @param desktopImage desktop image yes or blank for no
+	 * @param mobileImage mobile image yes or blank for no
+	 * @param desktopImageDesc desktop image description
+	 * @param desktopAltText desktop alt text
+	 * @param mobileImageDesc mobile image description
+	 * @param mobileAltText mobile alt text
+	 * @param pageAudio add page audio yes or blank for no
+	 * @param backgroundImage add background image yes or blank for no
+	 * @throws Exception
+	 */
 	static public void editConsentTemplate(String pageTitle, String showTitle, String markComplete, String pageContent, String consentButton, String desktopImage, String mobileImage, String desktopImageDesc, String desktopAltText, String mobileImageDesc, String mobileAltText, String pageAudio, String backgroundImage) throws Exception
 	{
 		try

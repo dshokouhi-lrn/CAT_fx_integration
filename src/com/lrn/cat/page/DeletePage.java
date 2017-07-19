@@ -11,6 +11,12 @@ import com.lrn.pp.utility.Log;
 
 public class DeletePage extends CATAppCommon {
 
+	/**
+	 * Must be called while user is on create your course tab after course has at least 1 page
+	 * @param lesson lesson position of the page we are deleting, increase by 1 if landing page is present
+	 * @param topic topic position of the page we are deleting
+	 * @param page page position of the page we are deleting
+	 */
 	static public void deletePage(String lesson, String topic, String page) throws Exception
 	{
 		try

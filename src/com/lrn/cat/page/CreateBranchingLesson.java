@@ -11,6 +11,18 @@ import com.lrn.pp.utility.Log;
 
 public class CreateBranchingLesson extends CATAppCommon	{
 	
+	/**
+	 * Must be called after addLesson and addTopic, preferably with 2 topics
+	 * @param lessonPosition position of the lesson you wish to configure (if landing page is present increase by 1)
+	 * @param tilesPerRow1 how many tiles per row (cannot be more than 5 or less than 2)
+	 * @param lessonAudio add audio to the lesson, leave blank for no
+	 * @param lessonWelcome welcome message for branching lesson
+	 * @param lessonCompletion  completion message for branching lesson, if left blank will set to no
+	 * @param lessonImage add image to lesson, leave blank for no
+	 * @param topicMandatory set first topic to mandatory yes/no
+	 * @param completeTopics how many topics to complete
+	 */
+	
 	static public void createBranchingLesson(String lessonPosition, int tilesPerRow1, String lessonAudio, String lessonWelcome, String lessonCompletion, String lessonImage, String topicMandatory, String completeTopics) throws Exception
 	{
 		try
@@ -32,7 +44,7 @@ public class CreateBranchingLesson extends CATAppCommon	{
 			
 			String tilesPerRow = Integer.toString(tilesPerRow1);
 			
-			if (tilesPerRow1 < 5)
+			if (tilesPerRow1 < 5 && tilesPerRow1 > 2)
 				clickIdentifierXpath(".//*[@id='branchingInfo']/div[1]/div[2]/div[" + tilesPerRow + "]/img");
 			
 			if (lessonAudio != "")
@@ -134,6 +146,15 @@ public class CreateBranchingLesson extends CATAppCommon	{
 		       throw e;
 		}
 	}
+	
+	/**
+	 * Must be called after createBranchingLesson
+	 * @param lessonPosition lesson position that contains the topics (if landing page is present increase by 1)
+	 * @param topicPosition topic position you wish you edit
+	 * @param topicDesc add topic description
+	 * @param topicLayout set tile layout
+	 * @param topicImage add tile image, leave blank if no
+	 */
 	
 	static public void configureTopic(String lessonPosition, String topicPosition, String topicDesc, String topicLayout, String topicImage) throws Exception
 	{

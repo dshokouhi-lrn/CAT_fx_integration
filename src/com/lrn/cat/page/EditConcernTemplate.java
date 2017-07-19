@@ -9,6 +9,51 @@ import com.lrn.pp.utility.Log;
 
 public class EditConcernTemplate extends CATAppCommon{
 	
+	/**
+	 *  to be called after addPage or selectPage
+	 * @param showTitle show page title yes or blank for no
+	 * @param pageTitle supply page title
+	 * @param concernLayout Left to Right or Right to Left
+	 * @param concernContent content for concern meter
+	 * @param meterQuestion the question for the concern meter
+	 * @param meterQuestionType "Multiple Choice" or "Check All"
+	 * @param meterCorrectAnswer is answer 1 correct yes or blank for no
+	 * @param meterAnswer answer 1 text
+	 * @param meterAnswerImage answer 1 image yes or blank for no
+	 * @param meterAnswerDesktop answer 1 desktop image yes or blank for no
+	 * @param meterAnswerImageDesc answer 1 image description
+	 * @param meterAnswerAltText answer 1 alt text
+	 * @param questionText question text after concern meter
+	 * @param questionAudio add audio for the question yes or blank for no
+	 * @param questionType "Multiple Choice" or "Check All"
+	 * @param correctAnswer is answer 1 correct for question after meter
+	 * @param answerText answer 1 text
+	 * @param answerImage answer 1 image yes or blank for no
+	 * @param answerDesktopImage answer 1 desktop image yes or blank for no
+	 * @param answerImageDesc answer 1 image description for question after meter
+	 * @param answerAltText answer 1 alt text for question for after meter
+	 * @param retryNumber number of retry attempts, leave blank to not configured
+	 * @param retryTitle retry title, leave blank if not configured
+	 * @param retryMessage retry message text, leave blank if not configured
+	 * @param retryButton retry button text, leave blank if not configured
+	 * @param feedbackOption "single" or "multiple"
+	 * @param singleFeedback feedback text for single feedback
+	 * @param singleImage single feedback image yes or blank for no
+	 * @param singleImageDesc single feedback image description
+	 * @param singleAltText single feedback alt text
+	 * @param correctTitle multiple feedback correct tile
+	 * @param correctContent multiple feedback correct text
+	 * @param correctImage multiple feedback image yes or blank for no
+	 * @param correctImageDesc multiple feedback image description
+	 * @param correctAltText  multiple feedback alt text
+	 * @param incorrectTitle multiple feedback  incorrect title
+	 * @param incorrectContent multiple feedback incorrect text
+	 * @param incorrectImage multiple feedback incorrect image yes or blank for no
+	 * @param incorrectImageDesc multiple feedback image description
+	 * @param incorrectAltText multiple feedback alt text
+	 * @param pageAudio add page audio yes or blank for no
+	 * @param backgroundImage add background image yes or blank for no
+	 */
 	static public void editConcernTemplate(String showTitle, String pageTitle, String concernLayout, String concernContent, String meterQuestion, String meterQuestionType, String meterCorrectAnswer, String meterAnswer, String meterAnswerImage, String meterAnswerDesktop, String meterAnswerImageDesc, String meterAnswerAltText, String questionText, String questionAudio, String questionType,  String correctAnswer, String answerText, String answerImage, String answerDesktopImage, String answerImageDesc, String answerAltText, String retryNumber, String retryTitle, String retryMessage, String retryButton, String feedbackOption, String singleFeedback, String singleImage, String singleImageDesc, String singleAltText, String correctTitle, String correctContent, String correctImage, String correctImageDesc, String correctAltText, String incorrectTitle, String incorrectContent, String incorrectImage, String incorrectImageDesc, String incorrectAltText, String pageAudio, String backgroundImage) throws Exception
 	{
 		try
@@ -262,6 +307,16 @@ public class EditConcernTemplate extends CATAppCommon{
 		}
 	}
 	
+	/**
+	 * to be called after editConcernTemplate or selectPage
+	 * @param answerPosition the position of the answer option for the meter
+	 * @param meterCorrectAnswer is this answer option correct yes or blank for no
+	 * @param meterAnswer answer option text
+	 * @param meterAnswerImage answer option image yes or blank for no
+	 * @param meterAnswerDesktop answer option desktop image yes or blank for no
+	 * @param meterAnswerImageDesc answer option image description
+	 * @param meterAnswerAltText answer option alt text
+	 */
 	static public void addMeterAnswer(String answerPosition, String meterCorrectAnswer, String meterAnswer, String meterAnswerImage, String meterAnswerDesktop, String meterAnswerImageDesc, String meterAnswerAltText) throws Exception
 	{
 		try
@@ -336,6 +391,16 @@ public class EditConcernTemplate extends CATAppCommon{
 		}
 	}
 	
+	/**
+	 * to be called after editConcernTemplate or selectPage, this is for the question after the meter
+	 * @param answerPosition the position of the answer option for after the meter
+	 * @param meterCorrectAnswer is this answer option correct yes or blank for no
+	 * @param meterAnswer answer option text
+	 * @param meterAnswerImage answer option image yes or blank for no
+	 * @param meterAnswerDesktop answer option desktop image yes or blank for no
+	 * @param meterAnswerImageDesc answer option image description
+	 * @param meterAnswerAltText answer option alt text
+	 */
 	static public void addAnswerOption(String answerPosition, String correctAnswer, String answerText, String answerImage, String answerDesktopImage, String answerImageDesc, String answerAltText) throws Exception
 	{
 		try

@@ -10,12 +10,6 @@ public class LogoutTC extends LogoutPage{
 	@Test
 	void CatLogicTC() throws Exception
 	{
-
 		logout();
-
 	}
-	
-	
-	
-
 }

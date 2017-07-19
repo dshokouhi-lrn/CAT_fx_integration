@@ -11,6 +11,19 @@ import com.lrn.pp.utility.Log;
 
 public class CourseFeatures extends CATAppCommon {
 	
+	/**
+	 * Must be called after createCourse or editGetStarted or anything in between
+	 * @param helpMenu show help menu yes/no
+	 * @param eocSurvey show EOC survey yes/no
+	 * @param surveyID provide survey ID if EOC survey is set to yes
+	 * @param menuImage show menu image, leave blank if no
+	 * @param menuImageDesc provide image description
+	 * @param menuAltText provide image alt text
+	 * @param hsNormal change global hotspot normal image
+	 * @param hsHover change global hotspot hover image
+	 * @param hsComplete change global hotspot complete image
+	 */
+	
 	static public void setupCourseFeatures(String helpMenu, String eocSurvey, String surveyID, String menuImage, String menuImageDesc, String menuAltText, String hsNormal, String hsHover, String hsComplete) throws Exception
 	{
 		try
@@ -159,6 +172,14 @@ public class CourseFeatures extends CATAppCommon {
 		}
 	}
 	
+	/**
+	 * must be called after setupCourseFeatures
+	 * @param enableTimer turn on timer yes/no
+	 * @param timerType must be one of the following: "Course Level", "Page Level" or "Custom Page Level"
+	 * @param page1Time if Custom Page Level provide first page time
+	 * @param page2Time if Custom Page Level provide second page time
+	 */
+	
 	static public void setupTimer(String enableTimer, String timerType, String page1Time, String page2Time) throws Exception
 	{
 		try
@@ -229,6 +250,15 @@ public class CourseFeatures extends CATAppCommon {
 		
 	}
 	
+	/**
+	 * Must be called after setupCourseFeatures
+	 * @param enableFAQ turn on FAQ Yes/No
+	 * @param question1Text provide question text for first FAQ
+	 * @param answer1Text provide answer text for first FAQ
+	 * @param question2Text provide question text for second FAQ
+	 * @param answer2Text provide answer text for second FAQ
+	 */
+	
 	static public void editFAQ(String enableFAQ, String question1Text, String answer1Text, String question2Text, String answer2Text) throws Exception
 	{
 		try
@@ -289,6 +319,15 @@ public class CourseFeatures extends CATAppCommon {
 		}
 	}
 	
+
+	/**
+	 * Must be called after setupCourseFeatures
+	 * @param enableTop10 Yes/No
+	 * @param summary1 summary for first top 10 item
+	 * @param explain1 explanation for first top 10 item
+	 * @param summary2 summary for second top 10 item
+	 * @param explain2 explanation for second top 10 item
+	 */
 	static public void editTop10(String enableTop10, String summary1, String explain1, String summary2, String explain2) throws Exception
 	{
 		try
@@ -348,6 +387,15 @@ public class CourseFeatures extends CATAppCommon {
 
 		}
 	}
+	
+	/**
+	 * Must be called after setupCourseFeatures
+	 * @param enableResources Yes/No
+	 * @param resource1Type must be "Link" or "Document"
+	 * @param resource1Name name of first resource
+	 * @param resource2Type must be "Link" or "Document"
+	 * @param resource2Name name of second resource
+	 */
 	
 	static public void editResources (String enableResources, String resource1Type, String resource1Name, String resource2Type, String resource2Name) throws Exception
 	{

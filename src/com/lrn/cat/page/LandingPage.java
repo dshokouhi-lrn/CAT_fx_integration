@@ -11,6 +11,27 @@ import com.lrn.pp.utility.Log;
 
 public class LandingPage extends CATAppCommon{
 	
+	/**
+	 * to be called when user is on create your course tab
+	 * @param enableLanding yes/no to enable landing page
+	 * @param desktopImage1 yes or blank for no
+	 * @param desktopImage2 yes or blank for no
+	 * @param desktopImage3 yes or blank for no
+	 * @param desktopImage4 yes or blank for no
+	 * @param mobileImage1 yes or blank for no
+	 * @param mobileImage2 yes or blank for no
+	 * @param mobileImage3 yes or blank for no
+	 * @param mobileImage4 yes or blank for no
+	 * @param landingText text on landing page
+	 * @param courseDuration yes/no
+	 * @param desktop yes/no
+	 * @param tablet yes/no
+	 * @param mobile yes/no
+	 * @param desktopNormal yes or blank for no
+	 * @param desktopHover yes or blank for no
+	 * @param mobileNormal yes or blank for no
+	 * @throws Exception
+	 */
 	static public void addLandingPage(String enableLanding, String desktopImage1, String desktopImage2, String desktopImage3, String desktopImage4, String mobileImage1, String mobileImage2, String mobileImage3, String mobileImage4, String landingText, String courseDuration, String desktop, String tablet, String mobile, String desktopNormal, String desktopHover, String mobileNormal) throws Exception
 	{
 		try

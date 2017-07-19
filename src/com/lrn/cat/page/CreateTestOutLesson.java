@@ -11,6 +11,41 @@ import com.lrn.pp.utility.Log;
 
 public class CreateTestOutLesson extends CATAppCommon{
 	
+	/**
+	 *  Must be called after addLesson along with either any page or topic
+	 * @param lessonPosition position of the lesson you wish to configure (increase by 1 if landing page is present)
+	 * @param welcomeLayout layout for welcome screen must be either: "text-only", "dir-ltr", "dir-rtl", "dir-btt", "dir-ttb" or "dir-fsg"
+	 * @param welcomeTitle welcome screen title
+	 * @param welcomeContent welcome screen content
+	 * @param welcomeAudio welcome screen audio, leave blank for no
+	 * @param welcomeDesktop welcome screen desktop image, leave blank for no
+	 * @param welcomeMobile welcome screen mobile image, leave blank for no
+	 * @param welcomeImageDesc welcome image description
+	 * @param welcomeAltText welcome screen image alt text
+	 * @param assessmentLayout layout or pass/fail message, must be: "dir-rtl" or "dir-ltr"
+	 * @param defaultPass set default pass message yes/no
+	 * @param passAudio pass message audio, leave blank for no
+	 * @param passDesktop pass message desktop image, leave blank for no
+	 * @param passMobile pass message mobile image, leave blank for no
+	 * @param passImageDesc pass message image description
+	 * @param passAltText pass message alt text
+	 * @param defaultFail set default fail message yes/no
+	 * @param failAudio fail message audio, leave blank for no
+	 * @param failDesktop fail message desktop image, leave blank for no
+	 * @param failMobile fail message mobile image, leave blank for no
+	 * @param failImageDesc fail message image description
+	 * @param failAltText fail message alt text
+	 * @param wrapUpLayout layout for wrap up, must be "dir-ltr" or "dir-rtl"
+	 * @param wrapUpTitle wrap up title
+	 * @param wrapUpContent wrap up content
+	 * @param wrapUpAudio wrap up audio, leave blank for no
+	 * @param wrapUpDesktop wrap up desktop image, leave blank for no
+	 * @param wrapUpMobile wrap up mobile image, leave blank for no
+	 * @param wrapUpImageDesc wrap up image description
+	 * @param wrapUpAltText wrap up alt text
+	 * @param randomizeQuestions set questions to be randomize yes/no
+	 */
+	
 	static public void createTestOutLesson(String lessonPosition, String welcomeLayout, String welcomeTitle, String welcomeContent, String welcomeAudio, String welcomeDesktop, String welcomeMobile, String welcomeImageDesc, String welcomeAltText, String assessmentLayout, String defaultPass, String passAudio, String passDesktop, String passMobile, String passImageDesc, String passAltText, String defaultFail, String failAudio, String failDesktop, String failMobile, String failImageDesc, String failAltText, String wrapUpLayout, String wrapUpTitle, String wrapUpContent, String wrapUpAudio, String wrapUpDesktop, String wrapUpMobile, String wrapUpImageDesc, String wrapUpAltText, String randomizeQuestions) throws Exception
 	{
 		try
@@ -252,6 +287,20 @@ public class CreateTestOutLesson extends CATAppCommon{
 
 		}
 	}
+	
+	/**
+	 * Must be called after createTestOutLesson
+	 * @param questionsToPass set the number of questions required to pass the lesson, must be whole numbers no greater than total amount of added questions
+	 * @param questionTitle question title for new question
+	 * @param questionText question text for new question
+	 * @param answerType must be set to "single" or "multiple"
+	 * @param answerOption1 text for answer option 1
+	 * @param answerOption2 text for answer option 2
+	 * @param image question image, leave blank for no
+	 * @param imageDesc image description
+	 * @param altText alt text
+	 * @throws Exception
+	 */
 	
 	static public void addTestOutQuestion(String questionsToPass, String questionTitle, String questionText, String answerType, String answerOption1, String answerOption2, String image, String imageDesc, String altText) throws Exception
 	{

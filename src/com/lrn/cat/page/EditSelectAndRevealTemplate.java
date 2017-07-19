@@ -9,6 +9,22 @@ import com.lrn.pp.utility.Log;
 
 public class EditSelectAndRevealTemplate extends CATAppCommon{
 	
+	/**
+	 * to be called after addPage or selectPage
+	 * @param pageTitle page title
+	 * @param showTitle show title yes/no
+	 * @param layoutReveal either: "Left To Right" or "Right To Left" or "Bottom To Top" or "Full Screen Graphic"
+	 * @param snrText text for content
+	 * @param revealOrder Random or Sequential
+	 * @param revealText first reveal text
+	 * @param revealTitle first reveal title
+	 * @param revealImage first reveal image yes or blank for no
+	 * @param revealImageDesc first image description
+	 * @param revealAltText first alt text
+	 * @param revealAudio first audio yes or blank for no
+	 * @param pageAudio add audio to page yes or blank for no
+	 * @param backgroundImage add background image yes or blank for no
+	 */
 	static public void editSelectAndRevealTemplate(String pageTitle, String showTitle, String layoutReveal, String snrText, String revealOrder, String revealText, String revealTitle, String revealImage, String revealImageDesc, String revealAltText, String revealAudio, String pageAudio, String backgroundImage) throws Exception
 	{
 		try
@@ -135,6 +151,16 @@ public class EditSelectAndRevealTemplate extends CATAppCommon{
 		}
 	}
 	
+	/**
+	 * to be called after selectPage or editSelectAndReveal
+	 * @param revealPosition1 the position of the reveal panel you are adding
+	 * @param revealText first reveal text
+	 * @param revealTitle first reveal title
+	 * @param revealImage first reveal image yes or blank for no
+	 * @param revealImageDesc first image description
+	 * @param revealAltText first alt text
+	 * @param revealAudio first audio yes or blank for no
+	 */
 	static public void editRevealPanel(int revealPosition1, String revealText, String revealTitle, String revealImage, String revealImageDesc, String revealAltText, String revealAudio) throws Exception
 	{
 		try

@@ -9,6 +9,23 @@ import com.lrn.pp.utility.Log;
 
 public class EditBinaryTemplate extends CATAppCommon{
 	
+	/**
+	 * To be called after addPage or selectPage
+	 * @param showTitle show page title yes/no
+	 * @param pageTitle list the page title
+	 * @param binaryContent binary page content
+	 * @param binaryChoice1 name for choice 1
+	 * @param binaryChoice2 name for choice 2
+	 * @param binaryDesktop show desktop image yes or blank for no
+	 * @param binaryDesktopImageDesc desktop image description
+	 * @param binaryDesktopAltText desktop alt text
+	 * @param binaryMobile show mobile image yes or blank for no
+	 * @param binaryMobileImageDesc mobile image description
+	 * @param binaryMobileAltText mobile alt text
+	 * @param pageAudio add page audio yes or blank for no
+	 * @param backgroundImage add background image yes or blank for no
+	 * @throws Exception
+	 */
 	static public void editBinaryTemplate(String showTitle, String pageTitle, String binaryContent, String binaryChoice1, String binaryChoice2, String binaryDesktop, String binaryDesktopImageDesc, String binaryDesktopAltText, String binaryMobile, String binaryMobileImageDesc, String binaryMobileAltText, String pageAudio, String backgroundImage) throws Exception
 	{
 		try
@@ -117,6 +134,16 @@ public class EditBinaryTemplate extends CATAppCommon{
 		
 	}
 	
+	/**
+	 * This method will add 2 binary panels, must be called after editBinaryTemplate
+	 * @param binaryPanels must be set to 2
+	 * @param binaryPanel1Text text for binary panel 1
+	 * @param binaryPanel1Category select the choice for panel 1 (ex: "Choice 1")
+	 * @param binaryPanel1Unmask the unmask position for panel 1, starting from 0 and increasing by 1 for each panel
+	 * @param binaryPanel2Text text for binary panel 2
+	 * @param binaryPanel2Category select the choice for panel 2 (ex: "Choice 2")
+	 * @param binaryPanel2Unmask the unmask position for panel 2, starting from 0 and increasing by 1 for each panel
+	 */
 	static public void edit2binaryPanels(String binaryPanels, String binaryPanel1Text, String binaryPanel1Category, String binaryPanel1Unmask, String binaryPanel2Text, String binaryPanel2Category, String binaryPanel2Unmask) throws Exception
 	{
 		try
@@ -177,6 +204,11 @@ public class EditBinaryTemplate extends CATAppCommon{
      }
 	}
 	
+	/**
+	 * Must be called after editBinaryTemplate
+	 * @param binaryPosition the correct number for the added position, there are aleady 2 so this should start at 3
+	 * @param binaryText the text for the new choice
+	 */
 	static public void addBinaryCategory(int binaryPosition, String binaryText) throws Exception
 	{
 		try

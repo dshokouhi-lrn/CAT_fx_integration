@@ -10,6 +10,11 @@ import com.lrn.pp.utility.Log;
 
 public class CheckInCourse extends CATAppCommon{
 	
+	/**
+	 * Must be called while a course is being created or edited, course must be checked out as well
+	 * @param comments provide the comments for checking in
+	 */
+	
 	static public void checkInCourse(String comments) throws Exception
 	{
 		

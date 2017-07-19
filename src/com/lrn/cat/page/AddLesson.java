@@ -8,6 +8,11 @@ import com.lrn.cat.common.CATAppCommon;
 import com.lrn.pp.utility.Log;
 
 public class AddLesson extends CATAppCommon {
+	
+	/**
+	 * Must be called after createCourse or editGetStarted
+	 * @param lessonName provide the lesson name
+	 */
 
 	static public void addLesson(String lessonName) throws Exception
 	{

@@ -10,6 +10,13 @@ import com.lrn.cat.common.CATAppCommon;
 import com.lrn.pp.utility.Log;
 
 public class CopyNode extends CATAppCommon {
+	
+	/**
+	 * Must be called while user is on create your course tab
+	 * @param lesson provide the lesson position you wish to copy (increase by 1 if landing page is present)
+	 * @param topic provide the topic position you wish to copy
+	 * @param page provide the page position you wish to copy
+	 */
 
 	static public void copyNode(String lesson, String topic, String page) throws Exception
 	{

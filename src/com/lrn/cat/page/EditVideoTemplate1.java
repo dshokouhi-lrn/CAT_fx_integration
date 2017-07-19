@@ -10,6 +10,24 @@ import com.lrn.pp.utility.Log;
 
 public class EditVideoTemplate1 extends CATAppCommon{
 	
+	/**
+	 * to be called after addPage or selectPage
+	 * @param pageTitle title for page
+	 * @param showTitle show title yes/no
+	 * @param pageContent page content
+	 * @param autoPlay autoplay video yes/no
+	 * @param fullScreen fullscreen video yes/no
+	 * @param addVideo add video yes/no
+	 * @param addSrt add SRT yes/no
+	 * @param webLink supply weblink if not adding video
+	 * @param panelContent first panel content
+	 * @param panelAudio first panel audio yes or blank for no
+	 * @param desktopImage first panel desktop image yes or blank for no
+	 * @param mobileImage first panel mobile image yes or blank for no
+	 * @param imageDesc first panel image description
+	 * @param altText first panel alt text
+	 * @throws Exception
+	 */
 	static public void editVideoTemplate(String pageTitle, String showTitle, String pageContent, String autoPlay, String fullScreen, String addVideo, String addSrt, String webLink, String panelContent, String panelAudio, String desktopImage, String mobileImage, String imageDesc, String altText) throws Exception
 	{
 		try
@@ -117,7 +135,7 @@ public class EditVideoTemplate1 extends CATAppCommon{
 
 			}
 			   
-			if (webLink == "yes")
+			if (webLink != "")
 			{
 				clickIdentifierByID(".//*[@id='videoUpload']/div/div[2]/label[2]/div/label");
 				typeTextById("webUrl", webLink);
@@ -209,6 +227,17 @@ public class EditVideoTemplate1 extends CATAppCommon{
 		}
 	}
 	
+	
+	/**
+	 * to be called after selectPage or editVideoTemplate
+	 * @param panelNumber number of panel being added
+	 * @param panelContent first panel content
+	 * @param panelAudio first panel audio yes or blank for no
+	 * @param desktopImage first panel desktop image yes or blank for no
+	 * @param mobileImage first panel mobile image yes or blank for no
+	 * @param imageDesc first panel image description
+	 * @param altText first panel alt text
+	 */
 	static public void addVideoPanel(int panelNumber, String panelContent, String panelAudio, String desktopImage, String mobileImage, String imageDesc, String altText) throws Exception
 	{
 		try
@@ -284,6 +313,15 @@ public class EditVideoTemplate1 extends CATAppCommon{
 		}
 	}
 	
+	/**
+	 * to be called after addPage for template with new layout
+	 * @param enableBulletin enable bulletin yes/no
+	 * @param bulletinLarge enable large bulletin yes/no
+	 * @param bulletinMandatory enable mandatory bulletin yes/no
+	 * @param bulletinType supply bulletin type by name
+	 * @param bulletinTitle bulletin title
+	 * @param bulletinText bulletin text
+	 */
 	static public void editNewBulletin(String enableBulletin, String bulletinLarge, String bulletinMandatory, String bulletinType, String bulletinTitle, String bulletinText) throws Exception
 	{
 		try

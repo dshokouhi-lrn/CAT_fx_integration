@@ -9,6 +9,49 @@ import com.lrn.pp.utility.Log;
 
 public class EditConsult extends CATAppCommon{
 	
+	
+	/**
+	 * to be called after addPage or selectPage
+	 * @param showTitle show title yes/no
+	 * @param pageTitle supply page content
+	 * @param layoutConsult Left to Right or Right to Left
+	 * @param consultContent content for the page
+	 * @param consultClickText first consult image click text
+	 * @param consultClickTitle first consult image click title
+	 * @param consultImage first consult image yes or blank for no
+	 * @param consultImageDesc first consult image description
+	 * @param consultAltText first consult alt text
+	 * @param consultQuestion consult question text
+	 * @param consultQuestionAudio consult question audio yes or blank for no
+	 * @param consultQuestionType consult question type either: "Two or More Correct Answers" or "One Correct Answer"
+	 * @param consultAnswerCorrect is the first answer correct yes/no
+	 * @param consultAnswer first answer text
+	 * @param consultAnswerImage first answer image yes/no
+	 * @param consultAnswerDesktopImage first answer desktop image yes or blank for no
+	 * @param consultAnswerImageDesc first answer image description
+	 * @param consultAnswerAltText first answer alt text
+	 * @param consultRetryNumber number of retry attempts, leave blank to configure
+	 * @param consultRetryTitle title for retry prompt, leave blank to configure
+	 * @param consultRetryMessage message for retry prompt, leave blank to configure
+	 * @param consultRetryButton button text for retry prompt, leave blank to configure
+	 * @param feedbackOption "single" or "multiple"
+	 * @param singleFeedback feedback text for single feedback
+	 * @param singleImage single feedback image yes or blank for no
+	 * @param singleImageDesc single feedback image description
+	 * @param singleAltText single feedback alt text
+	 * @param correctTitle multiple feedback correct tile
+	 * @param correctContent multiple feedback correct text
+	 * @param correctImage multiple feedback image yes or blank for no
+	 * @param correctImageDesc multiple feedback image description
+	 * @param correctAltText  multiple feedback alt text
+	 * @param incorrectTitle multiple feedback  incorrect title
+	 * @param incorrectContent multiple feedback incorrect text
+	 * @param incorrectImage multiple feedback incorrect image yes or blank for no
+	 * @param incorrectImageDesc multiple feedback image description
+	 * @param incorrectAltText multiple feedback alt text
+	 * @param pageAudio add page audio yes or blank for no
+	 * @param backgroundImage add background image yes or blank for no
+	 */
 	static public void editConsult(String showTitle, String pageTitle, String layoutConsult, String consultContent, String consultClickText, String consultClickTitle, String consultImage, String consultImageDesc, String consultAltText, String consultQuestion, String consultQuestionAudio, String consultQuestionType, String consultAnswerCorrect, String consultAnswer, String consultAnswerImage, String consultAnswerDesktopImage, String consultAnswerImageDesc, String consultAnswerAltText, String consultRetryNumber, String consultRetryTitle, String consultRetryMessage, String consultRetryButton, String feedbackOption, String singleFeedback, String singleImage, String singleImageDesc, String singleAltText, String correctTitle, String correctContent, String correctImage, String correctImageDesc, String correctAltText, String incorrectTitle, String incorrectContent, String incorrectImage, String incorrectImageDesc, String incorrectAltText, String pageAudio, String backgroundImage) throws Exception
 	{
 		try
@@ -233,6 +276,15 @@ public class EditConsult extends CATAppCommon{
 		}
 	}
 	
+	/**
+	 * to be called after editConsult or selectPage
+	 * @param consultPosition the position of the consult image
+	 * @param consultClickText consult image text
+	 * @param consultClickTitle consult image title
+	 * @param consultImage consult image yes or blank for no
+	 * @param consultImageDesc consult image description
+	 * @param consultAltText consult alt text
+	 */
 	static public void addConsult(int consultPosition, String consultClickText, String consultClickTitle, String consultImage, String consultImageDesc, String consultAltText) throws Exception
 	{
 		try
@@ -297,6 +349,16 @@ public class EditConsult extends CATAppCommon{
 		}
 	}
 	
+	/**
+	 * to be called after selectPage or editConsult
+	 * @param answerPosition the answer position for the added answer
+	 * @param consultAnswerCorrect is the answer correct yes/no
+	 * @param consultAnswer answer text
+	 * @param consultAnswerImage answer image yes or blank for no
+	 * @param consultAnswerDesktopImage answer desktop image yes or blank for no
+	 * @param consultAnswerImageDesc answer image description
+	 * @param consultAnswerAltText answer alt text
+	 */
 	static public void addAnswerOption(String answerPosition, String consultAnswerCorrect, String consultAnswer, String consultAnswerImage, String consultAnswerDesktopImage, String consultAnswerImageDesc, String consultAnswerAltText) throws Exception
 	{
 		try
