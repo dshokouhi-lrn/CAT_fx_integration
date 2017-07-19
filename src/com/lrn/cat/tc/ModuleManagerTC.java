@@ -9,11 +9,11 @@ public class ModuleManagerTC extends ModuleManager
 	@Test
 	public void searchModule() throws Exception
 	{
-		String course = "ADP028";
+		//String course = "ADP028";
 		getModuleManager();
-		getSearchModule(course);
-		copyToEditLibrary(course, "library");
-		editFluidxCourse(course);
+		getSearchModule(configProperties.getProperty("searchModule"));
+		copyToEditLibrary(configProperties.getProperty("searchModule"), "library");
+		editFluidxCourse(configProperties.getProperty("searchModule"));
 	}
 	
 	

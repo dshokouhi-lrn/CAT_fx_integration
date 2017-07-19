@@ -9,6 +9,6 @@ public class ExportToWordTC extends ExportToWord{
 	@Test
 	void CatExportToWord() throws Exception
 	{
-		exportToWordCourse("DAN736", "", "", "", "", "", "", "");
+		exportToWordCourse(configProperties.getProperty("baseCat"), "", "", "", "", "", "", "");
 	}
 }

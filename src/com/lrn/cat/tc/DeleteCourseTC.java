@@ -9,7 +9,7 @@ public class DeleteCourseTC extends SearchCourse{
 	@Test
 	void CatDeleteCourse() throws Exception
 	{
-		searchcourse("DAN736-r80en", "", "");
+		searchcourse(configProperties.getProperty("cloneDeleteCat"), "", "");
 		
 		Thread.sleep(5000);
 		
