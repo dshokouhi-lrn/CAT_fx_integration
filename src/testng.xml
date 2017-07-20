@@ -8,8 +8,8 @@
 		<classes>
 
 			<!-- START creator flow -->
-			<class name="com.lrn.cat.tc.LoginTC" />
-			<class name="com.lrn.cat.tc.ResetTestTC" />
+			<class name= "com.lrn.cat.tc.LoginTC" />
+			<class name= "com.lrn.cat.tc.ResetTestTC" />
 			<class name= "com.lrn.cat.tc.CreateCourseTC" />
  			<class name= "com.lrn.cat.tc.AddLessonTC" />
 			<class name= "com.lrn.cat.tc.AddTopicTC" />
@@ -70,15 +70,15 @@
 			<class name= "com.lrn.cat.tc.DeleteCourseTC" />
 <!-- 			<class name= "com.lrn.cat.tc.CheckInCourseTC" /> -->
 <!-- 			<class name= "com.lrn.cat.tc.CheckOutCourseTC" /> -->
-            <class name="com.lrn.cat.tc.LogoutTC" />
+            <class name= "com.lrn.cat.tc.LogoutTC" />
 			<!-- END creator flow -->
 			
 			<!-- START customizer flow -->
-			<class name="com.lrn.cat.tc.LCECLoginTC" />
-			<class name="com.lrn.cat.tc.ModuleManagerTC" />
-			<class name="com.lrn.cat.tc.CustomizerRoleTC" />
-			<class name="com.lrn.cat.tc.AfterSaveAndExitTC" />
-			<class name="com.lrn.cat.tc.LCECLogoutTC" />
+			<class name= "com.lrn.cat.tc.LCECLoginTC" />
+			<class name= "com.lrn.cat.tc.ModuleManagerTC" />
+			<class name= "com.lrn.cat.tc.CustomizerRoleTC" />
+			<class name= "com.lrn.cat.tc.AfterSaveAndExitTC" />
+			<class name= "com.lrn.cat.tc.LCECLogoutTC" />
 			<!-- END customizer flow -->
 			
 			<!-- test flow -->

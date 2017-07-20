@@ -45,7 +45,7 @@ public class SidebarTemplate extends CATAppCommon {
 			{
 				String audio = getRandomAudio();
 				clickIdentifierXpath("//*[@id='page_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded audio");
 			}
@@ -70,7 +70,7 @@ public class SidebarTemplate extends CATAppCommon {
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//div[@id='desktop-image-main-div-sidebar_image']/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded desktop image");
 				}
@@ -79,7 +79,7 @@ public class SidebarTemplate extends CATAppCommon {
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//div[@id='mobile-image-main-div-sidebar_image']/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded mobile image");
 				}

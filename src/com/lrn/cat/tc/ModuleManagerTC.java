@@ -12,7 +12,7 @@ public class ModuleManagerTC extends ModuleManager
 		//String course = "ADP028";
 		getModuleManager();
 		getSearchModule(configProperties.getProperty("searchModule"));
-		copyToEditLibrary(configProperties.getProperty("searchModule"), "library");
+		copyToEditLibrary(configProperties.getProperty("searchModule"), "custom");
 		editFluidxCourse(configProperties.getProperty("searchModule"));
 	}
 	

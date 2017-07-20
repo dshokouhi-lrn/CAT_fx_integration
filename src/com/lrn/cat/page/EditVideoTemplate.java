@@ -33,7 +33,7 @@ public class EditVideoTemplate extends CATAppCommon{
 		   clickIdentifierXpath(".//*[@id='uploadAMedia']/label");
 		   Thread.sleep(1000);
 		   clickIdentifierByID("fileToUpload");
-		   uploadFile("C:\\github\\CAT_automation\\resource\\video\\clipcanvas_14348_H264_640x360.mp4");
+		   uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\video\\clipcanvas_14348_H264_640x360.mp4");
 		   Thread.sleep(20000);
 		   clickIdentifierXpath(".//div[@aria-describedby='uploadDialogArea']/div/button");
 		   clickIdentifierXpath(".//div[@id='fileList']/div[2]/div[1]");
@@ -64,7 +64,7 @@ public class EditVideoTemplate extends CATAppCommon{
 		   Log.info("Clicked on Upload audio icon");
 		   Thread.sleep(5000);
 		   
-		   uploadFile("C:\\github\\CAT_automation\\resource\\audio\\TechJam.mp3");
+		   uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\TechJam.mp3");
 		   Thread.sleep(5000);
 		   
 		   driver.findElement(By.xpath(".//*[@id='tab1']/div/div[1]/div[2]/div/div/span")).click();

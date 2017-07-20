@@ -71,7 +71,7 @@ public class EditConsentTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='conscentImage']/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded desktop image");
 			}
@@ -81,7 +81,7 @@ public class EditConsentTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='conscentImage_mobileReady']/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded mobile image");
 			}

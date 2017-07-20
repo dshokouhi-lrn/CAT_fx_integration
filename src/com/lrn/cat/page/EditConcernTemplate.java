@@ -116,7 +116,7 @@ public class EditConcernTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='multiGraphicContent_add']/li[1]/div[1]/div[4]/div[2]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded meter answer image");
 				if(driver.getPageSource().contains(image))
@@ -138,7 +138,7 @@ public class EditConcernTemplate extends CATAppCommon{
 			{
 			String audio = getRandomAudio();
 				clickIdentifierXpath(".//*[@id='sltAudio']");
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded question audio");
 			}*/
@@ -171,7 +171,7 @@ public class EditConcernTemplate extends CATAppCommon{
 			{
 				String image1 = getRandomImage();
 				clickIdentifierXpath(".//*[@id='multiGraphicContentContainerconcernChoice']/div/div[4]/div[2]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image1 + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image1 + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded answer image");
 			}
@@ -207,7 +207,7 @@ public class EditConcernTemplate extends CATAppCommon{
 				{
 					String image2 = getRandomImage();
 					clickIdentifierXpath(".//*[@id='concernMeterFeedback']/div[1]/div[2]/div[3]/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image2 + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image2 + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded feedback image");
 				}
@@ -239,7 +239,7 @@ public class EditConcernTemplate extends CATAppCommon{
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='feedbackCorrectImage']/div[1]/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded correct feedback image");
 				}
@@ -248,7 +248,7 @@ public class EditConcernTemplate extends CATAppCommon{
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='feedbackIncorrectImage']/div[1]/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded incorrect feedback image");
 				}
@@ -354,7 +354,7 @@ public class EditConcernTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='concernAnswer']/ul/li[" + answerPosition + "]/div/div[5]/div[2]/div[1]/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded meter answer image");
 			}
@@ -438,7 +438,7 @@ public class EditConcernTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='concernChoice']/ul/li[" + answerPosition + "]/div/div[5]/div[2]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded answer image");
 			}

@@ -121,7 +121,7 @@ public class CATAppCommon extends WebAppCommon {
 			clickIdentifierXpath("//*[@id='pageBackgroundSection']/div/div[1]/div[1]/img");
 			
 			String image = getRandomImage();
-			uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+			uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 			
 			Thread.sleep(5000);
 			Log.info("uploaded background image");
@@ -162,7 +162,7 @@ public class CATAppCommon extends WebAppCommon {
 			
 			String audio = getRandomAudio();
 			
-			uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+			uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 			Thread.sleep(3000);
 			Log.info("uploaded audio");
 			
@@ -330,8 +330,8 @@ public class CATAppCommon extends WebAppCommon {
 	@AfterTest
 	public void endClass() throws Exception
 	{
-		String chromeDriverPath="C:\\github\\CAT_automation\\resource\\drivers\\chromedriver.exe";	
-	//	C:\Users\megha.thombre\Desktop\eclipse\CAT_automation
+		String chromeDriverPath="C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\drivers\\chromedriver.exe";	
+	//	C:\Users\megha.thombre\Desktop\eclipse\CAT_fx_integration\\CAT_integration
 		System.setProperty("webdriver.chrome.driver",chromeDriverPath);
 		driver=new ChromeDriver();
 		System.out.println("Opening Report +++++++++++++");

@@ -136,7 +136,7 @@ public class KnowledgeCheck extends CATAppCommon {
 						Thread.sleep(5000);
 						
 						String image = getRandomImage();
-						uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+						uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 						Thread.sleep(1000);
 						typeTextByXpath(".//*[@id='graphicDesc']",imgdes + " " + d.toString());
 						typeTextByXpath(".//*[@id='altTxtOn']",alttext + " " + d.toString());
@@ -156,7 +156,7 @@ public class KnowledgeCheck extends CATAppCommon {
 						clickIdentifierXpath(".//div[@id='question_layout']/div/div[10]/div[2]/img");
 						Thread.sleep(1000);
 						String image = getRandomImage();
-						uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+						uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 						
 						typeTextByXpath(".//*[@id='graphicDesc']",imgdes + " " + d.toString());
 						typeTextByXpath(".//*[@id='altTxtOn']",alttext + " " + d.toString());

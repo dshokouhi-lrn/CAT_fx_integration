@@ -170,7 +170,7 @@ public class KCConifg extends CATAppCommon {
 		{
 			String image = getRandomImage();
 			clickIdentifierXpath("//*[@id='imageToggleSection']/div[1]/div[1]/img");
-			uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+			uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 			Thread.sleep(5000);
 			Log.info("uploaded desktop image");
 		}

@@ -52,7 +52,7 @@ public class SelectableImage extends CATAppCommon {
 				{
 					String audio = getRandomAudio();
 					clickIdentifierXpath("//*[@id='page_uploadAudio']/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 					Thread.sleep(3000);
 					Log.info("uploaded audio");
 				}*/
@@ -61,7 +61,7 @@ public class SelectableImage extends CATAppCommon {
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//div[@id='desktop-image-main-div-hotspot_pageImage']/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded desktop image");
 				}
@@ -70,7 +70,7 @@ public class SelectableImage extends CATAppCommon {
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//div[@id='mobile-image-main-div-hotspot_pageImage']/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded mobile image");
 				}
@@ -101,7 +101,7 @@ public class SelectableImage extends CATAppCommon {
 				{
 					
 					clickIdentifierXpath(".//*[@id='widget1_uploadAudio']/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\audio\\l1p01_1.mp3");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\l1p01_1.mp3");
 					Thread.sleep(3000);
 					Log.info("uploaded Hotspot1 audio");
 				}*/
@@ -158,20 +158,20 @@ public class SelectableImage extends CATAppCommon {
 				
 				String normalImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//*[@id='hotspot-normal-image-main-div-revealHotspot_hotspot0']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + normalImage + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded normal image");
 				
 				clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot0']/img");
 			
 				String hoverImage = getRandomHotSpotImage();
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + hoverImage + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded hover image");
 				
 				String completeImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot0']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + completeImage + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded complete image");
 				
@@ -187,7 +187,7 @@ public class SelectableImage extends CATAppCommon {
 				{
 					
 					clickIdentifierXpath(".//*[@id='widget1_uploadAudio']/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\audio\\l1p01_1.mp3");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\l1p01_1.mp3");
 					Thread.sleep(3000);
 					Log.info("uploaded Hotspot1 audio");
 				}*/
@@ -244,19 +244,19 @@ public class SelectableImage extends CATAppCommon {
 				
 				String imageNormal = getRandomHotSpotImage();
 				clickIdentifierXpath(".//*[@id='hotspot-normal-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + imageNormal + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + imageNormal + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded normal image");
 				
 				String imageHover = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + imageHover + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + imageHover + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded hover image");
 				
 				String imageComplete = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + imageComplete + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + imageComplete + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded complete image");
 
@@ -277,7 +277,7 @@ public class SelectableImage extends CATAppCommon {
 				{
 					
 					clickIdentifierXpath(".//*[@id='widget1_uploadAudio']/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\audio\\l1p01_1.mp3");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\l1p01_1.mp3");
 					Thread.sleep(3000);
 					Log.info("uploaded Hotspot1 audio");
 				}*/
@@ -300,19 +300,19 @@ public class SelectableImage extends CATAppCommon {
 				
 				String normal = getRandomHotSpotImage();
 				clickIdentifierXpath(".//*[@id='hotspot-normal-image-main-div-revealHotspot_hotspot0']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + normal + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normal + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded normal image");
 				
 				String hover = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot0']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + hover + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hover + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded hover image");
 				
 				String complete = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot0']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + complete + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + complete + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded complete image");
 				
@@ -394,7 +394,7 @@ public class SelectableImage extends CATAppCommon {
 			{
 				String audio = getRandomAudio();
 				clickIdentifierXpath("//div[@id='widget2_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded audio");
 			}
