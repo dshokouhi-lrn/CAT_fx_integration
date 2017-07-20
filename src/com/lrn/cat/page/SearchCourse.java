@@ -19,10 +19,7 @@ public class SearchCourse extends CATAppCommon{
            {
                   Log.startTestCase("Verify Search course ");
                   
-                  clickIdentifierXpath("//ul[@class='nav navbar-nav nav-pills pull-right']/li[2]/a");
-                  
-                  clickIdentifierXpath(".//*[@id='homeDropDown']/a/span");
-                  Log.info("navigated to home page");
+                  navigateHome();
                   
                   typeTextById("courseName", courseName);
                   
