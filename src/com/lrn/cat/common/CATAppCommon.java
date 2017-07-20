@@ -48,6 +48,7 @@ import org.testng.asserts.SoftAssert;
 
 
 
+
 import com.lrn.pp.utility.*;
 import com.lrn.webdrivercommon.WebAppCommon;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -96,12 +97,18 @@ public class CATAppCommon extends WebAppCommon {
 
 	}
 	
+	/**
+	 * To be called while editing any page with old background image form,  will upload a random image and supply alt text
+	 * @throws Exception
+	 */
 	static public void uploadBackgroundImage() throws Exception
 	{
 		try
 		{
 			JavascriptExecutor jse = (JavascriptExecutor)driver;
 			jse.executeScript("window.scrollBy(0,550)", "");
+			
+			Date d = new Date();
 			
 			Thread.sleep(1000);
 			
@@ -115,6 +122,10 @@ public class CATAppCommon extends WebAppCommon {
 			uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 			Thread.sleep(5000);
 			Log.info("uploaded background image");
+			
+			typeTextById("graphicDescriptionBackgroundImage", "test " + d.toString());
+			
+			typeTextById("altTextBackgroundImage", "test " + d.toString());
 		}
 		
 		catch(Exception e){
@@ -122,6 +133,10 @@ public class CATAppCommon extends WebAppCommon {
 		}
 	}
 	
+	/**
+	 * to be called while editing old template
+	 * @throws Exception
+	 */
 	static public void uploadPageAudio() throws Exception
 	{
 		try
@@ -149,11 +164,15 @@ public class CATAppCommon extends WebAppCommon {
 		}
 	}
 	
+	/**
+	 * Navigate to coures features tab while editing a course
+	 * @throws Exception
+	 */
 	static public void navigateToCourseFeaturesTab() throws Exception
 	{
 		try
 		{
-			clickIdentifierXpath(".//*[@id='menuTabs']/ul/li[5]/p");
+			clickIdentifierXpath(".//*[@id='menuTabs']/ul/li[5]");
 		}
 		
 		catch(Exception e){
@@ -161,6 +180,29 @@ public class CATAppCommon extends WebAppCommon {
 		}
 	}
 	
+	/**
+	 * Navigate to home page of CAT
+	 * @throws Exception
+	 */
+	static public void navigateHome() throws Exception
+	{
+		try
+		{
+			clickIdentifierXpath("//ul[@class='nav navbar-nav nav-pills pull-right']/li[2]/a");
+            
+            clickIdentifierXpath(".//*[@id='homeDropDown']/a/span");
+            Log.info("navigated to home page");
+		}
+		
+		catch(Exception e){
+			throw e;
+		}
+	}
+	
+	/**
+	 * Get a random image to upload, to add more images add to the end of the array in this method
+	 * @return returns a random image name, make sure to add path and extension around it
+	 */
 	static public String getRandomImage()
 	{
 		String [] arr = {"Hydrangeas", "bns999_p18", "Penguins", "Chrysanthemum", "Desert", "Tulips", "Lighthouse", "Koala"};
@@ -173,6 +215,10 @@ public class CATAppCommon extends WebAppCommon {
 		return arr[select];
 	}
 	
+	/**
+	 * Get a random hot spot image to upload, to add more hot spot images add to the end of the array in this method.  Make sure the image is small enough to be considered a hot spot image otherwise preview will fail
+	 * @return returns a random image name, make sure to add path and extension around it
+	 */
 	static public String getRandomHotSpotImage()
 	{
 		String [] arr = {"venicewin", "venicecan", "gondala_pole"};
@@ -185,6 +231,10 @@ public class CATAppCommon extends WebAppCommon {
 		return arr[select];
 	}
 	
+	/**
+	 * Get a random audio to upload, to add more audio files add to the end of the array in this method
+	 * @return returns a random audio name, make sure to add path and extension around it
+	 */
 	static public String getRandomAudio()
 	{
 		String [] arr = {"Ambianica", "FunkyDiva", "l1p01_1", "NewAgeTechno", "SaxyGroovy", "TechJam", "ThatAintRight"};
