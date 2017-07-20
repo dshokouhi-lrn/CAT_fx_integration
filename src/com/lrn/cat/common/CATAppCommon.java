@@ -169,7 +169,7 @@ public class CATAppCommon extends WebAppCommon {
 			String success = driver.findElement(By.id("audioName")).getText();
 			
 			if (success.contains(audio))
-				Log.pass("verified page audio upload successful");
+				Log.pass("verified page audio upload successfully");
 		}
 		
 		catch(Exception e){
