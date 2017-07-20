@@ -119,6 +119,8 @@ public class EditConcernTemplate extends CATAppCommon{
 				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded meter answer image");
+				if(driver.getPageSource().contains(image))
+					Log.pass("successfully uploaded meter answer image");
 			}
 			
 			if (meterAnswerImageDesc != "")

@@ -23,6 +23,7 @@ import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.xml.DOMConfigurator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -41,6 +42,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
 
 
 
@@ -120,9 +122,15 @@ public class CATAppCommon extends WebAppCommon {
 			
 			String image = getRandomImage();
 			uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+			
 			Thread.sleep(5000);
 			Log.info("uploaded background image");
 			
+			String success = driver.findElement(By.xpath(".//*[@id='pageBackgroundSection']/div[1]/div[1]/div[2]/div[1]/img")).getAttribute("src");
+			
+			if (success.contains(image))
+				Log.pass("verified the background image uploaded");
+		
 			typeTextById("graphicDescriptionBackgroundImage", "test " + d.toString());
 			
 			typeTextById("altTextBackgroundImage", "test " + d.toString());
@@ -157,6 +165,11 @@ public class CATAppCommon extends WebAppCommon {
 			uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
 			Thread.sleep(3000);
 			Log.info("uploaded audio");
+			
+			String success = driver.findElement(By.id("audioName")).getText();
+			
+			if (success.contains(audio))
+				Log.pass("verified page audio upload successful");
 		}
 		
 		catch(Exception e){
