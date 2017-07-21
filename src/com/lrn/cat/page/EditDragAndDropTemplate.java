@@ -82,7 +82,7 @@ public class EditDragAndDropTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='categoryNameDivdragOptionsMultiText1']/div[5]/div[2]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded category 1 image");
 			}
@@ -103,7 +103,7 @@ public class EditDragAndDropTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='lineItemDivdragOptionsMultiText1']/div[7]/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded line item 1 image");
 			}
@@ -139,7 +139,7 @@ public class EditDragAndDropTemplate extends CATAppCommon{
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='dragOptionsFeedback']/div[1]/div[2]/div[3]/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded feedback image");
 				}
@@ -171,7 +171,7 @@ public class EditDragAndDropTemplate extends CATAppCommon{
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='dragOptionsFeedback']/div[1]/div[3]/div[1]/div[2]/div[1]/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded correct feedback image");
 				}
@@ -180,7 +180,7 @@ public class EditDragAndDropTemplate extends CATAppCommon{
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='dragOptionsFeedback']/div[1]/div[3]/div[2]/div[3]/div[1]/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded incorrect feedback image");
 				}
@@ -265,7 +265,7 @@ public class EditDragAndDropTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='categoryNameDivdragOptionsMultiText" + categoryPosition + "']/div[6]/div[2]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded category " + categoryPosition + " image");
 			}
@@ -333,7 +333,7 @@ public class EditDragAndDropTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='lineItemDivdragOptionsMultiText" + lineItemPosition + "']/div[8]/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded line item " + lineItemPosition + " image");
 			}

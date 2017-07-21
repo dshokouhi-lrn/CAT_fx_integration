@@ -67,7 +67,7 @@ public class EditSelectAndRevealTemplate extends CATAppCommon{
 			{
 				String image = getRandomHotSpotImage();
 				clickIdentifierXpath(".//*[@id='selectAndRevealText']/ul[1]/li[1]/div[1]/div[4]/div[2]/div[1]/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded reveal 1 image");
 			}
@@ -113,7 +113,7 @@ public class EditSelectAndRevealTemplate extends CATAppCommon{
 				Thread.sleep(1000);
 				clickIdentifierXpath(".//*[@id='audBtn_1']");
 				Thread.sleep(1000);
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				clickIdentifierXpath("//*[@aria-describedby='selectDialog']/div[3]/div[1]/button");
 				Thread.sleep(2000);
@@ -190,7 +190,7 @@ public class EditSelectAndRevealTemplate extends CATAppCommon{
 				{
 					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='selectAndRevealText']/ul[1]/li[" + revealPosition + "]/div[1]/div[5]/div[2]/div[1]/div[1]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(6000);
 					Log.info("uploaded reveal " + revealPosition + " image");
 				}
@@ -208,7 +208,7 @@ public class EditSelectAndRevealTemplate extends CATAppCommon{
 					Thread.sleep(1000);
 					clickIdentifierXpath(".//*[@id='audBtn_1']");
 					Thread.sleep(1000);
-					uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 					Thread.sleep(3000);
 					clickIdentifierXpath("//*[@aria-describedby='selectDialog']/div[3]/div[1]/button");
 					Thread.sleep(2000);

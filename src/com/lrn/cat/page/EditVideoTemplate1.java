@@ -122,7 +122,7 @@ public class EditVideoTemplate1 extends CATAppCommon{
 				Thread.sleep(3000);
 				clickIdentifierByID("fileToUpload");
 				Thread.sleep(3000);
-				uploadFile("C:\\github\\CAT_automation\\resource\\video\\clipcanvas_14348_H264_640x360.mp4");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\video\\clipcanvas_14348_H264_640x360.mp4");
 				Thread.sleep(30000);
 				clickIdentifierXpath(".//div[@aria-describedby='uploadDialogArea']/div/button");
 				Thread.sleep(3000);
@@ -150,7 +150,7 @@ public class EditVideoTemplate1 extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='desktop-image-main-div-0-videoUploadPanel']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded desktop image");
 			}
@@ -159,7 +159,7 @@ public class EditVideoTemplate1 extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='mobile-image-main-div-0-videoUploadPanel']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded mobile image");
 			}
@@ -186,7 +186,7 @@ public class EditVideoTemplate1 extends CATAppCommon{
 			if (addSrt == "yes")
 			{
 				clickIdentifierByID("srt-div");
-				uploadFile("C:\\github\\CAT_automation\\resource\\srt\\vsshort-en.srt");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\srt\\vsshort-en.srt");
 				Log.info("uploaded SRT file");
 			}
 			
@@ -194,7 +194,7 @@ public class EditVideoTemplate1 extends CATAppCommon{
 			{
 				String audio = getRandomAudio();
 				clickIdentifierXpath(".//*[@id='widget1_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Log.info("uploaded audio");
 				Thread.sleep(5000);
 			}
@@ -259,7 +259,7 @@ public class EditVideoTemplate1 extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='desktop-image-main-div-" + panelPosition + "-videoUploadPanel']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded desktop image");
 			}
@@ -268,7 +268,7 @@ public class EditVideoTemplate1 extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='mobile-image-main-div-" + panelPosition + "-videoUploadPanel']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded mobile image");
 			}
@@ -283,7 +283,7 @@ public class EditVideoTemplate1 extends CATAppCommon{
 			{
 				String audio = getRandomAudio();
 				clickIdentifierXpath(".//*[@id='widget" + panelNumber + "_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Log.info("uploaded audio");
 				Thread.sleep(5000);
 			}

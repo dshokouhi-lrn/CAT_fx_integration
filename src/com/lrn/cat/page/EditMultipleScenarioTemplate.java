@@ -102,7 +102,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='desktopImageContainer']/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded multiple scenario desktop image");
 				}
@@ -111,7 +111,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='smartPhoneImageContainer']/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(5000);
 					Log.info("uploaded multiple scenario mobile image");
 				}
@@ -160,7 +160,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 				{
 					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='hotSpotImageDiv']/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(6000);
 					Log.info("uploaded multiple scenario normal hot spot image");
 				}
@@ -169,7 +169,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 				{
 					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='hoverhotSpotImageDiv']/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(6000);
 					Log.info("uploaded multiple scenario hover hot spot image");
 				}
@@ -178,7 +178,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 				{
 					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='clickhotSpotImageDiv']/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(6000);
 					Log.info("uploaded multiple scenario click hot spot image");
 				}
@@ -217,7 +217,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 					{
 						String image = getRandomImage();
 						clickIdentifierXpath(".//*[@id='tngDesktopImageContainer']/div/img");
-						uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+						uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 						Thread.sleep(5000);
 						Log.info("uploaded scenario 1 desktop image");
 					}
@@ -226,7 +226,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 					{
 						String image = getRandomImage();
 						clickIdentifierXpath(".//*[@id='tngSmartPhoneImageContainer']/div/img");
-						uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+						uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 						Thread.sleep(5000);
 						Log.info("uploaded 1 scenario mobile image");
 					}
@@ -242,7 +242,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 				{
 					String audio = getRandomAudio();
 					clickIdentifierXpath(".//*[@id='sltAudio']");
-					uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 					Thread.sleep(3000);
 					Log.info("uploaded scenario audio");
 				}*/
@@ -334,7 +334,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 							{
 								String image = getRandomImage();
 								clickIdentifierXpath(".//*[@id='feedbackSingleImage']/div[1]/div[1]/img");
-								uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+								uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 								Thread.sleep(5000);
 								Log.info("uploaded feedback image");
 							}
@@ -370,7 +370,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 							{
 								String image = getRandomImage();
 								clickIdentifierXpath(".//*[@id='templateSaqFeedbackSection']/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/img");
-								uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+								uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 								Thread.sleep(5000);
 								Log.info("uploaded correct feedback image");
 							}
@@ -379,7 +379,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 							{
 								String image = getRandomImage();
 								clickIdentifierXpath(".//*[@id='templateSaqFeedbackSection']/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/img");
-								uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+								uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 								Thread.sleep(5000);
 								Log.info("uploaded incorrect feedback image");
 							}
@@ -531,7 +531,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 					{
 						String image = getRandomImage();
 						clickIdentifierXpath(".//*[@id='tngDesktopImageContainer']/div/img");
-						uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+						uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 						Thread.sleep(5000);
 						Log.info("uploaded scenario 1 desktop image");
 					}
@@ -540,7 +540,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 					{
 						String image = getRandomImage();
 						clickIdentifierXpath(".//*[@id='tngSmartPhoneImageContainer']/div/img");
-						uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+						uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 						Thread.sleep(5000);
 						Log.info("uploaded 1 scenario mobile image");
 					}
@@ -559,7 +559,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 					Thread.sleep(1000);
 					clickIdentifierXpath(".//*[@id='audBtn_1']");
 					Thread.sleep(1000);
-					uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 					Thread.sleep(3000);
 					clickIdentifierXpath("//*[@aria-describedby='selectDialog']/div[3]/div[1]/button");
 					Thread.sleep(2000);
@@ -653,7 +653,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 							{
 								String image = getRandomImage();
 								clickIdentifierXpath(".//*[@id='feedbackSingleImage']/div[1]/div[1]/img");
-								uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+								uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 								Thread.sleep(5000);
 								Log.info("uploaded feedback image");
 							}
@@ -689,7 +689,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 							{
 								String image = getRandomImage();
 								clickIdentifierXpath(".//*[@id='templateSaqFeedbackSection']/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/img");
-								uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+								uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 								Thread.sleep(5000);
 								Log.info("uploaded correct feedback image");
 							}
@@ -698,7 +698,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 							{
 								String image = getRandomImage();
 								clickIdentifierXpath(".//*[@id='templateSaqFeedbackSection']/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/img");
-								uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+								uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 								Thread.sleep(5000);
 								Log.info("uploaded incorrect feedback image");
 							}
@@ -846,7 +846,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 				{
 					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='hotSpotImageDiv']/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(6000);
 					Log.info("uploaded multiple scenario normal hot spot image");
 				}
@@ -855,7 +855,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 				{
 					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='hoverhotSpotImageDiv']/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(6000);
 					Log.info("uploaded multiple scenario hover hot spot image");
 				}
@@ -864,7 +864,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 				{
 					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='clickhotSpotImageDiv']/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(6000);
 					Log.info("uploaded multiple scenario click hot spot image");
 				}
@@ -906,7 +906,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 					{
 						String image = getRandomImage();
 						clickIdentifierXpath(".//*[@id='tngDesktopImageContainer']/div/img");
-						uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+						uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 						Thread.sleep(5000);
 						Log.info("uploaded scenario 1 desktop image");
 					}
@@ -915,7 +915,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 					{
 						String image = getRandomImage();
 						clickIdentifierXpath(".//*[@id='tngSmartPhoneImageContainer']/div/img");
-						uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+						uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 						Thread.sleep(5000);
 						Log.info("uploaded 1 scenario mobile image");
 					}
@@ -934,7 +934,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 					Thread.sleep(1000);
 					clickIdentifierXpath(".//*[@id='audBtn_1']");
 					Thread.sleep(1000);
-					uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 					Thread.sleep(3000);
 					clickIdentifierXpath("//*[@aria-describedby='selectDialog']/div[3]/div[1]/button");
 					Thread.sleep(2000);
@@ -1028,7 +1028,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 							{
 								String image = getRandomImage();
 								clickIdentifierXpath(".//*[@id='feedbackSingleImage']/div[1]/div[1]/img");
-								uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+								uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 								Thread.sleep(5000);
 								Log.info("uploaded feedback image");
 							}
@@ -1064,7 +1064,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 							{
 								String image = getRandomImage();
 								clickIdentifierXpath(".//*[@id='templateSaqFeedbackSection']/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/img");
-								uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+								uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 								Thread.sleep(5000);
 								Log.info("uploaded correct feedback image");
 							}
@@ -1073,7 +1073,7 @@ public class EditMultipleScenarioTemplate extends CATAppCommon{
 							{
 								String image = getRandomImage();
 								clickIdentifierXpath(".//*[@id='templateSaqFeedbackSection']/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/img");
-								uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+								uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 								Thread.sleep(5000);
 								Log.info("uploaded incorrect feedback image");
 							}

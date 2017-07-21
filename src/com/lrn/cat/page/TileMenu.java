@@ -331,7 +331,7 @@ public class TileMenu extends CATAppCommon{
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@class='lesson-panels']/div[" + tilePosition + "]/div[4]/div/div[1]/div[1]/img[4]");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(6000);
 					Log.info("uploaded tile image");
 				}
@@ -351,7 +351,7 @@ public class TileMenu extends CATAppCommon{
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@class='lesson-panels']/div[" + tilePosition + "]/div[4]/div/div[1]/div[1]/img[4]");
-					uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 					Thread.sleep(6000);
 					Log.info("uploaded tile image");
 				}

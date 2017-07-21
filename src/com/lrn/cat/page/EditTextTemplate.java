@@ -56,7 +56,7 @@ public class EditTextTemplate extends CATAppCommon{
 			{
 				String audio = getRandomAudio();
 				clickIdentifierXpath("//*[@id='page_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded audio");
 			}
@@ -65,7 +65,7 @@ public class EditTextTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='desktop-image-main-div-textGraphic_image']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded desktop image");
 			}
@@ -74,7 +74,7 @@ public class EditTextTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='mobile-image-main-div-textGraphic_image']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded mobile image");
 			}

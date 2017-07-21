@@ -53,7 +53,7 @@ public class EditCarouselTemplate extends CATAppCommon{
 			/*if (screenAudio != "")
 			{
 				clickIdentifierXpath(".//*[@id='carouselScreens']/div[2]/div[1]/div[2]/fieldset/div[7]/ul/div/div/div[1]/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\Ambianica.mp3");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\Ambianica.mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded carousel screen 1 audio");	
 			}*/
@@ -65,7 +65,7 @@ public class EditCarouselTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='carouselScreens']/div[2]/div[1]/div[2]/fieldset/div[7]/div[2]/ul/div[2]/div[2]/div[1]/div[1]/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded screen 1 desktop image");
 			}
@@ -74,7 +74,7 @@ public class EditCarouselTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='carouselScreens']/div[2]/div[1]/div[2]/fieldset/div[7]/div[2]/ul/div[2]/div[2]/div[1]/div[1]/div[2]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded screen 1 mobile image");
 			}
@@ -110,7 +110,7 @@ public class EditCarouselTemplate extends CATAppCommon{
 				String audio = getRandomAudio();
 				checkCheckBox(".//*[@id='carouselPageAudioFlag']");
 				clickIdentifierXpath(".//*[@id='page_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded carousel audio");
 			}
@@ -143,7 +143,7 @@ public class EditCarouselTemplate extends CATAppCommon{
 			{
 				String audio = getRandomAudio();
 				clickIdentifierXpath(".//*[@id='carouselScreens']/div[2]/div[1]/div[2]/fieldset/div[7]/ul/div/div/div[1]/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded carousel screen 1 audio");	
 			}
@@ -167,7 +167,7 @@ public class EditCarouselTemplate extends CATAppCommon{
 					Log.info("turned on page audio");
 					
 					clickIdentifierXpath(".//*[@id='page_uploadAudio']/img");
-					uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 					Thread.sleep(3000);
 					Log.info("uploaded carousel audio");
 				}
@@ -251,7 +251,7 @@ public class EditCarouselTemplate extends CATAppCommon{
 			{
 				String audio = getRandomAudio();
 				clickIdentifierXpath(".//*[@id='carouselScreens']/div[2]/div[1]/div[" + screenCount + "]/fieldset/div[7]/ul/div/div/div[1]/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded carousel screen " + screenNumber + " audio");	
 			}
@@ -263,7 +263,7 @@ public class EditCarouselTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='carouselScreens']/div[2]/div[1]/div[" + screenCount + "]/fieldset/div[7]/div[2]/ul/div[2]/div[2]/div[1]/div[1]/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded screen " + screenNumber + " desktop image");
 			}
@@ -272,7 +272,7 @@ public class EditCarouselTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='carouselScreens']/div[2]/div[1]/div[" + screenCount + "]/fieldset/div[7]/div[2]/ul/div[2]/div[2]/div[1]/div[1]/div[2]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(5000);
 				Log.info("uploaded screen " + screenNumber + " mobile image");
 			}

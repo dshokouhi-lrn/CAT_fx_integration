@@ -54,7 +54,7 @@ public class CreateBranchingLesson extends CATAppCommon	{
 				Thread.sleep(2000);
 				clickIdentifierXpath(".//*[@id='audBtn_1']");
 				Thread.sleep(2000);
-				uploadFile("C:\\github\\CAT_automation\\resource\\audio\\" + audio + ".mp3");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				clickIdentifierXpath("//*[@aria-describedby='selectDialog']/div[3]/div[1]/button");
 				Thread.sleep(2000);
@@ -89,7 +89,7 @@ public class CreateBranchingLesson extends CATAppCommon	{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='branchingLessonBackgroundImage']/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded lesson image");
 			}
@@ -181,7 +181,7 @@ public class CreateBranchingLesson extends CATAppCommon	{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='branchingTopicBackgroundImage']/div[1]/img");
-				uploadFile("C:\\github\\CAT_automation\\resource\\images\\" + image + ".jpg");
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded topic image");
 			}
