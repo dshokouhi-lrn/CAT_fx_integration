@@ -199,7 +199,7 @@ public class ModuleManager extends CATAppCommon
 	 * @param course provide the base catalog ID
 	 * @param type must be either "library" or "custom" for the course type
 	 */
-	static public void copyToEditLibrary(String course, String type) throws Exception
+	static public void copyToEditLibrary(String course) throws Exception
 	{
 		try
 		{
@@ -219,13 +219,14 @@ public class ModuleManager extends CATAppCommon
 			//String Libray_Xpath="//div[text()='LRN Library']";
 			
 			clickIdentifierXpath(".//*[@id='course_version_" + course + "']/td[1]/div[1]/div[1]/div[1]");
-			Log.info("Click Libray link for fresh insert page.");
+			Log.info("Click Libray link for fresh course");
+			System.out.println("Click Libray link for fresh course");
 			
 			Thread.sleep(5000);
-			
-			if (type.toLowerCase() == "library")
+			System.out.println("search type is " + configProperties.getProperty("moduleType"));
+			if (configProperties.getProperty("moduleType").contains("library"))
 				clickIdentifierXpath(CopyToEdit_Xpath);
-			else if (type == "custom")
+			else if (configProperties.getProperty("moduleType").contains("custom"))
 				clickIdentifierXpath(CopyToEdit_Xpath1);
 			
 			Log.pass("Clicked Copy to edit");
