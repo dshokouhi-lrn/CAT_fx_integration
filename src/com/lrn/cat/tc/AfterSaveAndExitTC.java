@@ -12,6 +12,9 @@ public class AfterSaveAndExitTC extends ModuleManager{
 		//String SearchModule = "ADP028";
 		getWaitForElementPresent("//*[@id='" + configProperties.getProperty("searchModule") + "']/div[2]/div/div", 100);
 		clickIdentifierXpath("//*[@id='" + configProperties.getProperty("searchModule") + "']/div[2]/div/div");
+		
+		Thread.sleep(5000);
+		
 		publishCourse(configProperties.getProperty("searchModule"));
 	}
 }

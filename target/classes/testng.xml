@@ -82,22 +82,21 @@
 			<!-- END customizer flow -->
 			
 			<!-- test flow -->
-			<!-- <class name="com.lrn.cat.tc.LoginTC" />
+			<!-- <class name= "com.lrn.cat.tc.LoginTC" />
+			<class name= "com.lrn.cat.tc.ResetTestTC" />
 			<class name= "com.lrn.cat.tc.CreateCourseTC" />
- 			<class name= "com.lrn.cat.tc.AddLessonTC" />
-			<class name= "com.lrn.cat.tc.AddTopicTC" />
- 			<class name= "com.lrn.cat.tc.AddPageTC" />
-			<class name= "com.lrn.cat.tc.EditConcernTemplateTC" />
-			<class name= "com.lrn.cat.tc.AdvancedTabTC" />
-			<class name= "com.lrn.cat.tc.CheckInCourseTC" />
-			<class name= "com.lrn.cat.tc.SearchCourseTC" />
-			<class name= "com.lrn.cat.tc.EditGetStartedTC" />
 			<class name= "com.lrn.cat.tc.AddLessonTC1" />
-			<class name= "com.lrn.cat.tc.AddTopicTC1" />
+			<class name= "com.lrn.cat.tc.AddTopicTC" />
 	 		<class name= "com.lrn.cat.tc.AddPageTC3" /> 
  			<class name= "com.lrn.cat.tc.EditTextTemplateTC" /> 
- 			<class name= "com.lrn.cat.tc.RevertCourseTC" />
- 			<class name="com.lrn.cat.tc.LogoutTC" /> -->
+ 			<class name= "com.lrn.cat.tc.AddPageTC10" />
+ 			<class name= "com.lrn.cat.tc.SelectableImageTC" />
+ 			<class name= "com.lrn.cat.tc.AddPageTC7" />
+ 			<class name= "com.lrn.cat.tc.EditVideoTemplateTC" />
+ 			<class name= "com.lrn.cat.tc.AddPageTC8" />
+ 			<class name= "com.lrn.cat.tc.SidebarTemplateTC" />
+ 			<class name= "com.lrn.cat.tc.TileMenuTC" />
+ 			<class name= "com.lrn.cat.tc.LogoutTC" /> -->
  			
  			
 		</classes>

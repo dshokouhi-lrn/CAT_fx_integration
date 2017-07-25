@@ -3,6 +3,7 @@ package com.lrn.cat.page;
 import java.util.Date;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import com.lrn.cat.common.CATAppCommon;
@@ -200,6 +201,8 @@ public class EditVideoTemplate1 extends CATAppCommon{
 			}
 			
 			Thread.sleep(5000);
+			
+			addNewTemplateBackgroundImage();
 			  
 			clickIdentifierXpath(".//*[@id='ok-button']");
 			   
@@ -330,8 +333,16 @@ public class EditVideoTemplate1 extends CATAppCommon{
 			
 			Log.info("start adding new bulletin");
 			
+
+			
 			if (enableBulletin != "")
 			{
+				JavascriptExecutor jse = (JavascriptExecutor)driver;
+				jse.executeScript("window.scrollBy(0, 500)", "");
+				
+				
+				clickIdentifierXpath(".//*[@id='tabs']/ul/li[1]");
+				
 				//clickIdentifierXpath(".//*[@id='tab1']/div/div[1]/div[2]/div/div/span");
 				//Log.info("bulletin enabled");
 				

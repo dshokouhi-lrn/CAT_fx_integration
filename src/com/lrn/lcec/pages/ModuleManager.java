@@ -214,8 +214,9 @@ public class ModuleManager extends CATAppCommon
 					
 			Log.info("expanded course");
 			
-			String CopyToEdit_Xpath="//div[div[div[text()='LRN Library']]]/div[2]/descendant::button[contains(text(),'Copy to Edit')]";
-			String CopyToEdit_Xpath1="//div[div[div[text()='LRN QA Custom']]]/div[2]/descendant::button[contains(text(),'Copy to Edit')]";
+			String CopyToEdit_Xpath = "//div[div[div[text()='LRN Library']]]/div[2]/descendant::button[contains(text(),'Copy to Edit')]";
+			String CopyToEdit_Xpath1 = "//div[div[div[text()='LRN QA Custom']]]/div[2]/descendant::button[contains(text(),'Copy to Edit')]";
+			String CopyToEdit_Xpath2 = "//div[div[div[text()='Default Custom']]]/div[2]/descendant::button[contains(text(),'Copy to Edit')]";
 			//String Libray_Xpath="//div[text()='LRN Library']";
 			
 			clickIdentifierXpath(".//*[@id='course_version_" + course + "']/td[1]/div[1]/div[1]/div[1]");
@@ -228,6 +229,8 @@ public class ModuleManager extends CATAppCommon
 				clickIdentifierXpath(CopyToEdit_Xpath);
 			else if (configProperties.getProperty("moduleType").contains("custom"))
 				clickIdentifierXpath(CopyToEdit_Xpath1);
+			else if (configProperties.getProperty("moduleType").contains("default"))
+				clickIdentifierXpath(CopyToEdit_Xpath2);
 			
 			Log.pass("Clicked Copy to edit");
 			

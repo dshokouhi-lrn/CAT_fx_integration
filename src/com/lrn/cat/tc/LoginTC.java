@@ -12,9 +12,9 @@ public class LoginTC extends LoginPage{
 	void CatLogicTC() throws Exception
 	{
 		//For QA
-		//login(configProperties.getProperty("catQA"), configProperties.getProperty("catQA"));
+		login(configProperties.getProperty("catQA"), configProperties.getProperty("catQA"));
 		
 		//For Production
-		login(configProperties.getProperty("username"), configProperties.getProperty("prodPassword"));
+		//login(configProperties.getProperty("username"), configProperties.getProperty("prodPassword"));
 	}	
 }
