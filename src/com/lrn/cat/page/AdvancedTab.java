@@ -81,6 +81,7 @@ public class AdvancedTab extends CATAppCommon{
 			String  fiftyn= driver.findElement(By.xpath("//*[@id='advanceToggleSection']/div[7]/div[2]/div/div/label[2]")).getText();;
 			
 			System.out.println("advanceToggleSection"+" value is  " + fiftyn);*/
+			
 			if (learnerRetry != "")
 				typeTextById("retakeAttempt", learnerRetry);
 			

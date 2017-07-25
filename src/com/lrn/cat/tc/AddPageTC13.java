@@ -10,6 +10,7 @@ public class AddPageTC13 extends AddPage {
 	
 	void CatAddPage() throws Exception
 	{
+		
 		addPage("hotspot");
 	}
 
