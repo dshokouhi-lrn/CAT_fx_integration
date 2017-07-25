@@ -17,9 +17,10 @@ public class AdvancedTab extends CATAppCommon{
 	 * @param resourcesMenu show resources menu yes/no
 	 * @param pageLock show locked pages yes/no
 	 * @param hideFooter hide the footer yes/no
+	 * @param fiftyfifty show 50-50 layout ye/no(toogle)
 	 * @param learnerRetry how many retry attempts should the user take (can not be higher than 5)
 	 */
-	static public void setupAdvancedFeatures(String lrnLogo, String progressBar, String pageNumbers, String resourcesMenu, String pageLock, String hideFooter, String learnerRetry) throws Exception
+	static public void setupAdvancedFeatures(String lrnLogo, String progressBar, String pageNumbers, String resourcesMenu, String pageLock, String hideFooter,String fiftyfifty, String learnerRetry) throws Exception
 	{
 		try
 		{
@@ -63,7 +64,23 @@ public class AdvancedTab extends CATAppCommon{
 				clickIdentifierXpath(".//*[@id='advanceToggleSection']/div[6]/div/div[2]/span/input");
 			if (hideFooter == "no")
 				clickIdentifierXpath(".//*[@id='advanceToggleSection']/div[6]/div/div[3]/span/input");
+/*		String  fiftyy= driver.findElement(By.xpath("//*[@id='advanceToggleSection']/div[7]/div[2]/div/div")).getText();;
 			
+			System.out.println("advanceToggleSection"+" value is  " + fiftyy);
+			
+			if(fiftyy.equals(fiftyfifty)){
+				
+				clickIdentifierXpath("//*[@id='advanceToggleSection']/div[7]/div[2]/div/div");
+			}
+			else{
+				clickIdentifierXpath("//*[@id='advanceToggleSection']/div[7]/div[2]/div/div");
+			}*/
+			/*if(fiftyy == fiftyfifty)
+				
+				clickIdentifierXpath("//*[@id='advanceToggleSection']/div[7]/div[2]/div/div");
+			String  fiftyn= driver.findElement(By.xpath("//*[@id='advanceToggleSection']/div[7]/div[2]/div/div/label[2]")).getText();;
+			
+			System.out.println("advanceToggleSection"+" value is  " + fiftyn);*/
 			if (learnerRetry != "")
 				typeTextById("retakeAttempt", learnerRetry);
 			
