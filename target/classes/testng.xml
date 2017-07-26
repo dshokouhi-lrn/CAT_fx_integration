@@ -60,6 +60,7 @@
 			<class name= "com.lrn.cat.tc.KCConfigTC" />
 			<class name= "com.lrn.cat.tc.TileMenuTC" />
 			<class name= "com.lrn.cat.tc.CourseFeaturesTC" />
+			<class name= "com.lrn.cat.tc.AdvancedTabTC" />
 			<class name= "com.lrn.cat.tc.PublishCourseTC" />
 			<class name= "com.lrn.cat.tc.SearchCourseTC" />
 			<class name= "com.lrn.cat.tc.EditGetStartedTC" />
