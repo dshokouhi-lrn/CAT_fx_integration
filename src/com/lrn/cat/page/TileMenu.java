@@ -27,7 +27,7 @@ public class TileMenu extends CATAppCommon{
 	 * @param lessonNavigation "exploratory" or "linear"
 	 * @param jumpToLesson yes/no
 	 */
-	static public void configureTileMenu(String enableTileMenu, int tilesPerRow1, String welcomeText, String enableActive, String activeText, String enableKC, String kcText, String enableCert, String certText, String completeText, String lessonNavigation, String jumpToLesson) throws Exception
+	static public void configureTileMenu(String enableTileMenu, int tilesPerRow1, String welcomeText, String enableActive, String activeText, String enableKC, String kcText, String enableCert, String certText, String completeText, String lessonNavigation, String jumpToLesson, String backgroundImage) throws Exception
 	{
 		try
 		{
@@ -272,6 +272,33 @@ public class TileMenu extends CATAppCommon{
 			}
 			
 			Thread.sleep(1000);
+			
+			if (backgroundImage != "")
+			{
+				clickIdentifierXpath(".//*[@id='globalConfigTab']/li[2]");
+				
+				Thread.sleep(2000);
+				
+				clickIdentifierXpath(".//*[@id='tmBackGroundImageCustomizations']/div/div/div[1]/div[1]/img[4]");
+				
+				Thread.sleep(2000);
+				
+				String image = getRandomImage();
+				
+				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				
+				Thread.sleep(5000);
+				
+				Log.info("uploaded background image");
+				
+				String success = driver.findElement(By.xpath(".//*[@id='tmBackGroundImageCustomizations']/div/div/div[1]/div[1]/img[3]")).getAttribute("src");
+				
+				if (success.contains(image))
+					Log.pass("verified the background image uploaded");
+				
+				typeTextByXpath(".//*[@id='tmBackGroundImageCustomizations']/div/div/div[2]/textarea", "test " + d.toString());
+			
+			}
 			
 			clickIdentifierByID("saveButtonImage");
 			

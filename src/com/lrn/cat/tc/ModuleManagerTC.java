@@ -11,9 +11,20 @@ public class ModuleManagerTC extends ModuleManager
 	{
 		//String course = "ADP028";
 		getModuleManager();
-		getSearchModule(configProperties.getProperty("searchModule"));
-		copyToEditLibrary(configProperties.getProperty("searchModule"));
-		editFluidxCourse(configProperties.getProperty("searchModule"));
+		
+		if (configProperties.getProperty("env").contains("qa7") || configProperties.getProperty("env").contains("prod"))
+		{
+			getSearchModule(configProperties.getProperty("searchModule"));
+			copyToEditLibrary(configProperties.getProperty("searchModule"));
+			editFluidxCourse(configProperties.getProperty("searchModule"));
+		}
+		
+		else if (configProperties.getProperty("env").contains("qa4"))
+		{
+			getSearchModule(configProperties.getProperty("qa4Module"));
+			copyToEditLibrary(configProperties.getProperty("qa4Module"));
+			editFluidxCourse(configProperties.getProperty("qa4Module"));
+		}
 	}
 	
 	

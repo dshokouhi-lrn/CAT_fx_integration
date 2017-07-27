@@ -184,6 +184,8 @@ public class CustomizerRole extends CATAppCommon{
 			
 			driver.switchTo().window(ModuleManager.window);
 			
+			Thread.sleep(5000);
+			
 			Log.pass("switched back to LCEC");
 		}
 		

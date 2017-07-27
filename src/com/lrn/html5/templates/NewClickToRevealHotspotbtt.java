@@ -190,7 +190,7 @@ public class NewClickToRevealHotspotbtt extends GenericTemplateMethods {
 		logPASS("ProgressIndicator is Present");
 	}
 
-	@Test(groups = { "Regression", "Sanity", "NextOnly", "ContentQA" }, testName="FLDXTWO-4705", priority=16)
+	@Test(groups = { "Regression", "Sanity", "NextOnly", "ContentQA" }, dependsOnMethods = { "clickHotspots" }, testName="FLDXTWO-4705", priority=16)
 	public void NEXT() throws Exception {
 		clickNEXTTimer();
 		logPASS("Clicked on Next");

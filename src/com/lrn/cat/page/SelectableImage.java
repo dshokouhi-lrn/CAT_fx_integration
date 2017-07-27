@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 
 
 
+import org.openqa.selenium.JavascriptExecutor;
+
 import com.lrn.cat.common.CATAppCommon;
 import com.lrn.pp.utility.Log;
 
@@ -358,7 +360,7 @@ public class SelectableImage extends CATAppCommon {
 								typeTextById("ckeditorContentBulletinTitle", bulletinTitle + " " + d.toString());
 								//typeTextByXpath(".//*[@id='ckeditorContentSidebarText']",pageContent + " " + d.toString());
 								typeTextById("ckeditorContentBulletin", bulletinText + " " + d.toString());
-				
+								addNewTemplateBackgroundImage();
 			}
 			else
 			{
@@ -376,6 +378,9 @@ public class SelectableImage extends CATAppCommon {
 			else{
 				
 			}
+	
+			
+			
 					
 			clickIdentifierByID("saveIconId");
 			
@@ -392,6 +397,10 @@ public class SelectableImage extends CATAppCommon {
 			
 			if (audioFile != "")
 			{
+				JavascriptExecutor jse = (JavascriptExecutor)driver;
+				jse.executeScript("window.scrollBy(0,-500)", "");
+				
+				
 				String audio = getRandomAudio();
 				clickIdentifierXpath("//div[@id='widget2_uploadAudio']/img");
 				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");

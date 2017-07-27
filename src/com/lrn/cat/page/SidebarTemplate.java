@@ -147,6 +147,7 @@ public class SidebarTemplate extends CATAppCommon {
 								//typeTextByXpath(".//*[@id='ckeditorContentSidebarText']",pageContent + " " + d.toString());
 								typeTextById("ckeditorContentBulletin", bulletinText + " " + d.toString());
 				
+								addNewTemplateBackgroundImage();
 			}
 			else
 			{
@@ -164,7 +165,10 @@ public class SidebarTemplate extends CATAppCommon {
 			else{
 				
 			}
-					
+				
+			
+			
+			
 			clickIdentifierByID("saveIconId");
 			
 			String pageSaved = getValueByXpath("//*[@id='messageDialog']/tr/td[2]");

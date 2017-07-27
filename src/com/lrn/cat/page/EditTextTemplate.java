@@ -85,6 +85,8 @@ public class EditTextTemplate extends CATAppCommon{
 			if (altText != "")
 				typeTextById("widgetAltTextBackgroundImage-textGraphic_image", altText + " " + d.toString());
 			
+			addNewTemplateBackgroundImage();
+			
 			clickIdentifierByID("saveIconId");
 			
 			String pageSaved = getValueByXpath("//*[@id='messageDialog']/tr/td[2]");

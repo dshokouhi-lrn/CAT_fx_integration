@@ -70,7 +70,14 @@ public class CATAppCommon extends WebAppCommon {
 		try{
 		//	makeDirectory();
 			launchBrowser(browser);
-			openURL(configProperties.getProperty("pptUrl1"));
+			System.out.println("the chosen environment is: " + configProperties.getProperty("env"));
+			
+			if (configProperties.getProperty("env").contains("qa7"))
+				openURL(configProperties.getProperty("pptUrl1"));
+			else if (configProperties.getProperty("env").contains("prod"))
+				openURL(configProperties.getProperty("pptUrl2"));
+			else if (configProperties.getProperty("env").contains("qa4"))
+				openURL(configProperties.getProperty("pptUrl4"));
 		}
 		catch(Exception e){
 			throw e;
@@ -170,6 +177,48 @@ public class CATAppCommon extends WebAppCommon {
 			
 			if (success.contains(audio))
 				Log.pass("verified page audio upload successfully");
+		}
+		
+		catch(Exception e){
+			throw e;
+		}
+	}
+	
+	/**
+	 * to be used on new templates: Text and Graphic, Sidebar, Video, Selectable Image 
+	 * @throws Exception
+	 */
+	static public void addNewTemplateBackgroundImage() throws Exception
+	{
+		try
+		{
+
+			JavascriptExecutor jse = (JavascriptExecutor)driver;
+			jse.executeScript("window.scrollBy(0,-500)", "");
+			
+			Date d = new Date();
+			Log.info("begin adding background image");
+			
+			clickIdentifierXpath(".//*[@id='tabs']/ul/li[3]");
+			
+			Thread.sleep(2000);
+			
+			clickIdentifierXpath(".//*[@id='tab-desktop-image-main-div']/img");
+			
+			String image = getRandomImage();
+			
+			uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+			
+			Thread.sleep(5000);
+			
+			Log.info("uploaded background image");
+			
+			String success = driver.findElement(By.id("tab-desktop-hover-image")).getAttribute("src");
+			
+			if (success.contains(image))
+				Log.pass("verified the background image uploaded");
+			
+			typeTextByXpath(".//*[@id='tab3']/div[1]/div[2]/div[1]/input", "test " + d.toString());
 		}
 		
 		catch(Exception e){
