@@ -23,7 +23,7 @@ public class LoginPage extends CATAppCommon{
                   softA.assertAll();
                   Thread.sleep(3000);
                   //     Assert.assertTrue(waitForElementPresentByLinkText("log out"));
-                  Log.pass("Logged-in Successfully!!");
+                  Log.pass("Logged-in to " + configProperties.getProperty("env") + " Successfully!!");
 
            }
            catch(Exception e){  

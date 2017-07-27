@@ -70,7 +70,14 @@ public class CATAppCommon extends WebAppCommon {
 		try{
 		//	makeDirectory();
 			launchBrowser(browser);
-			openURL(configProperties.getProperty("pptUrl1"));
+			System.out.println("the chosen environment is: " + configProperties.getProperty("env"));
+			
+			if (configProperties.getProperty("env").contains("qa7"))
+				openURL(configProperties.getProperty("pptUrl1"));
+			else if (configProperties.getProperty("env").contains("prod"))
+				openURL(configProperties.getProperty("pptUrl2"));
+			else if (configProperties.getProperty("env").contains("qa4"))
+				openURL(configProperties.getProperty("pptUrl4"));
 		}
 		catch(Exception e){
 			throw e;

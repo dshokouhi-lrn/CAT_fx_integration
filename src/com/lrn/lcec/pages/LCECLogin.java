@@ -23,8 +23,13 @@ public class LCECLogin extends  CATAppCommon{
     {
     	Log.startTestCase("start logging into LCEC");
     	
-    	openURL(configProperties.getProperty("pptUrl"));
-
+		if (configProperties.getProperty("env").contains("qa7"))
+			openURL(configProperties.getProperty("pptUrl"));
+		else if (configProperties.getProperty("env").contains("prod"))
+			openURL(configProperties.getProperty("pptUrl3"));
+		else if (configProperties.getProperty("env").contains("qa4"))
+			openURL(configProperties.getProperty("pptUrl5"));
+		
            typeTextById(userIDlocater,username);
            Log.info( "send user name in to user name text box");
            //LogerData.info("user name is :"+username);
