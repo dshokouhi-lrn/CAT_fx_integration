@@ -47,6 +47,7 @@ public class DeletePage extends CATAppCommon {
 				  
 				  Log.info("clicked on yes on Delete popup");
 			
+				  Thread.sleep(5000);
 		}
 		
 		   catch(Exception e){  

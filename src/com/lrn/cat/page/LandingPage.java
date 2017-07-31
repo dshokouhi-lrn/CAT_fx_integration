@@ -50,6 +50,8 @@ public class LandingPage extends CATAppCommon{
 			else
 				clickIdentifierXpath(".//*[@id='courseTree']/ul/li/ul/li[1]/a");
 			
+			Thread.sleep(5000);
+			
 			if (enableLanding != "")
 			{
 				//checkCheckBox(".//*[@id='videoAutoPlay']/div[2]/div/div[2]/div/input");

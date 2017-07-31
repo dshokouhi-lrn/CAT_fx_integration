@@ -29,7 +29,7 @@ public class PreviewCourse extends CATAppCommon{
 			clickIdentifierByID("coursePreviewButton");
 			
 			Set<String> courseWindow = driver.getWindowHandles();
-			System.out.println("count of windows open is "  +courseWindow.size());
+			System.out.println("count of windows open is: "  +courseWindow.size());
 			System.out.println(courseWindow);
 			Thread.sleep(2000);
 			Iterator<String> ite1=courseWindow.iterator();
@@ -55,22 +55,14 @@ public class PreviewCourse extends CATAppCommon{
 			Log.info("switched to course window");
 			Thread.sleep(5000);
 			
-			//String url = driver.getCurrentUrl();
-			
-			//Log.info(url);
-			
 			GenericTemplateMethods.initialiseTemplatesAndrunCourse();
 			
-			//driver.close();
-			
-			//Log.info("closed course window");
-			
-			if (windowCount ==3)
+			if (windowCount == 3)
 				driver.switchTo().window(courseWindow1);
 			else
 				driver.switchTo().window(Mainwindow);
 			
-			Log.pass("finised preview and switched back to CAT");
+			Log.pass("finised preview course and switched back to CAT");
 			
 
 		}

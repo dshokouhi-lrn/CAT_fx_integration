@@ -38,7 +38,14 @@ public class TileMenu extends CATAppCommon{
 			JavascriptExecutor jse = (JavascriptExecutor)driver;
 			jse.executeScript("window.scrollTo(0,0)", "");
 			
-			clickIdentifierXpath(".//div[@id='menuTabs']/ul/li[2]/p");
+			Thread.sleep(2000);
+			
+			clickIdentifierXpath(".//div[@id='menuTabs']/ul/li[2]");
+			
+			Thread.sleep(2000);
+			
+			clickIdentifierXpath(".//div[@id='menuTabs']/ul/li[2]");
+			
 			
 			Thread.sleep(3000);
 			

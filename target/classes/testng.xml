@@ -73,7 +73,7 @@
 			<class name= "com.lrn.cat.tc.DeleteCourseTC" />
 <!-- 			<class name= "com.lrn.cat.tc.CheckInCourseTC" /> -->
 <!-- 			<class name= "com.lrn.cat.tc.CheckOutCourseTC" /> -->
-            <class name= "com.lrn.cat.tc.LogoutTC" />
+<!--             <class name= "com.lrn.cat.tc.LogoutTC" /> -->
 			<!-- END creator flow -->
 			
 			<!-- START customizer flow -->
@@ -86,6 +86,9 @@
 			
 			<!-- test flow -->
 			<!-- <class name= "com.lrn.cat.tc.LoginTC" />
+			<class name= "com.lrn.cat.tc.SearchCourseTC" />
+			<class name= "com.lrn.cat.tc.EditGetStartedTC" />
+			<class name= "com.lrn.cat.tc.PreviewCourseTC" />
 			<class name= "com.lrn.cat.tc.ResetTestTC" />
 			<class name= "com.lrn.cat.tc.CreateCourseTC" />
 			<class name= "com.lrn.cat.tc.AddLessonTC1" />

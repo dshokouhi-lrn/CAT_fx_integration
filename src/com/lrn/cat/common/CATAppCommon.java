@@ -15,9 +15,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 import java.util.Random;
+import java.util.Set;
 
 import javax.imageio.ImageIO;
 
@@ -51,6 +53,10 @@ import org.testng.asserts.SoftAssert;
 
 
 
+
+
+
+import com.lrn.html5.common.GenericTemplateMethods;
 import com.lrn.pp.utility.*;
 import com.lrn.webdrivercommon.WebAppCommon;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -78,6 +84,8 @@ public class CATAppCommon extends WebAppCommon {
 				openURL(configProperties.getProperty("pptUrl2"));
 			else if (configProperties.getProperty("env").contains("qa4"))
 				openURL(configProperties.getProperty("pptUrl4"));
+			else if (configProperties.getProperty("env").contains("stg"))
+				openURL(configProperties.getProperty("pptUrl6"));
 		}
 		catch(Exception e){
 			throw e;
@@ -307,6 +315,80 @@ public class CATAppCommon extends WebAppCommon {
 		System.out.println("Random audio selected: " + arr[select]);
 		
 		return arr[select];
+	}
+	
+	public static void previewPage(String template) throws Exception
+	{
+		try
+		{
+					
+			JavascriptExecutor jse = (JavascriptExecutor)driver;
+			jse.executeScript("window.scrollTo(0,0)", "");
+			
+			String pageNum = "";
+			
+			if (template == "old")
+				pageNum = driver.findElement(By.xpath(".//*[@id='masterPage']/div[1]/div[2]/div[2]/label[2]")).getText();
+			
+			else if (template == "new")
+				pageNum = driver.findElement(By.xpath(".//*[@id='masterPage']/div/div[1]/div/div[6]/label")).getText();
+
+			System.out.println("the current page number is: " + pageNum);
+			
+			Log.startTestCase("Start previewing page: " + pageNum);
+			
+			Thread.sleep(3000);
+			
+			clickIdentifierXpath(".//*[@id='courseTreeOperationIcons']/li[4]");
+			
+			Thread.sleep(3000);
+			
+			Set<String> courseWindow = driver.getWindowHandles();
+			System.out.println("count of windows open is: "  +courseWindow.size());
+			System.out.println(courseWindow);
+			Thread.sleep(2000);
+			Iterator<String> ite1=courseWindow.iterator();
+			//System.out.println("Title-------"+driver.switchTo().window(ite.next()));
+			Thread.sleep(2000);
+			String Mainwindow = ite1.next(); // window id of main CAT window
+			String courseWindow1 = ite1.next();
+			String thirdWindow = null;
+			
+			int windowCount = courseWindow.size();
+			
+			Thread.sleep(30000);
+        
+			if (windowCount == 3)
+			{
+				thirdWindow = ite1.next();
+				driver.switchTo().window(thirdWindow);
+			}
+
+			else
+				driver.switchTo().window(courseWindow1); //Switch to course window
+			
+			Log.info("switched to course window");
+			Thread.sleep(5000);
+			
+			GenericTemplateMethods.catPreviewJumptToPage(pageNum);
+			
+			driver.close();
+			
+			//driver.switchTo().window(courseWindow1).close();
+			
+			if (windowCount == 3)
+				driver.switchTo().window(courseWindow1);
+			else
+				driver.switchTo().window(Mainwindow);
+			
+			Log.pass("finised preview page and switched back to CAT");
+			
+			Thread.sleep(5000);
+		}
+		
+		catch(Exception e){
+			throw e;
+		}
 	}
 	
 
