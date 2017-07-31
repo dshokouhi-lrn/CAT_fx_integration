@@ -19,7 +19,6 @@ public class SelectableHotspotTC extends SelectableHotspot{
 		SelectableHotspot obj=new SelectableHotspot();
 		
 		obj.selectableHotspotTemplate("dir-btt","selectable title","yes","content","Sequential","Fixed Location","DesktopSamrtphones",10,20,"HS ImageTitle","HS ImageText","yes","yes","yes","test","test","yammer","Bulletin Tilte","Content for bulletin");
-		
 	}
 
 }

@@ -241,7 +241,7 @@ public class WebAppCommon {
 		else
 		{
 			logger.info(methodName + " :: " + message);		
-			logger1.log(LogStatus.SKIP, methodName + " :: " + message);
+			logger1.log(LogStatus.INFO, methodName + " :: " + message);
 		}
 	}
 		

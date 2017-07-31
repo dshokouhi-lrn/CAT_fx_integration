@@ -4142,10 +4142,10 @@ public class GenericTemplateMethods extends WebAppCommon {
 		}
 	}
 	
-	public static void catPreviewJumptToPage() throws Exception {
+	public static void catPreviewJumptToPage(String pageNum) throws Exception {
 		try {
 			Thread.sleep(15000);
-			JumptoCoursePage = "16"; // The page number is Mandatory, so it Jump to the given page number & will execute the page-level assertfail methods.
+			JumptoCoursePage = pageNum; // The page number is Mandatory, so it Jump to the given page number & will execute the page-level assertfail methods.
 			if (verifyElementPresent("LandingPageltr"))
 			{
 				clickElement("LandingPageNextButton");
@@ -4191,10 +4191,14 @@ public class GenericTemplateMethods extends WebAppCommon {
 					}
 				}
 			}
-			jumpToPage(JumptoCoursePage); // This method does not work on BranchingLesson's & TileMenu's landing page.
-			Thread.sleep(2000);
-			initialiseTemplates();
-			runTemplatesTestNGxml();
+			
+			if (JumptoCoursePage != "")
+			{
+				jumpToPage(JumptoCoursePage); // This method does not work on BranchingLesson's & TileMenu's landing page.
+				Thread.sleep(2000);
+				initialiseTemplates();
+				runTemplatesTestNGxml();
+			}
 		} catch (Exception e) {
 			TakeScreenshot("Fail-Method-catPreviewJumptToPage");
 			logFAILED("The method catPreviewJumptToPage failed (error)");

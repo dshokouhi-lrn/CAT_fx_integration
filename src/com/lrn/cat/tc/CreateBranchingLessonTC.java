@@ -10,6 +10,7 @@ public class CreateBranchingLessonTC extends CreateBranchingLesson{
 	void CatCreateBranchingLesson() throws Exception
 	{
 		createBranchingLesson("2", 4, "yes", "test", "test", "yes", "yes", "1");
+		//previewPage("branching");
 		configureTopic("2", "1", "test", "Fifty fifty", "yes");
 		configureTopic("2", "2", "test", "Solid", "");
 	}

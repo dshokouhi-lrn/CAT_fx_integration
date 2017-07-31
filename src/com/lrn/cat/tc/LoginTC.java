@@ -12,6 +12,10 @@ public class LoginTC extends LoginPage{
 	void CatLogicTC() throws Exception
 	{
 
-		login(configProperties.getProperty("username"), configProperties.getProperty("password"));
+		if (!configProperties.getProperty("env").contains("stg"))
+			login(configProperties.getProperty("username"), configProperties.getProperty("password"));
+		else if (configProperties.getProperty("env").contains("stg"))
+			login(configProperties.getProperty("stgUser"), configProperties.getProperty("stgPass"));
+
 	}	
 }

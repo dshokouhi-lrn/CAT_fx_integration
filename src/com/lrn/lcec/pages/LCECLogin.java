@@ -29,6 +29,8 @@ public class LCECLogin extends  CATAppCommon{
 			openURL(configProperties.getProperty("pptUrl3"));
 		else if (configProperties.getProperty("env").contains("qa4"))
 			openURL(configProperties.getProperty("pptUrl5"));
+		else if (configProperties.getProperty("env").contains("stg"))
+			openURL(configProperties.getProperty("pptUrl7"));
 		
            typeTextById(userIDlocater,username);
            Log.info( "send user name in to user name text box");

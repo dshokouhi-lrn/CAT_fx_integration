@@ -51,16 +51,16 @@
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.AddPageTC3 -->
-      <class name="com.lrn.cat.tc.ModuleManagerTC">
-        <methods>
-          <include name="updateResult"/>
-        </methods>
-      </class> <!-- com.lrn.cat.tc.ModuleManagerTC -->
       <class name="com.lrn.cat.tc.LockPageTC">
         <methods>
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.LockPageTC -->
+      <class name="com.lrn.cat.tc.CustomizerRoleTC">
+        <methods>
+          <include name="updateResult"/>
+        </methods>
+      </class> <!-- com.lrn.cat.tc.CustomizerRoleTC -->
       <class name="com.lrn.cat.tc.AddTopicTC1">
         <methods>
           <include name="updateResult"/>
@@ -76,51 +76,47 @@
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.EditConsultTemplateTC -->
-      <class name="com.lrn.cat.tc.AddTopicTC">
-        <methods>
-          <include name="updateResult"/>
-        </methods>
-      </class> <!-- com.lrn.cat.tc.AddTopicTC -->
       <class name="com.lrn.cat.tc.AdvancedTabTC">
         <methods>
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.AdvancedTabTC -->
-      <class name="com.lrn.cat.tc.AddLessonTC1">
+      <class name="com.lrn.cat.tc.AddTopicTC">
         <methods>
           <include name="updateResult"/>
         </methods>
-      </class> <!-- com.lrn.cat.tc.AddLessonTC1 -->
-      <class name="com.lrn.cat.tc.LCECLogoutTC">
-        <methods>
-          <include name="updateResult"/>
-        </methods>
-      </class> <!-- com.lrn.cat.tc.LCECLogoutTC -->
+      </class> <!-- com.lrn.cat.tc.AddTopicTC -->
       <class name="com.lrn.cat.tc.AddPageTC7">
         <methods>
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.AddPageTC7 -->
+      <class name="com.lrn.cat.tc.AddLessonTC1">
+        <methods>
+          <include name="updateResult"/>
+        </methods>
+      </class> <!-- com.lrn.cat.tc.AddLessonTC1 -->
       <class name="com.lrn.cat.tc.PasteNodeTC">
         <methods>
           <include name="updateResult"/>
+          <include name="CatPasteNode"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.PasteNodeTC -->
-      <class name="com.lrn.cat.tc.AddLessonTC2">
-        <methods>
-          <include name="updateResult"/>
-        </methods>
-      </class> <!-- com.lrn.cat.tc.AddLessonTC2 -->
       <class name="com.lrn.cat.tc.AddPageTC12">
         <methods>
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.AddPageTC12 -->
-      <class name="com.lrn.cat.tc.LCECLoginTC">
+      <class name="com.lrn.cat.tc.AddLessonTC2">
         <methods>
           <include name="updateResult"/>
         </methods>
-      </class> <!-- com.lrn.cat.tc.LCECLoginTC -->
+      </class> <!-- com.lrn.cat.tc.AddLessonTC2 -->
+      <class name="com.lrn.cat.tc.ModuleManagerTC">
+        <methods>
+          <include name="updateResult"/>
+        </methods>
+      </class> <!-- com.lrn.cat.tc.ModuleManagerTC -->
       <class name="com.lrn.cat.tc.EditBinaryTemplateTC">
         <methods>
           <include name="updateResult"/>
@@ -131,11 +127,11 @@
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.ResetTestTC -->
-      <class name="com.lrn.cat.tc.CustomizerRoleTC">
+      <class name="com.lrn.cat.tc.AfterSaveAndExitTC">
         <methods>
           <include name="updateResult"/>
         </methods>
-      </class> <!-- com.lrn.cat.tc.CustomizerRoleTC -->
+      </class> <!-- com.lrn.cat.tc.AfterSaveAndExitTC -->
       <class name="com.lrn.cat.tc.UnhidePageTC">
         <methods>
           <include name="updateResult"/>
@@ -164,6 +160,7 @@
       <class name="com.lrn.cat.tc.PublishCourseTC">
         <methods>
           <include name="updateResult"/>
+          <include name="CatPublishCourse"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.PublishCourseTC -->
       <class name="com.lrn.cat.tc.EditVideoTemplateTC">
@@ -171,16 +168,16 @@
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.EditVideoTemplateTC -->
+      <class name="com.lrn.cat.tc.LCECLoginTC">
+        <methods>
+          <include name="updateResult"/>
+        </methods>
+      </class> <!-- com.lrn.cat.tc.LCECLoginTC -->
       <class name="com.lrn.cat.tc.EditConcernTemplateTC">
         <methods>
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.EditConcernTemplateTC -->
-      <class name="com.lrn.cat.tc.LogoutTC">
-        <methods>
-          <include name="updateResult"/>
-        </methods>
-      </class> <!-- com.lrn.cat.tc.LogoutTC -->
       <class name="com.lrn.cat.tc.EditGetStartedTC">
         <methods>
           <include name="updateResult"/>
@@ -202,16 +199,16 @@
           <include name="CATKnowledgeCheckTC"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.KnowledgeCheckTC -->
-      <class name="com.lrn.cat.tc.AfterSaveAndExitTC">
-        <methods>
-          <include name="updateResult"/>
-        </methods>
-      </class> <!-- com.lrn.cat.tc.AfterSaveAndExitTC -->
       <class name="com.lrn.cat.tc.DeletePageTC">
         <methods>
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.DeletePageTC -->
+      <class name="com.lrn.cat.tc.LCECLogoutTC">
+        <methods>
+          <include name="updateResult"/>
+        </methods>
+      </class> <!-- com.lrn.cat.tc.LCECLogoutTC -->
       <class name="com.lrn.cat.tc.EditMultipleScenarioTemplateTC">
         <methods>
           <include name="updateResult"/>
@@ -222,26 +219,26 @@
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.EditCarouselTemplateTC -->
-      <class name="com.lrn.cat.tc.AddLessonTC">
-        <methods>
-          <include name="updateResult"/>
-        </methods>
-      </class> <!-- com.lrn.cat.tc.AddLessonTC -->
       <class name="com.lrn.cat.tc.DeleteCourseTC">
         <methods>
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.DeleteCourseTC -->
-      <class name="com.lrn.cat.tc.TileMenuTC">
+      <class name="com.lrn.cat.tc.AddLessonTC">
         <methods>
           <include name="updateResult"/>
         </methods>
-      </class> <!-- com.lrn.cat.tc.TileMenuTC -->
+      </class> <!-- com.lrn.cat.tc.AddLessonTC -->
       <class name="com.lrn.cat.tc.CreateTestOutLessonTC">
         <methods>
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.CreateTestOutLessonTC -->
+      <class name="com.lrn.cat.tc.TileMenuTC">
+        <methods>
+          <include name="updateResult"/>
+        </methods>
+      </class> <!-- com.lrn.cat.tc.TileMenuTC -->
       <class name="com.lrn.cat.tc.AddPageTC2">
         <methods>
           <include name="updateResult"/>
@@ -273,16 +270,16 @@
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.CreateCourseTC -->
-      <class name="com.lrn.cat.tc.LandingPageTC">
-        <methods>
-          <include name="updateResult"/>
-        </methods>
-      </class> <!-- com.lrn.cat.tc.LandingPageTC -->
       <class name="com.lrn.cat.tc.PreviewCourseTC">
         <methods>
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.PreviewCourseTC -->
+      <class name="com.lrn.cat.tc.LandingPageTC">
+        <methods>
+          <include name="updateResult"/>
+        </methods>
+      </class> <!-- com.lrn.cat.tc.LandingPageTC -->
       <class name="com.lrn.cat.tc.CloneCourseTC">
         <methods>
           <include name="updateResult"/>
@@ -343,16 +340,16 @@
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.ReorderNodesTC -->
-      <class name="com.lrn.cat.tc.AddPageTC4">
-        <methods>
-          <include name="updateResult"/>
-        </methods>
-      </class> <!-- com.lrn.cat.tc.AddPageTC4 -->
       <class name="com.lrn.cat.tc.AddPageTC13">
         <methods>
           <include name="updateResult"/>
         </methods>
       </class> <!-- com.lrn.cat.tc.AddPageTC13 -->
+      <class name="com.lrn.cat.tc.AddPageTC4">
+        <methods>
+          <include name="updateResult"/>
+        </methods>
+      </class> <!-- com.lrn.cat.tc.AddPageTC4 -->
     </classes>
   </test> <!-- SanityCheck(failed) -->
 </suite> <!-- Failed suite [Suite] -->
