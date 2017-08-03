@@ -16,6 +16,8 @@ public class KCConifg extends CATAppCommon {
 	/****************************Knowledge check Configuration***************************************/
 		try{
 			
+			Date d = new Date();
+			
 			Log.startTestCase("go to on Knowledge check Config");
 			Thread.sleep(500);
 			
@@ -55,16 +57,18 @@ public class KCConifg extends CATAppCommon {
 						clickIdentifierXpath(".//div[@id='isPooledQuizDiv']/div[2]/div/div");
 						//clickIdentifierByID("isPooledQuizDiv");
 						System.out.println("Question poll  KC toggle Button is set to yes" );
-						
+												
 						/***KC Total no of questions ***/
 						
 						String totalNQns =driver.findElement(By.xpath(".//*[@id='totalNoOfQuestions']")).getText();
 						System.out.println("Total no of questions ="  + totalNQns);
 						int kcTQ = Integer.parseInt(totalNQns);
 						int kclTQ = Integer.parseInt(learnertakesquestion);
-						if(kcTQ>kclTQ){
+						if(kcTQ>=kclTQ){
 							
 							typeTextById("knowledgeCheckPoolSize", learnertakesquestion);
+							
+							//clickIdentifierXpath(".//*[@id='knowledgeCheckPoolSizeDiv']/div[4]/div/div");
 							
 							/***KC no of Attempts ***/
 							String passkc =driver.findElement(By.xpath("//div[@id='isKnowledgeCheckRetryDiv']/div[2]/div/div/label[2]")).getText();
@@ -95,7 +99,7 @@ public class KCConifg extends CATAppCommon {
 								
 								System.out.println(" number of attempts =" + i);
 								
-								typeTextByXpath(".//*[@id='attemptFailKC']",failedmsg);
+								typeTextByXpath(".//*[@id='attemptFailKC']",failedmsg + " " + d.toString());
 								
 								
 								/***KC re take Learners ***/
@@ -104,7 +108,7 @@ public class KCConifg extends CATAppCommon {
 								System.out.println("retake KC  Question poool toggle Button Status="  + retakekc); 
 								
 								String retake  = "NO";
-								if (retake.equals(retake))
+								if (retakekc.equals(retake))
 								{
 									Thread.sleep(1000);
 									clickIdentifierXpath("//*[@id='isRetryQuizRandomDiv']/div[2]/div/div");

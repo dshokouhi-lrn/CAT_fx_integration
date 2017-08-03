@@ -17,6 +17,7 @@ public class CustomizerRoleTC extends CustomizerRole{
 		AddLesson.addLesson("customizer lesson");
 		customizerAddPage("text");
 		EditTextTemplate.editTextTemplate("dir-ltr", "customizer test", "yes", "customizer content", "yes", "yes", "yes", "customizer test", "customizer test");
+		previewPage("new");
 		//PreviewCourse.previewCourse();
 		//ExportToWord.exportToWordCourse(configProperties.getProperty("searchModule"), "no", "no", "yes", "yes", "no", "yes", "no");
 		saveAndExit();
