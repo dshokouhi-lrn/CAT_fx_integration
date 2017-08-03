@@ -11,7 +11,7 @@ public class EditTextTemplateTC extends EditTextTemplate{
 	static void CatEditTextTemplate() throws Exception
 	{
 		editTextTemplate("dir-rtl", "text title", "yes", "content", "yes", "yes", "yes", "test", "test");
-		previewPage("new");
+		//previewPage("new");
 	}
 
 }

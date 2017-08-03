@@ -310,6 +310,8 @@ public class CreateTestOutLesson extends CATAppCommon{
 				
 			typeTextById("questionsToPass", "1");
 			
+			Thread.sleep(1000);
+			
 			clickIdentifierXpath("//*[@id='adaptiveInfo']/div[8]/div/a");
 			
 			Thread.sleep(3000);
