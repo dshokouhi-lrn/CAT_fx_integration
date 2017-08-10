@@ -461,12 +461,13 @@ public class CATAppCommon extends WebAppCommon {
 	@AfterTest
 	public void endClass() throws Exception
 	{
-		String chromeDriverPath="C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\drivers\\chromedriver.exe";	
+		
+		String chromeDriverPath="C:\\Jenkins\\workspace\\CAT_fx_integration-master\\resource\\drivers\\chromedriver.exe";	
 	//	C:\Users\megha.thombre\Desktop\eclipse\CAT_fx_integration\\CAT_integration
 		System.setProperty("webdriver.chrome.driver",chromeDriverPath);
 		driver=new ChromeDriver();
 		System.out.println("Opening Report +++++++++++++");
-		driver.get("C:\\Report\\CATExecutionReport.html");
+		driver.get("C:\\Jenkins\\workspace\\CAT_fx_integration-master\\CATExecutionReport.html");
 		driver.manage().window().maximize();
 
 	}
