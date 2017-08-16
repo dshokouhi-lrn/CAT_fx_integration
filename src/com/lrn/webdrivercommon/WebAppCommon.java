@@ -138,7 +138,7 @@ public class WebAppCommon {
 
 	
 //	public static ExtentReports report=new ExtentReports("C:\\Report\\PPTExecutionReport.html");
-	public static ExtentReports report=new ExtentReports("C:\\Report\\CATExecutionReport.html", true);
+	public static ExtentReports report=new ExtentReports("C:\\Jenkins\\workspace\\CAT_fx_integration-master\\CATExecutionReport.html", true);
 	
 	// Get the DB environment to be connected to
 	String connectToDB = configProperties.getProperty("connectToDB");
