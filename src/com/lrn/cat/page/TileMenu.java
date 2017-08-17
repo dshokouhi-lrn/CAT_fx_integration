@@ -292,9 +292,12 @@ public class TileMenu extends CATAppCommon{
 				
 				String image = getRandomImage();
 				
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='tmBackGroundImageCustomizations']/div/div/div[1]/div[1]/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				
-				Thread.sleep(5000);
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				
+				Thread.sleep(50000);
 				
 				Log.info("uploaded background image");
 				
@@ -365,8 +368,10 @@ public class TileMenu extends CATAppCommon{
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@class='lesson-panels']/div[" + tilePosition + "]/div[4]/div/div[1]/div[1]/img[4]");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(6000);
+					WebElement file = driver.findElement(By.xpath(".//*[@class='lesson-panels']/div[" + tilePosition + "]/div[4]/div/div[1]/div[1]/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(60000);
 					Log.info("uploaded tile image");
 				}
 				
@@ -385,8 +390,10 @@ public class TileMenu extends CATAppCommon{
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@class='lesson-panels']/div[" + tilePosition + "]/div[4]/div/div[1]/div[1]/img[4]");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(6000);
+					WebElement file = driver.findElement(By.xpath(".//*[@class='lesson-panels']/div[" + tilePosition + "]/div[4]/div/div[1]/div[1]/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(60000);
 					Log.info("uploaded tile image");
 				}
 				

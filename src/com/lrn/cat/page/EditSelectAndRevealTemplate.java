@@ -2,7 +2,9 @@ package com.lrn.cat.page;
 
 import java.util.Date;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 import com.lrn.cat.common.CATAppCommon;
 import com.lrn.pp.utility.Log;
@@ -67,8 +69,10 @@ public class EditSelectAndRevealTemplate extends CATAppCommon{
 			{
 				String image = getRandomHotSpotImage();
 				clickIdentifierXpath(".//*[@id='selectAndRevealText']/ul[1]/li[1]/div[1]/div[4]/div[2]/div[1]/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(6000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='selectAndRevealText']/ul[1]/li[1]/div[1]/div[4]/div[2]/div[1]/div[1]/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(60000);
 				Log.info("uploaded reveal 1 image");
 			}
 			
@@ -113,8 +117,10 @@ public class EditSelectAndRevealTemplate extends CATAppCommon{
 				Thread.sleep(1000);
 				clickIdentifierXpath(".//*[@id='audBtn_1']");
 				Thread.sleep(1000);
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
-				Thread.sleep(3000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='audFile_1']"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				Thread.sleep(30000);
 				clickIdentifierXpath("//*[@aria-describedby='selectDialog']/div[3]/div[1]/button");
 				Thread.sleep(2000);
 				Log.info("uploaded reveal 1 audio");
@@ -190,8 +196,10 @@ public class EditSelectAndRevealTemplate extends CATAppCommon{
 				{
 					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='selectAndRevealText']/ul[1]/li[" + revealPosition + "]/div[1]/div[5]/div[2]/div[1]/div[1]/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(6000);
+					WebElement file = driver.findElement(By.xpath(".//*[@id='selectAndRevealText']/ul[1]/li[" + revealPosition + "]/div[1]/div[5]/div[2]/div[1]/div[1]/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(60000);
 					Log.info("uploaded reveal " + revealPosition + " image");
 				}
 				
@@ -208,8 +216,10 @@ public class EditSelectAndRevealTemplate extends CATAppCommon{
 					Thread.sleep(1000);
 					clickIdentifierXpath(".//*[@id='audBtn_1']");
 					Thread.sleep(1000);
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
-					Thread.sleep(3000);
+					WebElement file = driver.findElement(By.xpath(".//*[@id='audFile_1']"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+					Thread.sleep(30000);
 					clickIdentifierXpath("//*[@aria-describedby='selectDialog']/div[3]/div[1]/button");
 					Thread.sleep(2000);
 					Log.info("uploaded reveal " + revealPosition + " audio");

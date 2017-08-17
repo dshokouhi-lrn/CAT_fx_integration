@@ -76,8 +76,10 @@ public class LandingPage extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='dsktpImgSection']/div[1]/img[4]");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(6000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='dsktpImgSection']/div[1]/input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(60000);
 				Log.info("uploaded desktop image 1");
 			}
 			
@@ -85,8 +87,10 @@ public class LandingPage extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='dsktpImgSection']/div[2]/img[4]");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(6000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='dsktpImgSection']/div[2]/input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(60000);
 				Log.info("uploaded desktop image 2");
 			}
 			
@@ -94,7 +98,9 @@ public class LandingPage extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='dsktpImgSection']/div[3]/img[4]");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='dsktpImgSection']/div[3]/input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded desktop image 3");
 			}
@@ -103,7 +109,9 @@ public class LandingPage extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='dsktpImgSection']/div[4]/img[4]");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='dsktpImgSection']/div[4]/input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded desktop image 4");
 			}
@@ -112,7 +120,9 @@ public class LandingPage extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='mblImgSection']/div[1]/img[4]");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='mblImgSection']/div[1]/input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded mobile image 1");
 			}
@@ -121,7 +131,9 @@ public class LandingPage extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='mblImgSection']/div[2]/img[4]");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='mblImgSection']/div[2]/input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded mobile image 2");
 			}
@@ -130,7 +142,9 @@ public class LandingPage extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='mblImgSection']/div[3]/img[4]");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='mblImgSection']/div[3]/input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded mobile image 3");
 			}
@@ -139,7 +153,9 @@ public class LandingPage extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='mblImgSection']/div[4]/img[4]");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='mblImgSection']/div[4]/input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				Thread.sleep(6000);
 				Log.info("uploaded mobile image 4");
 			}
@@ -231,8 +247,10 @@ public class LandingPage extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='divDsktpStartBtn']/img[4]");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(6000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='divDsktpStartBtn']/input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(60000);
 				Log.info("uploaded desktop normal start button");
 			}
 			
@@ -240,8 +258,10 @@ public class LandingPage extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='divDsktpStartBtnHover']/img[4]");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(6000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='divDsktpStartBtnHover']///input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(60000);
 				Log.info("uploaded desktop hover start button");
 			}
 			
@@ -249,8 +269,10 @@ public class LandingPage extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='divMblStartBtn']/img[4]");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(6000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='divMblStartBtn']/input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(60000);
 				Log.info("uploaded mobile normal start button");
 			}
 			

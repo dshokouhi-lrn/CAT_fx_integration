@@ -2,7 +2,9 @@ package com.lrn.cat.page;
 
 import java.util.Date;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 import com.lrn.cat.common.CATAppCommon;
 import com.lrn.pp.utility.Log;
@@ -91,8 +93,10 @@ public class EditConsult extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='consultClickReveal']/ul/li/div/div[4]/div[2]/div/div/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='consultClickReveal']/ul/li/div/div[4]/div[2]/div/div/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(15000);
 				Log.info("uploaded consult image");
 			}
 			
@@ -142,8 +146,10 @@ public class EditConsult extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='consultAnswer']/ul/li[1]/div/div[4]/div[2]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='consultAnswer']/ul/li[1]/div/div[4]/div[2]/div/div[1]/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(15000);
 				Log.info("uploaded consult image");
 			}
 			
@@ -176,8 +182,10 @@ public class EditConsult extends CATAppCommon{
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='consultFeedback']/div[1]/div[2]/div[3]/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(5000);
+					WebElement file = driver.findElement(By.xpath(".//*[@id='consultFeedback']/div[1]/div[2]/div[3]/div/div[2]/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(60000);
 					Log.info("uploaded feedback image");
 				}
 				
@@ -209,7 +217,7 @@ public class EditConsult extends CATAppCommon{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='consultFeedback']/div[1]/div[3]/div[1]/div[2]/div[1]/div[2]/img");
 					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(5000);
+					Thread.sleep(15000);
 					Log.info("uploaded correct feedback image");
 				}
 				
@@ -218,7 +226,7 @@ public class EditConsult extends CATAppCommon{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='consultFeedback']/div[1]/div[3]/div[2]/div[3]/div[1]/div[2]/img");
 					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(5000);
+					Thread.sleep(15000);
 					Log.info("uploaded incorrect feedback image");
 				}
 				
@@ -308,8 +316,10 @@ public class EditConsult extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='consultClickReveal']/ul/li[" + consultCount + "]/div/div[5]/div[2]/div/div/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='consultClickReveal']/ul/li[" + consultCount + "]/div/div[5]/div[2]/div/div/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(60000);
 				Log.info("uploaded consult image");
 			}
 			
@@ -394,8 +404,10 @@ public class EditConsult extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='consultAnswer']/ul/li[" + answerPosition + "]/div/div[5]/div[2]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='consultAnswer']/ul/li[" + answerPosition + "]/div/div[5]/div[2]/div/div[1]/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(60000);
 				Log.info("uploaded consult image");
 			}
 			

@@ -30,6 +30,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -136,9 +137,11 @@ public class CATAppCommon extends WebAppCommon {
 			clickIdentifierXpath("//*[@id='pageBackgroundSection']/div/div[1]/div[1]/img");
 			
 			String image = getRandomImage();
-			uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+			WebElement file = driver.findElement(By.xpath("//*[@id='pageBackgroundSection']/div/div[1]/div[1]/input[2]"));
+			file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+			//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 			
-			Thread.sleep(5000);
+			Thread.sleep(60000);
 			Log.info("uploaded background image");
 			
 			String success = driver.findElement(By.xpath(".//*[@id='pageBackgroundSection']/div[1]/div[1]/div[2]/div[1]/img")).getAttribute("src");
@@ -176,8 +179,9 @@ public class CATAppCommon extends WebAppCommon {
 			clickIdentifierXpath("//*[@id='audioUpload']/input[2]");
 			
 			String audio = getRandomAudio();
-			
-			uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+			WebElement file = driver.findElement(By.xpath("//*[@id='audioUpload']/input[3]"));
+			file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+			//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 			Thread.sleep(3000);
 			Log.info("uploaded audio");
 			
@@ -211,13 +215,20 @@ public class CATAppCommon extends WebAppCommon {
 			
 			Thread.sleep(2000);
 			
+			clickIdentifierXpath(".//*[@id='tabs']/ul/li[3]");
+			
+			Thread.sleep(2000);
+			
 			clickIdentifierXpath(".//*[@id='tab-desktop-image-main-div']/img");
 			
 			String image = getRandomImage();
 			
-			uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+			WebElement file = driver.findElement(By.xpath(".//*[@id='tab-desktop-image-main-div']/input[2]"));
+			file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 			
-			Thread.sleep(5000);
+			//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+			
+			Thread.sleep(60000);
 			
 			Log.info("uploaded background image");
 			
@@ -461,6 +472,7 @@ public class CATAppCommon extends WebAppCommon {
 	@AfterTest
 	public void endClass() throws Exception
 	{
+
 		String chromeDriverPath="C:\\Jenkins\\workspace\\CAT_fx_integration-master\\resource\\drivers\\chromedriver.exe";	
 	//	C:\Users\megha.thombre\Desktop\eclipse\CAT_fx_integration\\CAT_integration
 		System.setProperty("webdriver.chrome.driver",chromeDriverPath);

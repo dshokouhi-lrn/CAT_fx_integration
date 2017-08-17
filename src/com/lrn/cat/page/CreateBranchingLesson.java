@@ -54,8 +54,10 @@ public class CreateBranchingLesson extends CATAppCommon	{
 				Thread.sleep(2000);
 				clickIdentifierXpath(".//*[@id='audBtn_1']");
 				Thread.sleep(2000);
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
-				Thread.sleep(3000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='audFile_1']"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				Thread.sleep(13000);
 				clickIdentifierXpath("//*[@aria-describedby='selectDialog']/div[3]/div[1]/button");
 				Thread.sleep(2000);
 				Log.info("uploaded lesson audio");
@@ -89,8 +91,10 @@ public class CreateBranchingLesson extends CATAppCommon	{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='branchingLessonBackgroundImage']/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(6000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='branchingLessonBackgroundImage']/div[1]/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(60000);
 				Log.info("uploaded lesson image");
 			}
 			
@@ -181,8 +185,10 @@ public class CreateBranchingLesson extends CATAppCommon	{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='branchingTopicBackgroundImage']/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(6000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='branchingTopicBackgroundImage']/div[1]/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(60000);
 				Log.info("uploaded topic image");
 			}
 			

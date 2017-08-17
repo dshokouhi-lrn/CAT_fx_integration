@@ -92,8 +92,10 @@ public class CourseFeatures extends CATAppCommon {
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='courseFeature']/div[3]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath("//*[@id='courseFeature']/div[3]/div/div[1]/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded menu image");
 			}
 			
@@ -113,8 +115,10 @@ public class CourseFeatures extends CATAppCommon {
 				{
 					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='chooseHotspot']/div[1]/div[1]/div[1]/div[2]/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(6000);
+					WebElement file = driver.findElement(By.xpath(".//*[@id='chooseHotspot']/div[1]/div[1]/div[1]/div[2]/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(60000);
 					Log.info("uploaded normal hot spot image");
 				}
 				
@@ -122,8 +126,10 @@ public class CourseFeatures extends CATAppCommon {
 				{
 					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='chooseHotspot']/div[1]/div[2]/div[1]/div[2]/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(6000);
+					WebElement file = driver.findElement(By.xpath(".//*[@id='chooseHotspot']/div[1]/div[2]/div[1]/div[2]/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(60000);
 					Log.info("uploaded hover hot spot image");
 				}
 				
@@ -131,8 +137,10 @@ public class CourseFeatures extends CATAppCommon {
 				{
 					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='chooseHotspot']/div[1]/div[3]/div[1]/div[2]/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(6000);
+					WebElement file = driver.findElement(By.xpath(".//*[@id='chooseHotspot']/div[1]/div[3]/div[1]/div[2]/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(60000);
 					Log.info("uploaded completed hot spot image");
 				}
 				
@@ -367,7 +375,7 @@ public class CourseFeatures extends CATAppCommon {
 			
 			String pageSaved = getValueByXpath("//*[@id='messageDialog']/tr/td[2]");
 			
-			Thread.sleep(3000);
+			//Thread.sleep(3000);
 			
 			if (pageSaved.contains("Course features saved"))
 				Log.pass("Course features saved");
@@ -428,8 +436,10 @@ public class CourseFeatures extends CATAppCommon {
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='fileUpload']");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(5000);
+					WebElement file = driver.findElement(By.xpath(".//*[@id='fileUpload']"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(50000);
 					Log.info("uploaded resource 1 document");
 				}
 				
@@ -437,8 +447,10 @@ public class CourseFeatures extends CATAppCommon {
 				{
 					String image = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='fileUpload2']");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(5000);
+					WebElement file = driver.findElement(By.xpath(".//*[@id='fileUpload2']"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(50000);
 					Log.info("uploaded resource 2 document");
 				}
 				

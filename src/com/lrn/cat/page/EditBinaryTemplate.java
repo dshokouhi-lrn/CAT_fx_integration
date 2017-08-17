@@ -2,7 +2,9 @@ package com.lrn.cat.page;
 
 import java.util.Date;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 import com.lrn.cat.common.CATAppCommon;
 import com.lrn.pp.utility.Log;
@@ -62,8 +64,10 @@ public class EditBinaryTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='binaryListImage']/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='binaryListImage']/div/div[1]/input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(15000);
 				Log.info("uploaded binary desktop image");
 			}
 			
@@ -77,8 +81,10 @@ public class EditBinaryTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='binaryListImage_mobileReady']/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='binaryListImage_mobileReady']/div/div[1]/input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(15000);
 				Log.info("uploaded binary mobile image");
 			}
 			
