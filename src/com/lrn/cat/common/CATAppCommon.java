@@ -472,7 +472,7 @@ public class CATAppCommon extends WebAppCommon {
 	@AfterTest
 	public void endClass() throws Exception
 	{
-		
+
 		String chromeDriverPath="C:\\Jenkins\\workspace\\CAT_fx_integration-master\\resource\\drivers\\chromedriver.exe";	
 	//	C:\Users\megha.thombre\Desktop\eclipse\CAT_fx_integration\\CAT_integration
 		System.setProperty("webdriver.chrome.driver",chromeDriverPath);
