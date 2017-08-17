@@ -2,6 +2,9 @@ package com.lrn.cat.page;
 
 import java.util.Date;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import com.lrn.cat.common.CATAppCommon;
 import com.lrn.pp.utility.Log;
 
@@ -56,8 +59,11 @@ public class EditTextTemplate extends CATAppCommon{
 			{
 				String audio = getRandomAudio();
 				clickIdentifierXpath("//*[@id='page_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
-				Thread.sleep(3000);
+
+				WebElement file = driver.findElement(By.xpath(".//*[@id='page_audioFile']"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				Thread.sleep(13000);
 				Log.info("uploaded audio");
 			}
 			
@@ -65,8 +71,10 @@ public class EditTextTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='desktop-image-main-div-textGraphic_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath("//*[@id='desktop-image-main-div-textGraphic_image']/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded desktop image");
 			}
 			
@@ -74,8 +82,10 @@ public class EditTextTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='mobile-image-main-div-textGraphic_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath("//*[@id='mobile-image-main-div-textGraphic_image']/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded mobile image");
 			}
 			

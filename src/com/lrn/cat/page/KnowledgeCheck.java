@@ -136,8 +136,10 @@ public class KnowledgeCheck extends CATAppCommon {
 						Thread.sleep(5000);
 						
 						String image = getRandomImage();
-						uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-						Thread.sleep(1000);
+						WebElement file = driver.findElement(By.xpath("//div[@id='question_layout']/div/div/div/input[2]"));
+						file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+						//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+						Thread.sleep(50000);
 						typeTextByXpath(".//*[@id='graphicDesc']",imgdes + " " + d.toString());
 						typeTextByXpath(".//*[@id='altTxtOn']",alttext + " " + d.toString());
 						clickIdentifierXpath("//*[@aria-describedby='question_layout']/div[3]/div/button");
@@ -156,8 +158,10 @@ public class KnowledgeCheck extends CATAppCommon {
 						clickIdentifierXpath(".//div[@id='question_layout']/div/div[10]/div[2]/img");
 						Thread.sleep(1000);
 						String image = getRandomImage();
-						uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-						
+						WebElement file = driver.findElement(By.xpath(".//div[@id='question_layout']/div/div[10]/div[2]/input[2]"));
+						file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+						//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+						Thread.sleep(60000);
 						typeTextByXpath(".//*[@id='graphicDesc']",imgdes + " " + d.toString());
 						typeTextByXpath(".//*[@id='altTxtOn']",alttext + " " + d.toString());
 						clickIdentifierXpath("//*[@aria-describedby='question_layout']/div[3]/div/button");
@@ -179,7 +183,7 @@ public class KnowledgeCheck extends CATAppCommon {
 				
 				clickIdentifierXpath(".//*[@id='knowledgeCheckCertificationForm']/div[1]/button");
 				
-				String publish = getValueByXpath("//*[@id='messageDialog']/tr/td[2]");
+				/*String publish = getValueByXpath("//*[@id='messageDialog']/tr/td[2]");
 				
 				if (publish.contains("Data saved"))
 				{
@@ -187,7 +191,7 @@ public class KnowledgeCheck extends CATAppCommon {
 				}
 				
 				else
-					Log.fail("Unable to save knowledge check for reason: " + publish);
+					Log.fail("Unable to save knowledge check for reason: " + publish);*/
 				
 	}
 	catch(Exception e){  

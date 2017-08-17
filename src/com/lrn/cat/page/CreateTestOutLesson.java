@@ -78,7 +78,9 @@ public class CreateTestOutLesson extends CATAppCommon{
 			{
 				String audio = getRandomAudio();
 				clickIdentifierXpath("//*[@id='adpLandingPage_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='adpLandingPage_audioFile']"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded welcome audio");
 			}
@@ -87,8 +89,10 @@ public class CreateTestOutLesson extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='desktop-image-main-div-adaptiveLandingPage_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath("//*[@id='desktop-image-main-div-adaptiveLandingPage_image']/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded welcome desktop image");
 			}
 			
@@ -96,8 +100,10 @@ public class CreateTestOutLesson extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='mobile-image-main-div-adaptiveLandingPage_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath("//*[@id='mobile-image-main-div-adaptiveLandingPage_image']/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded welcome mobile image");
 			}
 			
@@ -141,7 +147,9 @@ public class CreateTestOutLesson extends CATAppCommon{
 			{
 				String audio = getRandomAudio();
 				clickIdentifierXpath("//*[@id='adpPassMessage_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='adpPassMessage_audioFile']"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded pass audio");
 			}
@@ -150,8 +158,10 @@ public class CreateTestOutLesson extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='desktop-image-main-div-adaptivePassMessage_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath("//*[@id='desktop-image-main-div-adaptivePassMessage_image']/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded pass desktop image");
 			}
 			
@@ -159,8 +169,10 @@ public class CreateTestOutLesson extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='mobile-image-main-div-adaptivePassMessage_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath("//*[@id='mobile-image-main-div-adaptivePassMessage_image']/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded pass mobile image");
 			}
 			
@@ -184,7 +196,9 @@ public class CreateTestOutLesson extends CATAppCommon{
 			{
 				String audio = getRandomAudio();
 				clickIdentifierXpath("//*[@id='adpFailMessage_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='adpFailMessage_audioFile']"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded fail audio");
 			}
@@ -193,8 +207,10 @@ public class CreateTestOutLesson extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='desktop-image-main-div-adaptiveFailMessage_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath("//*[@id='desktop-image-main-div-adaptiveFailMessage_image']/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded fail desktop image");
 			}
 			
@@ -202,8 +218,10 @@ public class CreateTestOutLesson extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='mobile-image-main-div-adaptiveFailMessage_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath("//*[@id='mobile-image-main-div-adaptiveFailMessage_image']/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded fail mobile image");
 			}
 			
@@ -226,7 +244,9 @@ public class CreateTestOutLesson extends CATAppCommon{
 			{
 				String audio = getRandomAudio();
 				clickIdentifierXpath("//*[@id='adpWrapUp_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='adpWrapUp_audioFile']"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded wrap up audio");
 			}
@@ -235,8 +255,10 @@ public class CreateTestOutLesson extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='desktop-image-main-div-adaptiveWrapUp_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath("//*[@id='desktop-image-main-div-adaptiveWrapUp_image']/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded wrap up desktop image");
 			}
 			
@@ -244,8 +266,10 @@ public class CreateTestOutLesson extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath("//*[@id='mobile-image-main-div-adaptiveWrapUp_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath("//*[@id='mobile-image-main-div-adaptiveWrapUp_image']/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded wrap up mobile image");
 			}
 			
@@ -348,8 +372,10 @@ public class CreateTestOutLesson extends CATAppCommon{
 			{
 				String image1 = getRandomImage();
 				clickIdentifierXpath(".//*[@id='desktop-image-main-div-questionDetails_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image1 + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='desktop-image-main-div-questionDetails_image']/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image1 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image1 + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded question image");
 			}
 			

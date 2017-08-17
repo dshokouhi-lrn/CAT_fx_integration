@@ -4,6 +4,7 @@ import java.util.Date;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 import com.lrn.cat.common.CATAppCommon;
 import com.lrn.pp.utility.Log;
@@ -60,8 +61,10 @@ public class SelectableHotspot extends CATAppCommon {
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//div[@id='desktop-image-main-div-hotspot_pageImage']/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(10000);
+					WebElement file = driver.findElement(By.xpath(".//div[@id='desktop-image-main-div-hotspot_pageImage']/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(50000);
 					Log.info("uploaded desktop image");
 				}
 				
@@ -69,8 +72,10 @@ public class SelectableHotspot extends CATAppCommon {
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//div[@id='mobile-image-main-div-hotspot_pageImage']/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(10000);
+					WebElement file = driver.findElement(By.xpath(".//div[@id='mobile-image-main-div-hotspot_pageImage']/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(50000);
 					Log.info("uploaded mobile image");
 				}
 				
@@ -103,13 +108,17 @@ public class SelectableHotspot extends CATAppCommon {
 				
 				String normalImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//*[@id='hotspot-normal-image-main-div-hotspot_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage + ".jpg");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='hotspot-normal-image-main-div-hotspot_image']/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded normal image");
 				
 				String hoverImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-hotspot_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage + ".jpg");
+				WebElement file1 = driver.findElement(By.xpath(".//div[@id='hotspot-hover-image-main-div-hotspot_image']/input[2]"));
+				file1.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded hover image");
 				
@@ -117,7 +126,9 @@ public class SelectableHotspot extends CATAppCommon {
 				
 				String activeImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-active-image-main-div-hotspot_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage + ".jpg");
+				WebElement file2 = driver.findElement(By.xpath(".//div[@id='hotspot-active-image-main-div-hotspot_image']/input[2]"));
+				file2.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded close image");
 				
@@ -125,7 +136,9 @@ public class SelectableHotspot extends CATAppCommon {
 				
 				String closeImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-close-image-main-div-hotspot_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage + ".jpg");
+				WebElement file3 = driver.findElement(By.xpath(".//div[@id='hotspot-close-image-main-div-hotspot_image']/input[2]"));
+				file3.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded closehover image");
 				
@@ -133,7 +146,9 @@ public class SelectableHotspot extends CATAppCommon {
 				
 				String completeImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-hotspot_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage + ".jpg");
+				WebElement file4 = driver.findElement(By.xpath(".//div[@id='hotspot-complete-image-main-div-hotspot_image']/input[2]"));
+				file4.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded complete image");
 				
@@ -208,37 +223,49 @@ public class SelectableHotspot extends CATAppCommon {
 				//uplaod active image
 				String activeImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-content-active-image-main-div-revealHotspot_hotspot0']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage1 + ".jpg");
+				WebElement file5 = driver.findElement(By.xpath(".//div[@id='hotspot-content-active-image-main-div-revealHotspot_hotspot0']/input"));
+				file5.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage1 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded Active image");
 				
 				String normalImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot0']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage1 + ".jpg");
+				WebElement file6 = driver.findElement(By.xpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot0']/input[2]"));
+				file6.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage1 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded normal image");
 				
 				String hoverImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot0']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage1 + ".jpg");
+				WebElement file7 = driver.findElement(By.xpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot0']/input[2]"));
+				file7.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage1 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded hover image");
 				
 				String closeImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-active-image-main-div-revealHotspot_hotspot0']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage1 + ".jpg");
+				WebElement file8 = driver.findElement(By.xpath(".//div[@id='hotspot-active-image-main-div-revealHotspot_hotspot0']/input[2]"));
+				file8.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage1 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded close image");
 				
 				String closeHoverImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-close-image-main-div-revealHotspot_hotspot0']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage + ".jpg");
+				WebElement file9 = driver.findElement(By.xpath(".//div[@id='hotspot-close-image-main-div-revealHotspot_hotspot0']/input[2]"));
+				file9.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded closehover image");
 				
 				String completeImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot0']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage1 + ".jpg");
+				WebElement file10 = driver.findElement(By.xpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot0']1/input[2]"));
+				file10.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage1 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded complete image");
 				
@@ -314,37 +341,49 @@ public class SelectableHotspot extends CATAppCommon {
 				
 				String activeImage2 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-content-active-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage2 + ".jpg");
+				WebElement file11 = driver.findElement(By.xpath(".//div[@id='hotspot-content-active-image-main-div-revealHotspot_hotspot1']/input"));
+				file11.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage2 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded Active image");
 				
 				String normalImage2 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage2 + ".jpg");
+				WebElement file12 = driver.findElement(By.xpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file12.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage2 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded normal image");
 				
 				String hoverImage2 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot1']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage2 + ".jpg");
+				WebElement file13 = driver.findElement(By.xpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file13.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage2 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded hover image");
 				
 				String closeImage2 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-active-image-main-div-revealHotspot_hotspot1']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage2 + ".jpg");
+				WebElement file14 = driver.findElement(By.xpath(".//div[@id='hotspot-active-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file14.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage2 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded close image");
 				
 				String closeHoverImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-close-image-main-div-revealHotspot_hotspot1']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage1 + ".jpg");
+				WebElement file15 = driver.findElement(By.xpath(".//div[@id='hotspot-close-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file15.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage1 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded closehover image");
 				
 				String completeImage2 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage2 + ".jpg");
+				WebElement file16 = driver.findElement(By.xpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file16.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage2 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded complete image");
 				
@@ -423,37 +462,49 @@ public class SelectableHotspot extends CATAppCommon {
 				
 				String activeImage3 = getRandomHotSpotImage();
 				//clickIdentifierXpath(".//div[@id='hotspot-content-active-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage3 + ".jpg");
+				WebElement file17 = driver.findElement(By.xpath(".//div[@id='hotspot-content-active-image-main-div-revealHotspot_hotspot1']/input"));
+				file17.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage3 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage3 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded Active image");//
 				
 				String normalImage3 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage3 + ".jpg");
+				WebElement file18 = driver.findElement(By.xpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file18.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage3 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage3 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded normal image");
 				
 				String hoverImage3 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot1']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage3 + ".jpg");
+				WebElement file19 = driver.findElement(By.xpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file19.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage3 + ".jpg");
+		       // uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage3 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded hover image");
 				
 				String closeImage3 = getRandomHotSpotImage();
 				//clickIdentifierXpath(".//div[@id='hotspot-active-image-main-div-revealHotspot_hotspot1']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage3 + ".jpg");
+				WebElement file20 = driver.findElement(By.xpath(".//div[@id='hotspot-active-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file20.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage3 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage3 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded close image");//
 				
 				String closeHoverImage3 = getRandomHotSpotImage();
 				//clickIdentifierXpath(".//div[@id='hotspot-close-image-main-div-revealHotspot_hotspot1']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage3 + ".jpg");
+				WebElement file21 = driver.findElement(By.xpath(".//div[@id='hotspot-close-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file21.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage3 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage3 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded closehover image");//
 				
 				String completeImage3 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage3 + ".jpg");
+				WebElement file22 = driver.findElement(By.xpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file22.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage3 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage3 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded complete image");
 				
@@ -478,19 +529,25 @@ public class SelectableHotspot extends CATAppCommon {
 				
 				String normalImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//*[@id='hotspot-normal-image-main-div-hotspot_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage + ".jpg");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='hotspot-normal-image-main-div-hotspot_image']/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded normal image");
 				
 				String hoverImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-hotspot_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage + ".jpg");
+				WebElement file1 = driver.findElement(By.xpath(".//div[@id='hotspot-hover-image-main-div-hotspot_image']/input[2]"));
+				file1.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded hover image");
 				
 				String completeImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-hotspot_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage + ".jpg");
+				WebElement file2 = driver.findElement(By.xpath(".//div[@id='hotspot-complete-image-main-div-hotspot_image']/input[2]"));
+				file2.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded complete image");
 				
@@ -567,19 +624,25 @@ public class SelectableHotspot extends CATAppCommon {
 			
 				String normalImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot0']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage1 + ".jpg");
+				WebElement file3 = driver.findElement(By.xpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot0']/input[2]"));
+				file3.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage1 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded normal image");
 				
 				String hoverImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot0']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage1 + ".jpg");
+				WebElement file4 = driver.findElement(By.xpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot0']/input[2]"));
+				file4.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage1 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded hover image");
 				
 				String completeImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot0']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage1 + ".jpg");
+				WebElement file5 = driver.findElement(By.xpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot0']/input[2]"));
+				file5.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage1 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded complete image");
 				
@@ -659,37 +722,49 @@ public class SelectableHotspot extends CATAppCommon {
 				
 				String activeImage2 = getRandomHotSpotImage();
 				//clickIdentifierXpath(".//div[@id='hotspot-content-active-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage2 + ".jpg");
+				WebElement file7 = driver.findElement(By.xpath(".//div[@id='hotspot-content-active-image-main-div-revealHotspot_hotspot1']/input"));
+				file7.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage2 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded Active image");//
 				
 				String normalImage2 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage2 + ".jpg");
+				WebElement file8 = driver.findElement(By.xpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file8.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage2 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded normal image");
 				
 				String hoverImage2 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot1']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage2 + ".jpg");
+				WebElement file9 = driver.findElement(By.xpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file9.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage2 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded hover image");
 				
 				String closeImage2 = getRandomHotSpotImage();
 				//clickIdentifierXpath(".//div[@id='hotspot-active-image-main-div-revealHotspot_hotspot1']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage2 + ".jpg");
+				WebElement file10 = driver.findElement(By.xpath(".//div[@id='hotspot-active-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file10.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage2 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded close image");//
 				
 				String closeHoverImage2 = getRandomHotSpotImage();
 				//clickIdentifierXpath(".//div[@id='hotspot-close-image-main-div-revealHotspot_hotspot1']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage2 + ".jpg");
+				WebElement file11 = driver.findElement(By.xpath(".//div[@id='hotspot-close-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file11.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage2 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded closehover image");//
 				
 				String completeImage2 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage2 + ".jpg");
+				WebElement file12 = driver.findElement(By.xpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file12.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage2 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded complete image");
 				
@@ -710,31 +785,41 @@ public class SelectableHotspot extends CATAppCommon {
 				
 				String normalImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//*[@id='hotspot-normal-image-main-div-hotspot_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage + ".jpg");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='hotspot-normal-image-main-div-hotspot_image']/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded normal image");
 				
 				String hoverImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-hotspot_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage + ".jpg");
+				WebElement file1 = driver.findElement(By.xpath(".//div[@id='hotspot-hover-image-main-div-hotspot_image']/input[2]"));
+				file1.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded hover image");
 				
 				String closeImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-active-image-main-div-hotspot_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage + ".jpg");
+				WebElement file2 = driver.findElement(By.xpath(".//div[@id='hotspot-active-image-main-div-hotspot_image']/input[2]"));
+				file2.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage + ".jpg");
 				Thread.sleep(8000);
 				Log.info("uploaded close image");
 				
 				String closeHoverImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-close-image-main-div-hotspot_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage + ".jpg");
+				WebElement file3 = driver.findElement(By.xpath(".//div[@id='hotspot-close-image-main-div-hotspot_image']/input[2]"));
+				file3.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage + ".jpg");
 				Thread.sleep(15000);
 				Log.info("uploaded closehover image");
 				
 				String completeImage = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-hotspot_image']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage + ".jpg");
+				WebElement file4 = driver.findElement(By.xpath(".//div[@id='hotspot-complete-image-main-div-hotspot_image']/input[2]"));
+				file4.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded complete image");
 				
@@ -809,37 +894,49 @@ public class SelectableHotspot extends CATAppCommon {
 				//uplaod active image
 				String activeImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-content-active-image-main-div-revealHotspot_hotspot0']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage1 + ".jpg");
+				WebElement file12 = driver.findElement(By.xpath(".//div[@id='hotspot-content-active-image-main-div-revealHotspot_hotspot0']/input"));
+				file12.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage1 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded Active image");
 				
 				String normalImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot0']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage1 + ".jpg");
+				WebElement file13 = driver.findElement(By.xpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot0']/input[2]"));
+				file13.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage1 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded normal image");
 				
 				String hoverImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot0']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage1 + ".jpg");
+				WebElement file14 = driver.findElement(By.xpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot0']/input[2]"));
+				file14.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage1 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded hover image");
 				
 				String closeImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-active-image-main-div-revealHotspot_hotspot0']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage1 + ".jpg");
+				WebElement file15 = driver.findElement(By.xpath(".//div[@id='hotspot-active-image-main-div-revealHotspot_hotspot0']/input[2]"));
+				file15.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage1 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded close image");
 				
 				String closeHoverImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-close-image-main-div-revealHotspot_hotspot0']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage1 + ".jpg");
+				WebElement file16 = driver.findElement(By.xpath(".//div[@id='hotspot-close-image-main-div-revealHotspot_hotspot0']/input[2]"));
+				file16.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage1 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded closehover image");
 				
 				String completeImage1 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot0']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage1 + ".jpg");
+				WebElement file17 = driver.findElement(By.xpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot0']/input[2]"));
+				file17.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage1 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage1 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded complete image");
 				
@@ -918,37 +1015,49 @@ public class SelectableHotspot extends CATAppCommon {
 				
 				String activeImage2 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-content-active-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage2 + ".jpg");
+				WebElement file18 = driver.findElement(By.xpath(".//div[@id='hotspot-content-active-image-main-div-revealHotspot_hotspot1']/input"));
+				file18.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage2 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded Active image");
 				
 				String normalImage2 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage2 + ".jpg");
+				WebElement file19 = driver.findElement(By.xpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file19.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage2 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded normal image");
 				
 				String hoverImage2 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot1']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage2 + ".jpg");
+				WebElement file20 = driver.findElement(By.xpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file20.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage2 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded hover image");
 				
 				String closeImage2 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-active-image-main-div-revealHotspot_hotspot1']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage2 + ".jpg");
+				WebElement file21 = driver.findElement(By.xpath(".//div[@id='hotspot-active-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file21.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage2 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded close image");
 				
 				String closeHoverImage2 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-close-image-main-div-revealHotspot_hotspot1']/img");
-		        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage2 + ".jpg");
+				WebElement file22 = driver.findElement(By.xpath(".//div[@id='hotspot-close-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file22.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage2 + ".jpg");
+		        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded closehover image");
 				
 				String completeImage2 = getRandomHotSpotImage();
 				clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot1']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage2 + ".jpg");
+				WebElement file23 = driver.findElement(By.xpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot1']/input[2]"));
+				file23.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage2 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage2 + ".jpg");
 				Thread.sleep(10000);
 				Log.info("uploaded complete image");
 				}
@@ -963,19 +1072,25 @@ public class SelectableHotspot extends CATAppCommon {
 					
 					String normalImage = getRandomHotSpotImage();
 					clickIdentifierXpath(".//*[@id='hotspot-normal-image-main-div-hotspot_image']/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage + ".jpg");
+					WebElement file = driver.findElement(By.xpath(".//*[@id='hotspot-normal-image-main-div-hotspot_image']/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage + ".jpg");
 					Thread.sleep(10000);
 					Log.info("uploaded normal image");
 					
 					String hoverImage = getRandomHotSpotImage();
 					clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-hotspot_image']/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage + ".jpg");
+					WebElement file1 = driver.findElement(By.xpath(".//div[@id='hotspot-hover-image-main-div-hotspot_image']/input[2]"));
+					file1.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage + ".jpg");
 					Thread.sleep(10000);
 					Log.info("uploaded hover image");
 					
 					String completeImage = getRandomHotSpotImage();
 					clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-hotspot_image']/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage + ".jpg");
+					WebElement file2 = driver.findElement(By.xpath(".//div[@id='hotspot-complete-image-main-div-hotspot_image']/input[2]"));
+					file2.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage + ".jpg");
 					Thread.sleep(10000);
 					Log.info("uploaded complete image");
 					
@@ -1053,19 +1168,25 @@ public class SelectableHotspot extends CATAppCommon {
 				
 					String normalImage1 = getRandomHotSpotImage();
 					clickIdentifierXpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot0']/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage1 + ".jpg");
+					WebElement file3 = driver.findElement(By.xpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot0']/input[2]"));
+					file3.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage1 + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage1 + ".jpg");
 					Thread.sleep(10000);
 					Log.info("uploaded normal image");
 					
 					String hoverImage1 = getRandomHotSpotImage();
 					clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot0']/img");
-			        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage1 + ".jpg");
+					WebElement file4 = driver.findElement(By.xpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot0']/input[2]"));
+					file4.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage1 + ".jpg");
+			        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage1 + ".jpg");
 					Thread.sleep(10000);
 					Log.info("uploaded hover image");
 					
 					String completeImage1 = getRandomHotSpotImage();
 					clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot0']/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage1 + ".jpg");
+					WebElement file5 = driver.findElement(By.xpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot0']/input[2]"));
+					file5.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage1 + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage1 + ".jpg");
 					Thread.sleep(10000);
 					Log.info("uploaded complete image");
 					
@@ -1141,37 +1262,49 @@ public class SelectableHotspot extends CATAppCommon {
 					
 					String activeImage2 = getRandomHotSpotImage();
 					//clickIdentifierXpath(".//div[@id='hotspot-content-active-image-main-div-revealHotspot_hotspot1']/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage2 + ".jpg");
+					WebElement file8 = driver.findElement(By.xpath(".//div[@id='hotspot-content-active-image-main-div-revealHotspot_hotspot1']/input"));
+					file8.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage2 + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + activeImage2 + ".jpg");
 					Thread.sleep(10000);
 					Log.info("uploaded Active image");//
 					
 					String normalImage2 = getRandomHotSpotImage();
 					clickIdentifierXpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot1']/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage2 + ".jpg");
+					WebElement file9 = driver.findElement(By.xpath(".//div[@id='hotspot-normal-image-main-div-revealHotspot_hotspot1']/input[2]"));
+					file9.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage2 + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + normalImage2 + ".jpg");
 					Thread.sleep(10000);
 					Log.info("uploaded normal image");
 					
 					String hoverImage2 = getRandomHotSpotImage();
 					clickIdentifierXpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot1']/img");
-			        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage2 + ".jpg");
+					WebElement file10 = driver.findElement(By.xpath(".//div[@id='hotspot-hover-image-main-div-revealHotspot_hotspot1']/input[2]"));
+					file10.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage2 + ".jpg");
+			        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + hoverImage2 + ".jpg");
 					Thread.sleep(10000);
 					Log.info("uploaded hover image");
 					
 					String closeImage2 = getRandomHotSpotImage();
 					//clickIdentifierXpath(".//div[@id='hotspot-active-image-main-div-revealHotspot_hotspot1']/img");
-			        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage2 + ".jpg");
+					WebElement file11 = driver.findElement(By.xpath(".//div[@id='hotspot-active-image-main-div-revealHotspot_hotspot1']/input[2]"));
+					file11.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage2 + ".jpg");
+			        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeImage2 + ".jpg");
 					Thread.sleep(10000);
 					Log.info("uploaded close image");//
 					
 					String closeHoverImage2 = getRandomHotSpotImage();
 					//clickIdentifierXpath(".//div[@id='hotspot-close-image-main-div-revealHotspot_hotspot1']/img");
-			        uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage2 + ".jpg");
+					WebElement file12 = driver.findElement(By.xpath(".//div[@id='hotspot-close-image-main-div-revealHotspot_hotspot1']/input[2]"));
+					file12.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage2 + ".jpg");
+			        //uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + closeHoverImage2 + ".jpg");
 					Thread.sleep(10000);
 					Log.info("uploaded closehover image");//
 					
 					String completeImage2 = getRandomHotSpotImage();
 					clickIdentifierXpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot1']/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage2 + ".jpg");
+					WebElement file13 = driver.findElement(By.xpath(".//div[@id='hotspot-complete-image-main-div-revealHotspot_hotspot1']/input[2]"));
+					file13.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage2 + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + completeImage2 + ".jpg");
 					Thread.sleep(10000);
 					Log.info("uploaded complete image");
 				}	
@@ -1250,7 +1383,9 @@ public class SelectableHotspot extends CATAppCommon {
 				
 				String audio = getRandomAudio();
 				clickIdentifierXpath("//div[@id='widget2_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='widget2_audioFile']"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
 				Thread.sleep(3000);
 				Log.info("uploaded audio");
 			}

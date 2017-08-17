@@ -10,7 +10,7 @@ public class PasteNodeTC extends PasteNode {
 	@Test
 	void CatPasteNode() throws Exception
 	{
-		pasteNode("1", "1");
+		pasteNode("2", "1");
 	}
 
 }

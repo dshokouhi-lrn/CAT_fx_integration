@@ -80,13 +80,13 @@ public class ExportToWord extends CATAppCommon{
 			
 			Log.info("configured export to word options");
 			
-			//Thread.sleep(1000);
+			Thread.sleep(1000);
 			
 			clickIdentifierXpath(".//*[@id='exportToWord']/div[1]/div[10]/input");
 			
 			Thread.sleep(10000);
 			
-			boolean wordDoc = isFileDownloaded("C:\\Users\\dshokouhi\\Downloads", fileName);
+			boolean wordDoc = isFileDownloaded("C:\\Users\\Jenkins.User\\Downloads", fileName);
 			
 			if (wordDoc)
 				Log.pass("detected the file was downloaded");

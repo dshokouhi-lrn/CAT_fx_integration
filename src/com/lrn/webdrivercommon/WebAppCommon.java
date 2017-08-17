@@ -3,6 +3,7 @@ package com.lrn.webdrivercommon;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
+import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
@@ -25,6 +26,7 @@ import jxl.Workbook;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.xml.DOMConfigurator;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.JavascriptExecutor;
@@ -68,6 +70,8 @@ import com.relevantcodes.extentreports.LogStatus;
 /*import java.net.MalformedURLException;		
 import java.net.URL;		
 import java.io.BufferedInputStream;*/
+
+import Client.Robotil;
 
 /*import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;*/
@@ -1209,6 +1213,11 @@ public class WebAppCommon {
 		{
 			//		filePath = appPath() + filePath; 
 			System.out.println("--------------------------" +filePath);
+			//WebDriverWait wait = new WebDriverWait(driver, 10);
+			//wait.until(ExpectedConditions.alertIsPresent());
+			
+			//driver.switchTo().alert();
+			
 			StringSelection stringSelection = new StringSelection(filePath);
 			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 			Robot robot = new Robot();
@@ -1216,7 +1225,7 @@ public class WebAppCommon {
 			robot.keyPress(KeyEvent.VK_V);
 			robot.keyRelease(KeyEvent.VK_V);
 			robot.keyRelease(KeyEvent.VK_CONTROL);
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			robot.keyPress(KeyEvent.VK_ENTER);
 			robot.keyRelease(KeyEvent.VK_ENTER);
 			Thread.sleep(10000);
@@ -1239,6 +1248,7 @@ public class WebAppCommon {
 				WebElement e1 = driver.findElement(By.xpath(strHTMLID));
 				Actions builder1 = new Actions(driver);
 				builder1.moveToElement(e1).click(e1);
+				builder1.release();
 				builder1.perform();
 				Thread.sleep(1000);
 			}
