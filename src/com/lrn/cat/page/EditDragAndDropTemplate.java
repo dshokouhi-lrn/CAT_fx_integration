@@ -2,7 +2,9 @@ package com.lrn.cat.page;
 
 import java.util.Date;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 import com.lrn.cat.common.CATAppCommon;
 import com.lrn.pp.utility.Log;
@@ -82,8 +84,10 @@ public class EditDragAndDropTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='categoryNameDivdragOptionsMultiText1']/div[5]/div[2]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='categoryNameDivdragOptionsMultiText1']/div[5]/div[2]/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded category 1 image");
 			}
 			
@@ -103,8 +107,10 @@ public class EditDragAndDropTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='lineItemDivdragOptionsMultiText1']/div[7]/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='lineItemDivdragOptionsMultiText1']/div[7]/div[1]/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded line item 1 image");
 			}
 			
@@ -139,8 +145,10 @@ public class EditDragAndDropTemplate extends CATAppCommon{
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='dragOptionsFeedback']/div[1]/div[2]/div[3]/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(5000);
+					WebElement file = driver.findElement(By.xpath(".//*[@id='dragOptionsFeedback']/div[1]/div[2]/div[3]/div/div[2]/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(50000);
 					Log.info("uploaded feedback image");
 				}
 				
@@ -265,8 +273,10 @@ public class EditDragAndDropTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='categoryNameDivdragOptionsMultiText" + categoryPosition + "']/div[6]/div[2]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='categoryNameDivdragOptionsMultiText" + categoryPosition + "']/div[6]/div[2]/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded category " + categoryPosition + " image");
 			}
 			
@@ -333,8 +343,10 @@ public class EditDragAndDropTemplate extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='lineItemDivdragOptionsMultiText" + lineItemPosition + "']/div[8]/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='lineItemDivdragOptionsMultiText" + lineItemPosition + "']/div[8]/div[1]/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(50000);
 				Log.info("uploaded line item " + lineItemPosition + " image");
 			}
 			

@@ -1,11 +1,15 @@
 package com.lrn.cat.page;
 
+import java.io.File;
 import java.util.Date;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 import com.lrn.cat.common.CATAppCommon;
 import com.lrn.pp.utility.Log;
+
 
 public class EditConcernTemplate extends CATAppCommon{
 	
@@ -115,9 +119,16 @@ public class EditConcernTemplate extends CATAppCommon{
 			if (meterAnswerDesktop != "")
 			{
 				String image = getRandomImage();
+			
+				//WebElement file = driver.findElement(By.xpath(".//*[@id='concernAnswer']/ul/li[1]/div[1]/div[4]/div[2]/div/div[1]/input[2]"));
+				//file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
 				clickIdentifierXpath(".//*[@id='multiGraphicContent_add']/li[1]/div[1]/div[4]/div[2]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				//driver.switchTo().activeElement().sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jp");
+				WebElement file = driver.findElement(By.xpath(".//*[@id='concernAnswer']/ul/li[1]/div[1]/div[4]/div[2]/div/div[1]/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(15000);
 				Log.info("uploaded meter answer image");
 				if(driver.getPageSource().contains(image))
 					Log.pass("successfully uploaded meter answer image");
@@ -171,8 +182,10 @@ public class EditConcernTemplate extends CATAppCommon{
 			{
 				String image1 = getRandomImage();
 				clickIdentifierXpath(".//*[@id='multiGraphicContentContainerconcernChoice']/div/div[4]/div[2]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image1 + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='multiGraphicContentContainerconcernChoice']/div/div[4]/div[2]/div/div[1]/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image1 + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image1 + ".jpg");
+				Thread.sleep(15000);
 				Log.info("uploaded answer image");
 			}
 			
@@ -207,8 +220,10 @@ public class EditConcernTemplate extends CATAppCommon{
 				{
 					String image2 = getRandomImage();
 					clickIdentifierXpath(".//*[@id='concernMeterFeedback']/div[1]/div[2]/div[3]/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image2 + ".jpg");
-					Thread.sleep(5000);
+					WebElement file = driver.findElement(By.xpath(".//*[@id='concernMeterFeedback']/div[1]/div[2]/div[3]/div/div[2]/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image2 + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image2 + ".jpg");
+					Thread.sleep(15000);
 					Log.info("uploaded feedback image");
 				}
 				
@@ -355,7 +370,7 @@ public class EditConcernTemplate extends CATAppCommon{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='concernAnswer']/ul/li[" + answerPosition + "]/div/div[5]/div[2]/div[1]/div[1]/img");
 				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				Thread.sleep(15000);
 				Log.info("uploaded meter answer image");
 			}
 			
@@ -439,7 +454,7 @@ public class EditConcernTemplate extends CATAppCommon{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='concernChoice']/ul/li[" + answerPosition + "]/div/div[5]/div[2]/div/div[1]/img");
 				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				Thread.sleep(15000);
 				Log.info("uploaded answer image");
 			}
 			

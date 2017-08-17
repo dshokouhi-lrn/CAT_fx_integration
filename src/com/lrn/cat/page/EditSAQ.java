@@ -2,7 +2,9 @@ package com.lrn.cat.page;
 
 import java.util.Date;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 import com.lrn.cat.common.CATAppCommon;
 import com.lrn.pp.utility.Log;
@@ -111,8 +113,10 @@ public class EditSAQ extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='multiGraphicContentContainerSAQAns1']/div/div[4]/div[2]/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='multiGraphicContentContainerSAQAns1']/div/div[4]/div[2]/div/div[1]/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(60000);
 				Log.info("uploaded answer image");
 			}
 			
@@ -145,8 +149,10 @@ public class EditSAQ extends CATAppCommon{
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//*[@id='SAQFeedback1']/div[1]/div[2]/div[3]/div/div[2]/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(5000);
+					WebElement file = driver.findElement(By.xpath(".//*[@id='SAQFeedback1']/div[1]/div[2]/div[3]/div/div[2]/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(60000);
 					Log.info("uploaded feedback image");
 				}
 				
@@ -209,8 +215,10 @@ public class EditSAQ extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='SAQImage']/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='SAQImage']/div/div[1]/input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(60000);
 				Log.info("uploaded saq desktop image");
 			}
 			
@@ -218,8 +226,10 @@ public class EditSAQ extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='SAQImage_mobileReady']/div/div[1]/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='SAQImage_mobileReady']/div/div[1]/input"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(60000);
 				Log.info("uploaded saq mobile image");
 			}
 			
@@ -326,8 +336,10 @@ public class EditSAQ extends CATAppCommon{
 			{
 				String image = getRandomImage();
 				clickIdentifierXpath(".//*[@id='multiGraphicContent_add']/li[" + listCount + "]/div/div[5]/div[2]/div/div/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-				Thread.sleep(5000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='multiGraphicContent_add']/li[" + listCount + "]/div/div[5]/div[2]/div/div/input[2]"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+				Thread.sleep(60000);
 				Log.info("uploaded answer image");
 			}
 			

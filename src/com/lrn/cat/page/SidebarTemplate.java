@@ -3,6 +3,7 @@ package com.lrn.cat.page;
 import java.util.Date;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import com.lrn.cat.common.CATAppCommon;
 import com.lrn.pp.utility.Log;
@@ -45,8 +46,10 @@ public class SidebarTemplate extends CATAppCommon {
 			{
 				String audio = getRandomAudio();
 				clickIdentifierXpath("//*[@id='page_uploadAudio']/img");
-				uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
-				Thread.sleep(3000);
+				WebElement file = driver.findElement(By.xpath(".//*[@id='page_audioFile']"));
+				file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\audio\\" + audio + ".mp3");
+				Thread.sleep(10000);
 				Log.info("uploaded audio");
 			}
 			
@@ -70,8 +73,10 @@ public class SidebarTemplate extends CATAppCommon {
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//div[@id='desktop-image-main-div-sidebar_image']/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(5000);
+					WebElement file = driver.findElement(By.xpath(".//div[@id='desktop-image-main-div-sidebar_image']/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(60000);
 					Log.info("uploaded desktop image");
 				}
 				
@@ -79,8 +84,10 @@ public class SidebarTemplate extends CATAppCommon {
 				{
 					String image = getRandomImage();
 					clickIdentifierXpath(".//div[@id='mobile-image-main-div-sidebar_image']/img");
-					uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
-					Thread.sleep(5000);
+					WebElement file = driver.findElement(By.xpath(".//div[@id='mobile-image-main-div-sidebar_image']/input[2]"));
+					file.sendKeys("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					//uploadFile("C:\\github\\CAT_fx_integration\\CAT_integration\\resource\\images\\" + image + ".jpg");
+					Thread.sleep(50000);
 					Log.info("uploaded mobile image");
 				}
 				
@@ -182,12 +189,12 @@ public class SidebarTemplate extends CATAppCommon {
 		}
 		
 		catch(Exception e){  
-		       Log.fail("Failed to edit text template");
+		       Log.fail("Failed to edit sidebar template");
 		       e.printStackTrace();
 		       throw e;                                        
 		} catch(AssertionError e)
 		{
-		       Log.fail("Failed to edit text template");
+		       Log.fail("Failed to edit sidebar template");
 		       e.printStackTrace();
 		       throw e;
 
