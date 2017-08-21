@@ -23,7 +23,7 @@ public class PushToCDVCourse extends CATAppCommon {
 			
 			clickIdentifierByID("pushToCdv");
 			
-			Thread.sleep(1000);
+			Thread.sleep(10000);
 			
 			clickIdentifierXpath(".//div[@aria-describedby='dialogArea']/div[3]/div/button[1]");
 

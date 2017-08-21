@@ -71,8 +71,6 @@ import com.relevantcodes.extentreports.LogStatus;
 import java.net.URL;		
 import java.io.BufferedInputStream;*/
 
-import Client.Robotil;
-
 /*import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;*/
 
