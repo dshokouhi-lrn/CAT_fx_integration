@@ -22,7 +22,7 @@ public class RevertCourse extends CATAppCommon{
 			
 			clickIdentifierByID("courseRevertButton");
 			
-			Thread.sleep(2000);
+			Thread.sleep(10000);
 			
 			clickIdentifierXpath("//*[@class='ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons']/div[3]/div/button[1]");
 			

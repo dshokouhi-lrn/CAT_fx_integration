@@ -173,7 +173,7 @@ public class CreateBranchingLesson extends CATAppCommon	{
 			
 			clickIdentifierXpath(".//*[@id='courseTree']/ul/li/ul/li[" + lessonPosition + "]/ul/li[" + topicPosition + "]/a");
 			
-			Thread.sleep(3000);
+			Thread.sleep(10000);
 			
 			if(topicDesc != "")
 				typeTextById("branchingTopicEditorContent", topicDesc + " " + d.toString());
