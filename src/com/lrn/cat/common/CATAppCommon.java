@@ -57,6 +57,8 @@ import org.testng.asserts.SoftAssert;
 
 
 
+
+
 import com.lrn.html5.common.GenericTemplateMethods;
 import com.lrn.pp.utility.*;
 import com.lrn.webdrivercommon.WebAppCommon;
@@ -283,8 +285,9 @@ public class CATAppCommon extends WebAppCommon {
 	/**
 	 * Get a random image to upload, to add more images add to the end of the array in this method
 	 * @return returns a random image name, make sure to add path and extension around it
+	 * @throws InterruptedException 
 	 */
-	static public String getRandomImage()
+	static public String getRandomImage() throws InterruptedException
 	{
 		String [] arr = {"Hydrangeas", "bns999_p18", "Penguins", "Chrysanthemum", "Desert", "Tulips", "Lighthouse", "Koala"};
 		Random r = new Random();
@@ -292,6 +295,8 @@ public class CATAppCommon extends WebAppCommon {
 		int select = r.nextInt(arr.length);
 		
 		System.out.println("Random image selected: " + arr[select]);
+		
+		//Thread.sleep(30000);
 		
 		return arr[select];
 	}
@@ -315,8 +320,9 @@ public class CATAppCommon extends WebAppCommon {
 	/**
 	 * Get a random audio to upload, to add more audio files add to the end of the array in this method
 	 * @return returns a random audio name, make sure to add path and extension around it
+	 * @throws InterruptedException 
 	 */
-	static public String getRandomAudio()
+	static public String getRandomAudio() throws InterruptedException
 	{
 		String [] arr = {"Ambianica", "FunkyDiva", "l1p01_1", "NewAgeTechno", "SaxyGroovy", "TechJam", "ThatAintRight"};
 		Random r = new Random();
@@ -324,6 +330,8 @@ public class CATAppCommon extends WebAppCommon {
 		int select = r.nextInt(arr.length);
 		
 		System.out.println("Random audio selected: " + arr[select]);
+		
+		//Thread.sleep(3000);
 		
 		return arr[select];
 	}
