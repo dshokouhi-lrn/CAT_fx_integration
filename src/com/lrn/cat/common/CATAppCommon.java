@@ -89,6 +89,8 @@ public class CATAppCommon extends WebAppCommon {
 				openURL(configProperties.getProperty("pptUrl4"));
 			else if (configProperties.getProperty("env").contains("stg"))
 				openURL(configProperties.getProperty("pptUrl6"));
+			else if (configProperties.getProperty("env").contains("qa3"))
+				openURL(configProperties.getProperty("pptUrl8"));
 		}
 		catch(Exception e){
 			throw e;
