@@ -28,10 +28,14 @@ public class AdminRoles extends CATAppCommon {
 			JavascriptExecutor jse = (JavascriptExecutor)driver;
 			jse.executeScript("window.scrollTo(0,0)", "");
 			
+			Thread.sleep(5000);
 			
 			 //clickIdentifierXpath("//*[@id='mainSection']/div[2]/a[1]/span");
 			 clickIdentifierXpath("//ul[@class='nav navbar-nav nav-pills pull-right']/li[2]/a");
 			clickIdentifierXpath("//*[@id='assignRoles']/a/span");
+			
+			Thread.sleep(5000);
+			
 			 typeTextByXpath("//*[@id='user_table_filter']/label/input",Searchuser);
 			 	
 			clickIdentifierXpath("//*[@id='user_table']/tbody/tr/td[7]/button");

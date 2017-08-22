@@ -84,7 +84,7 @@ public class ExportToWord extends CATAppCommon{
 			
 			clickIdentifierXpath(".//*[@id='exportToWord']/div[1]/div[10]/input");
 			
-			Thread.sleep(10000);
+			Thread.sleep(30000);
 			
 			boolean wordDoc = isFileDownloaded("C:\\Users\\Jenkins.User\\Downloads", fileName);
 			
